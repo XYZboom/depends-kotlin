@@ -14,11 +14,11 @@ import org.antlr.v4.runtime.ParserRuleContext
 import org.antlr.v4.runtime.RuleContext
 
 class ExpressionUsage(
-        private val context: KotlinHandlerContext,
-        private val entityRepo: EntityRepo,
-        private val bindingResolver: IBindingResolver
+    private val context: KotlinHandlerContext,
+    entityRepo: EntityRepo,
+    private val bindingResolver: IBindingResolver,
 ) {
-    val idGenerator: IdGenerator = entityRepo
+    private val idGenerator: IdGenerator = entityRepo
 
     private fun findExpressionInStack(ctx: RuleContext?): KotlinExpression? {
         if (ctx == null) return null
@@ -80,8 +80,9 @@ class ExpressionUsage(
         /* create expression and link it with parent*/
         val parent = findExpressionInStack(ctx)
         val expression = if (ctx.parent?.childCount == 1 && parent != null
-                && parent.location.startIndex == ctx.start.startIndex
-                && parent.location.stopIndex == ctx.stop.stopIndex) {
+            && parent.location.startIndex == ctx.start.startIndex
+            && parent.location.stopIndex == ctx.stop.stopIndex
+        ) {
             parent
         } else {
             val newExpression = KotlinExpression(idGenerator.generateId())
@@ -182,12 +183,19 @@ class ExpressionUsage(
 
     private fun handlePostfixUnary(ctx: PostfixUnaryExpressionContext, expression: Expression) {
         val suffix = ctx.postfixUnarySuffix()
+        val navigationSuffix = suffix?.navigationSuffix()
         if (suffix?.callSuffix() != null) {
             expression.isCall = true
-        } else if (suffix?.navigationSuffix() != null) {
+            val postfixUnaryExpression = ctx.postfixUnaryExpression()
+            val primaryExpression = postfixUnaryExpression.primaryExpression()
+            val simpleIdentifier = primaryExpression?.simpleIdentifier()
+            // 处理形如func()的直接函数调用
+            if (simpleIdentifier != null) {
+                expression.setIdentifier(simpleIdentifier.text)
+            }
+        } else if (navigationSuffix != null) {
             expression.isDot = true
         }
-        val navigationSuffix = suffix?.navigationSuffix()
         if (navigationSuffix?.simpleIdentifier() != null) {
             val parent = expression.parent
             if (parent?.isCall == true && parent.text == "${expression.text}()") {

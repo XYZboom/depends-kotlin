@@ -2,7 +2,6 @@ package depends.extractor.kotlin
 
 import depends.entity.repo.EntityRepo
 import depends.extractor.FileParser
-import depends.extractor.java.JavaFileParser
 import depends.extractor.java.JavaLexer
 import depends.extractor.java.JavaListener
 import depends.extractor.java.JavaParser
@@ -17,7 +16,6 @@ import org.antlr.v4.runtime.tree.ParseTreeWalker
 import java.io.IOException
 
 class KotlinFileParser(entityRepo: EntityRepo?, bindingResolver: IBindingResolver) : FileParser() {
-    private val javaFileParser = JavaFileParser(entityRepo, bindingResolver)
     @Throws(IOException::class)
     override fun parseFile(fileFullPath: String) {
         val input = CharStreams.fromFileName(fileFullPath)

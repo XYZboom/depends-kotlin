@@ -62,4 +62,21 @@ class KotlinPropertyTest : KotlinParserTest() {
 
         }
     }
+
+    @Test
+    fun shouldHandleTopLevelPropertySuccess2() {
+        val srcs = arrayOf(
+            "./src/test/resources/kotlin-code-examples/property/property2/ProviderProperty2.kt",
+            "./src/test/resources/kotlin-code-examples/property/property2/UserProperty2.kt",
+        )
+        val parser = createParser()
+        srcs.forEach {
+            parser.parse(it)
+        }
+        resolveAllBindings()
+        val relations = entityRepo.getEntity("${myPackageName}2.UserProperty2.test0").relations
+        assertEquals(1, relations.size)
+        assertEquals(DependencyType.USE, relations[0].type)
+        assertTrue(relations[0].entity.rawName.name == "string")
+    }
 }

@@ -1,6 +1,7 @@
 package depends.extractor.kotlin.expression
 
 import depends.deptypes.DependencyType
+import depends.entity.TypeEntity
 import depends.extractor.kotlin.KotlinParserTest
 import depends.extractor.kotlin.packageName
 import org.junit.jupiter.api.Assertions.assertEquals
@@ -9,7 +10,7 @@ import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 
 class CallExpressionTest : KotlinParserTest() {
-    override val myPackageName: String = "$packageName.expression.call.call"
+    override val myPackageName: String = "expression.call.call"
 
     @BeforeEach
     fun setUp() = super.init()
@@ -25,21 +26,27 @@ class CallExpressionTest : KotlinParserTest() {
         run {
             val relations = entityRepo.getEntity("${myPackageName}0.TestCall0.test0").relations
             assertEquals(
-                    setOf(DependencyType.CALL, DependencyType.USE,
-                            DependencyType.CONTAIN, DependencyType.CREATE),
-                    relations.map { it.type }.toSet()
+                setOf(
+                    DependencyType.CALL, DependencyType.USE,
+                    DependencyType.CONTAIN, DependencyType.CREATE
+                ),
+                relations.map { it.type }.toSet()
             )
             for (relation in relations) {
                 when (relation.type) {
                     DependencyType.CALL -> {
-                        assertTrue(relation.entity.rawName.name == "func0"
-                                || relation.entity.rawName.name == "func1"
-                                || relation.entity.rawName.name == "ProviderCall0")
+                        assertTrue(
+                            relation.entity.rawName.name == "func0"
+                                    || relation.entity.rawName.name == "func1"
+                                    || relation.entity.rawName.name == "ProviderCall0"
+                        )
                     }
 
                     DependencyType.USE -> {
-                        assertTrue(relation.entity.rawName.name == "providerCall0"
-                                || relation.entity.rawName.name == "ProviderCall0")
+                        assertTrue(
+                            relation.entity.rawName.name == "providerCall0"
+                                    || relation.entity.rawName.name == "ProviderCall0"
+                        )
                     }
 
                     DependencyType.CONTAIN -> {
@@ -67,22 +74,28 @@ class CallExpressionTest : KotlinParserTest() {
         run {
             val relations = entityRepo.getEntity("${myPackageName}1.TestCall1.test0").relations
             assertEquals(
-                    setOf(DependencyType.CALL, DependencyType.USE,
-                            DependencyType.CONTAIN, DependencyType.CREATE),
-                    relations.map { it.type }.toSet()
+                setOf(
+                    DependencyType.CALL, DependencyType.USE,
+                    DependencyType.CONTAIN, DependencyType.CREATE
+                ),
+                relations.map { it.type }.toSet()
             )
             for (relation in relations) {
                 when (relation.type) {
                     DependencyType.CALL -> {
-                        assertTrue(relation.entity.rawName.name == "func0"
-                                || relation.entity.rawName.name == "funcInMiddleType"
-                                || relation.entity.rawName.name == "ProviderCall1")
+                        assertTrue(
+                            relation.entity.rawName.name == "func0"
+                                    || relation.entity.rawName.name == "funcInMiddleType"
+                                    || relation.entity.rawName.name == "ProviderCall1"
+                        )
                     }
 
                     DependencyType.USE -> {
-                        assertTrue(relation.entity.rawName.name == "providerCall1"
-                                || relation.entity.rawName.name == "ProviderCall1"
-                                || relation.entity.rawName.name == "MiddleTypeCall1")
+                        assertTrue(
+                            relation.entity.rawName.name == "providerCall1"
+                                    || relation.entity.rawName.name == "ProviderCall1"
+                                    || relation.entity.rawName.name == "MiddleTypeCall1"
+                        )
                     }
 
                     DependencyType.CONTAIN -> {
@@ -110,20 +123,26 @@ class CallExpressionTest : KotlinParserTest() {
         run {
             val relations = entityRepo.getEntity("${myPackageName}2.TestCall2.test0").relations
             assertEquals(
-                    setOf(DependencyType.CALL, DependencyType.USE,
-                            DependencyType.CONTAIN, DependencyType.CREATE),
-                    relations.map { it.type }.toSet()
+                setOf(
+                    DependencyType.CALL, DependencyType.USE,
+                    DependencyType.CONTAIN, DependencyType.CREATE
+                ),
+                relations.map { it.type }.toSet()
             )
             for (relation in relations) {
                 when (relation.type) {
                     DependencyType.CALL -> {
-                        assertTrue(relation.entity.rawName.name == "func0"
-                                || relation.entity.rawName.name == "ProviderCall2")
+                        assertTrue(
+                            relation.entity.rawName.name == "func0"
+                                    || relation.entity.rawName.name == "ProviderCall2"
+                        )
                     }
 
                     DependencyType.USE -> {
-                        assertTrue(relation.entity.rawName.name == "providerCall2"
-                                || relation.entity.rawName.name == "ProviderCall2")
+                        assertTrue(
+                            relation.entity.rawName.name == "providerCall2"
+                                    || relation.entity.rawName.name == "ProviderCall2"
+                        )
                     }
 
                     DependencyType.CONTAIN -> {
@@ -149,22 +168,27 @@ class CallExpressionTest : KotlinParserTest() {
         run {
             val relations = entityRepo.getEntity("${myPackageName}3.TestCall3.test0").relations
             assertEquals(
-                    setOf(DependencyType.CALL, DependencyType.USE,
-                            DependencyType.CONTAIN, DependencyType.CREATE),
-                    relations.map { it.type }.toSet()
+                setOf(
+                    DependencyType.CALL, DependencyType.USE,
+                    DependencyType.CONTAIN, DependencyType.CREATE
+                ),
+                relations.map { it.type }.toSet()
             )
             for (relation in relations) {
                 when (relation.type) {
                     DependencyType.CALL -> {
-                        assertTrue(relation.entity.rawName.name == "func0"
-                                || relation.entity.rawName.name == "ProviderCall3"
-                                || relation.entity.rawName.name == "func1")
+                        assertTrue(
+                            relation.entity.rawName.name == "func0"
+                                    || relation.entity.rawName.name == "ProviderCall3"
+                                    || relation.entity.rawName.name == "func1"
+                        )
                     }
 
                     DependencyType.USE -> {
-                        assertTrue(relation.entity.rawName.name == "providerCall3"
-                                || relation.entity.rawName.name == "ProviderCall3"
-                                || relation.entity.rawName.name == "str" // str is a local variable
+                        assertTrue(
+                            relation.entity.rawName.name == "providerCall3"
+                                    || relation.entity.rawName.name == "ProviderCall3"
+                                    || relation.entity.rawName.name == "str" // str is a local variable
                         )
                     }
 
@@ -176,6 +200,55 @@ class CallExpressionTest : KotlinParserTest() {
                         assertEquals("ProviderCall3", relation.entity.rawName.name)
                     }
                 }
+            }
+        }
+    }
+
+    @Test
+    fun shouldHandleCallInTopLevelSuccess4() {
+        val src0 = "./src/test/resources/kotlin-code-examples/expression/call/call4/ProviderCall4.kt"
+        val src1 = "./src/test/resources/kotlin-code-examples/expression/call/call4/TestCall4.kt"
+        val parser = createParser()
+        parser.parse(src0)
+        parser.parse(src1)
+        resolveAllBindings()
+        run {
+            val relations = entityRepo.getEntity("${myPackageName}4.TestCall4.test0").relations
+            assertEquals(
+                DependencyType.CALL, relations[0].type
+            )
+            assertEquals("func", relations[0].entity.rawName.name)
+        }
+    }
+
+    @Test
+    fun shouldHandleCallInTopLevelSuccess5() {
+        val src0 = "./src/test/resources/kotlin-code-examples/expression/call/call5/ProviderCall5.kt"
+        val src1 = "./src/test/resources/kotlin-code-examples/expression/call/call5/TestCall5.java"
+        val parser = createParser()
+        parser.parse(src0)
+        parser.parse(src1)
+        resolveAllBindings()
+        run {
+            val relations = entityRepo.getEntity("${myPackageName}5.TestCall5.main").relations
+            assertEquals(
+                setOf(DependencyType.RETURN, DependencyType.PARAMETER,
+                    DependencyType.CALL, DependencyType.USE),
+                relations.map { it.type }.toSet()
+            )
+            for (relation in relations) {
+                when (relation.type) {
+                    DependencyType.RETURN, DependencyType.PARAMETER -> {
+                        assertEquals(TypeEntity.buildInType, relation.entity)
+                    }
+                    DependencyType.USE -> {
+                        assertEquals("ProviderCall5Kt", relation.entity.rawName.name)
+                    }
+                    DependencyType.CALL -> {
+                        assertEquals("func", relation.entity.rawName.name)
+                    }
+                }
+
             }
         }
     }

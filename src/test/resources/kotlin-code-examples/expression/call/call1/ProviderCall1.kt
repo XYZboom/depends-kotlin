@@ -1,4 +1,4 @@
-package `kotlin-code-examples`.expression.call.call1
+package expression.call.call1
 
 class ProviderCall1 {
     fun func0(): MiddleTypeCall1 {

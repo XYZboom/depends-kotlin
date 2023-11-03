@@ -1,4 +1,4 @@
-package `kotlin-code-examples`.expression.call.call2
+package expression.call.call2
 
 class TestCall2 {
     fun test0() {

@@ -221,11 +221,10 @@ class KotlinListener(
 
     override fun enterPropertyDeclaration(ctx: KotlinParser.PropertyDeclarationContext) {
         val currentFunction = context.currentFunction()
-        val currentType = context.currentType()
         if (currentFunction != null) {
             handleLocalVariable(ctx)
-        } else if (currentType is KotlinTypeEntity) {
-            handleClassProperty(ctx)
+        } else {
+            handleProperty(ctx)
         }
         super.enterPropertyDeclaration(ctx)
     }
@@ -391,7 +390,7 @@ class KotlinListener(
         }
     }
 
-    private fun handleClassProperty(ctx: KotlinParser.PropertyDeclarationContext) {
+    private fun handleProperty(ctx: KotlinParser.PropertyDeclarationContext) {
         if (ctx.receiverType() != null) {
             logReceiverTypeNotSupport()
             return

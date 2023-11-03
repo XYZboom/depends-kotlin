@@ -7,6 +7,7 @@ import depends.extractor.kotlin.KotlinParser.ClassParameterContext
 import depends.extractor.kotlin.utils.typeClassName
 import depends.relations.IBindingResolver
 import io.github.oshai.kotlinlogging.KotlinLogging
+import java.io.File
 
 private val logger = KotlinLogging.logger {}
 
@@ -21,6 +22,18 @@ class KotlinHandlerContext(entityRepo: EntityRepo, bindingResolver: IBindingReso
             }
             return null
         }
+
+    // kotlin顶层类型所表示的Entity，只有声明了顶层函数或顶层属性才会有此类型生成
+    private val currentTopLevelType: KotlinTypeEntity by lazy {
+        val typeName = "${File(currentFileEntity.qualifiedName).name.removeSuffix(".kt")}Kt"
+        val result = KotlinTypeEntity(
+            GenericName.build(typeName),
+            currentFileEntity, idGenerator.generateId()
+        )
+        addToRepo(result)
+        currentFileEntity.addType(result)
+        result
+    }
 
     fun enterGetter(currentProperty: KotlinPropertyEntity) {
         pushToStack(currentProperty.getter)
@@ -40,6 +53,17 @@ class KotlinHandlerContext(entityRepo: EntityRepo, bindingResolver: IBindingReso
         addToRepo(currentTypeEntity)
         currentFileEntity.addType(currentTypeEntity)
         return currentTypeEntity
+    }
+
+    override fun foundMethodDeclarator(methodName: String, startLine: Int): FunctionEntity {
+        val currentType = currentType()
+        return if (currentType !is FileEntity) {
+            super.foundMethodDeclarator(methodName, startLine)
+        } else {
+            val functionEntity = super.foundMethodDeclarator(methodName, startLine)
+            currentTopLevelType.addFunction(functionEntity)
+            functionEntity
+        }
     }
 
     fun foundNewDelegation(delegationExpression: KotlinExpression) {
@@ -129,6 +153,9 @@ class KotlinHandlerContext(entityRepo: EntityRepo, bindingResolver: IBindingReso
         property.setter?.let { addToRepo(it) }
         property.getter?.let { addToRepo(it) }
         pushToStack(property)
+        if (currentType is FileEntity) {
+            currentTopLevelType.properties.add(property)
+        }
         return property
     }
 }
