@@ -16,7 +16,8 @@ class KotlinTypeEntity(
     override var jvmName = simpleName
     val properties = ArrayList<KotlinPropertyEntity>()
 
-    override fun lookupFunctionLocally(functionName: GenericName): FunctionEntity? {
+    override fun lookupFunctionLocally(functionName: GenericName?): FunctionEntity? {
+        functionName ?: return null
         val superResult = super.lookupFunctionLocally(functionName)
         if (superResult != null) return superResult
         // kotlin自调用时一律视为kotlin属性，但java对kotlin调用时应当视为getter或setter方法的调用

@@ -125,7 +125,9 @@ val KotlinParser.FunctionTypeContext.usedTypeArguments: List<String>
         functionTypeParameters().type().forEach {
             result.addAll(it.usedTypeArguments)
         }
-        result.addAll(receiverType().usedTypeArguments)
+        receiverType()?.usedTypeArguments?.let {
+            result.addAll(it)
+        }
         return result
     }
 
