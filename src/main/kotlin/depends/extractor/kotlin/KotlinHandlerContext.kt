@@ -108,8 +108,10 @@ class KotlinHandlerContext(entityRepo: EntityRepo, bindingResolver: IBindingReso
         }
         val currentType = currentType()
         val kotlinType = currentType as? KotlinTypeEntity
-            ?: run {
-                logger.warn { "error entity class" }
+            ?: if (currentType is FileEntity) {
+                currentTopLevelType
+            } else {
+                logger.warn { "error kotlin type entity: ${currentType.javaClass}" }
                 null
             }
         // 如果编译通过，那么不带接收器的类属性一定不存在泛型参数和泛型参数约束
@@ -153,9 +155,6 @@ class KotlinHandlerContext(entityRepo: EntityRepo, bindingResolver: IBindingReso
         property.setter?.let { addToRepo(it) }
         property.getter?.let { addToRepo(it) }
         pushToStack(property)
-        if (currentType is FileEntity) {
-            currentTopLevelType.properties.add(property)
-        }
         return property
     }
 }
