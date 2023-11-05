@@ -13,9 +13,9 @@ class KotlinDelegateTest : KotlinParserTest() {
     @Test
     fun shouldHandleDelegateAllSuccess() {
         val srcs = arrayOf(
-                "./src/test/resources/kotlin-code-examples/delegate/delegate0/DelegateProvider0.kt",
-                "./src/test/resources/kotlin-code-examples/delegate/delegate0/DelegateUser0.kt",
-                "./src/test/resources/kotlin-code-examples/delegate/delegate0/IDelegateInterface0.kt",
+            "./src/test/resources/kotlin-code-examples/delegate/delegate0/DelegateProvider0.kt",
+            "./src/test/resources/kotlin-code-examples/delegate/delegate0/DelegateUser0.kt",
+            "./src/test/resources/kotlin-code-examples/delegate/delegate0/IDelegateInterface0.kt",
         )
         val parser = createParser()
         srcs.forEach {
@@ -24,17 +24,19 @@ class KotlinDelegateTest : KotlinParserTest() {
         resolveAllBindings()
         val relations = entityRepo.getEntity("${myPackageName}0.DelegateUser0").relations
         assertEquals(
-                setOf(
-                        DependencyType.CALL,
-                        DependencyType.IMPLEMENT,
-                        DependencyType.DELEGATE,
-                        DependencyType.CREATE
-                ),
-                relations.map { it.type }.toSet()
+            setOf(
+                DependencyType.CALL,
+                DependencyType.IMPLEMENT,
+                DependencyType.DELEGATE,
+                DependencyType.CREATE,
+                DependencyType.USE
+            ),
+            relations.map { it.type }.toSet()
         )
         for (relation in relations) {
             when (relation.type) {
-                DependencyType.CALL, DependencyType.DELEGATE, DependencyType.CREATE
+                DependencyType.CALL, DependencyType.DELEGATE, DependencyType.CREATE,
+                DependencyType.USE,
                 -> assertEquals("DelegateProvider0", relation.entity.rawName.name)
 
                 DependencyType.IMPLEMENT -> {

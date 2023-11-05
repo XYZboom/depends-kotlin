@@ -182,45 +182,43 @@ class ExpressionUsage(
     }
 
     private fun handlePostfixUnary(ctx: PostfixUnaryExpressionContext, expression: Expression) {
+        val primaryExpression = ctx.primaryExpression()
+        val simpleIdentifier = primaryExpression?.simpleIdentifier()
+        if (simpleIdentifier != null) {
+            expression.setIdentifier(simpleIdentifier.text)
+        }
         val suffix = ctx.postfixUnarySuffix()
         val navigationSuffix = suffix?.navigationSuffix()
         if (suffix?.callSuffix() != null) {
             expression.isCall = true
-            val postfixUnaryExpression = ctx.postfixUnaryExpression()
-            val primaryExpression = postfixUnaryExpression.primaryExpression()
-            val simpleIdentifier = primaryExpression?.simpleIdentifier()
-            // 处理形如func()的直接函数调用
-            if (simpleIdentifier != null) {
-                expression.setIdentifier(simpleIdentifier.text)
-            }
         } else if (navigationSuffix != null) {
             expression.isDot = true
         }
         if (navigationSuffix?.simpleIdentifier() != null) {
-            val parent = expression.parent
-            if (parent?.isCall == true && parent.text == "${expression.text}()") {
-                /**
-                 * 由于函数的调用延迟发生，例如表达式a.foo()解析为
-                 *              a.foo()
-                 *              |     \
-                 *           a.foo   ()
-                 *           |         \
-                 *           a        .foo
-                 * 生成的表达式树如下
-                 *          a.foo()
-                 *             |
-                 *          a.foo
-                 *            |
-                 *            a
-                 * 类型推导至a.foo时，应当将a.foo视为函数调用，
-                 * 同时推导a.foo()的类型，并且a.foo()不能视为函数调用
-                 * 否则a.foo()的类型(此处假设为MyType型)会被视为对MyType的函数调用
-                 */
-                // TODO 对函数对象的调用；调用运算符重载
-                expression.isCall = true
-                expression.parent.isCall = false
-            }
             expression.setIdentifier(navigationSuffix.simpleIdentifier().text)
+        }
+        val parent = expression.parent
+        if (parent?.isCall == true && parent.text == "${expression.text}()") {
+            /**
+             * 由于函数的调用延迟发生，例如表达式a.foo()解析为
+             *              a.foo()
+             *              |     \
+             *           a.foo   ()
+             *           |         \
+             *           a        .foo
+             * 生成的表达式树如下
+             *          a.foo()
+             *             |
+             *          a.foo
+             *            |
+             *            a
+             * 类型推导至a.foo时，应当将a.foo视为函数调用，
+             * 同时推导a.foo()的类型，并且a.foo()不能视为函数调用
+             * 否则a.foo()的类型(此处假设为MyType型)会被视为对MyType的函数调用
+             */
+            // TODO 对函数对象的调用；调用运算符重载
+            expression.isCall = true
+            expression.parent.isCall = false
         }
     }
 }

@@ -3,7 +3,6 @@ package depends.extractor.kotlin.expression
 import depends.deptypes.DependencyType
 import depends.entity.TypeEntity
 import depends.extractor.kotlin.KotlinParserTest
-import depends.extractor.kotlin.packageName
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.BeforeEach
@@ -214,6 +213,7 @@ class CallExpressionTest : KotlinParserTest() {
         resolveAllBindings()
         run {
             val relations = entityRepo.getEntity("${myPackageName}4.TestCall4.test0").relations
+            assertEquals(1, relations.size)
             assertEquals(
                 DependencyType.CALL, relations[0].type
             )
@@ -232,8 +232,10 @@ class CallExpressionTest : KotlinParserTest() {
         run {
             val relations = entityRepo.getEntity("${myPackageName}5.TestCall5.main").relations
             assertEquals(
-                setOf(DependencyType.RETURN, DependencyType.PARAMETER,
-                    DependencyType.CALL, DependencyType.USE),
+                setOf(
+                    DependencyType.RETURN, DependencyType.PARAMETER,
+                    DependencyType.CALL, DependencyType.USE
+                ),
                 relations.map { it.type }.toSet()
             )
             for (relation in relations) {
@@ -241,15 +243,36 @@ class CallExpressionTest : KotlinParserTest() {
                     DependencyType.RETURN, DependencyType.PARAMETER -> {
                         assertEquals(TypeEntity.buildInType, relation.entity)
                     }
+
                     DependencyType.USE -> {
                         assertEquals("ProviderCall5Kt", relation.entity.rawName.name)
                     }
+
                     DependencyType.CALL -> {
                         assertEquals("func", relation.entity.rawName.name)
                     }
                 }
 
             }
+        }
+    }
+
+    @Test
+    fun shouldHandleCallInTopLevelSuccess6() {
+        val src0 = "./src/test/resources/kotlin-code-examples/expression/call/call6/ProviderCall6.kt"
+        val src1 = "./src/test/resources/kotlin-code-examples/expression/call/call6/TestCall6.kt"
+        val parser = createParser()
+        parser.parse(src0)
+        parser.parse(src1)
+        resolveAllBindings()
+        run {
+            val relations = entityRepo.getEntity("${myPackageName}6.user").relations
+            assertEquals(1, relations.size)
+            assertEquals(
+                DependencyType.CALL,
+                relations[0].type
+            )
+            assertEquals("provider", relations[0].entity.rawName.name)
         }
     }
 }
