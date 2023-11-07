@@ -34,6 +34,26 @@ val KotlinParser.TypeContext.typeClassName: String
         }
     }
 
+val KotlinParser.ReceiverTypeContext.typeClassName: String
+    get() {
+        return if (parenthesizedType() != null) {
+            parenthesizedType().type().typeClassName
+        } else if (nullableType() != null) {
+            val nullableTypeContext = nullableType()
+            if (nullableTypeContext.typeReference() != null) {
+                nullableTypeContext.typeReference().typeClassName
+            } else if (nullableTypeContext.parenthesizedType() != null) {
+                nullableTypeContext.parenthesizedType().type().typeClassName
+            } else {
+                throw parserException
+            }
+        } else if (typeReference() != null) {
+            typeReference().typeClassName
+        } else {
+            throw parserException
+        }
+    }
+
 val KotlinParser.TypeContext.usedTypeArguments: List<String>
     get() {
         val result = ArrayList<String>()

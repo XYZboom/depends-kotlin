@@ -4,7 +4,9 @@ import depends.entity.*
 import depends.entity.repo.EntityRepo
 import depends.extractor.java.JavaHandlerContext
 import depends.extractor.kotlin.KotlinParser.ClassParameterContext
+import depends.extractor.kotlin.KotlinParser.ReceiverTypeContext
 import depends.extractor.kotlin.utils.typeClassName
+import depends.extractor.kotlin.utils.usedTypeArguments
 import depends.relations.IBindingResolver
 import io.github.oshai.kotlinlogging.KotlinLogging
 import java.io.File
@@ -13,6 +15,15 @@ private val logger = KotlinLogging.logger {}
 
 class KotlinHandlerContext(entityRepo: EntityRepo, bindingResolver: IBindingResolver) :
     JavaHandlerContext(entityRepo, bindingResolver) {
+
+    val currentExtensionsContainer: IKotlinExtensionsContainer
+        get() {
+            for (i in entityStack.indices.reversed()) {
+                val t = entityStack[i]
+                if (t is IKotlinExtensionsContainer) return t
+            }
+            return currentTopLevelType
+        }
 
     val currentProperty: KotlinPropertyEntity?
         get() {
@@ -32,6 +43,7 @@ class KotlinHandlerContext(entityRepo: EntityRepo, bindingResolver: IBindingReso
         )
         addToRepo(result)
         currentFileEntity.addType(result)
+        currentFileEntity.getAncestorOfType(PackageEntity::class.java).addChild(result)
         result
     }
 
@@ -56,20 +68,39 @@ class KotlinHandlerContext(entityRepo: EntityRepo, bindingResolver: IBindingReso
     }
 
     override fun foundMethodDeclarator(methodName: String, startLine: Int): FunctionEntity {
+        return foundMethodDeclarator(methodName, startLine, null)
+    }
+
+    fun foundMethodDeclarator(methodName: String, startLine: Int, receiverType: ReceiverTypeContext?): FunctionEntity {
         val currentType = currentType()
-        return if (currentType !is FileEntity) {
+        val functionEntity = if (currentType !is FileEntity) {
             super.foundMethodDeclarator(methodName, startLine)
         } else {
             val functionEntity = super.foundMethodDeclarator(methodName, startLine)
             currentTopLevelType.addFunction(functionEntity)
             functionEntity
         }
+        if (receiverType != null) {
+            functionEntity.addParameter(
+                VarEntity(
+                    GenericName.build("this"),
+                    GenericName.build(receiverType.typeClassName),
+                    functionEntity,
+                    entityRepo.generateId()
+                ).apply {
+                    receiverType.typeModifiers()?.usedTypeArguments?.map(GenericName::build)
+                        ?.let { addAnnotations(it) }
+                }
+            )
+            currentExtensionsContainer.setFunctionIsExtension(functionEntity)
+        }
+        return functionEntity
     }
 
     fun foundNewDelegation(delegationExpression: KotlinExpression) {
         val currentType = currentType()
         if (currentType is KotlinTypeEntity) {
-            delegationExpression.deducedTypeDelegates.add(currentType)
+            delegationExpression.addDeducedDelegate(currentType)
         } else {
             logger.warn { "currentType should be ${KotlinTypeEntity::class.simpleName}" }
         }
@@ -141,7 +172,7 @@ class KotlinHandlerContext(entityRepo: EntityRepo, bindingResolver: IBindingReso
             hasSetter
         )
         if (expressionContext != null) {
-            val newExpression = KotlinExpression(entityRepo.generateId())
+            val newExpression = KotlinExpression(entityRepo.generateId(), currentExtensionsContainer)
             lastContainer().addExpression(ctx, newExpression)
             newExpression.text = ctx.text
             newExpression.setStart(ctx.start.startIndex)

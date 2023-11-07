@@ -85,7 +85,7 @@ class ExpressionUsage(
         ) {
             parent
         } else {
-            val newExpression = KotlinExpression(idGenerator.generateId())
+            val newExpression = KotlinExpression(idGenerator.generateId(), context.currentExtensionsContainer)
             context.lastContainer().addExpression(ctx, newExpression)
             newExpression.parent = parent
             newExpression.text = ctx.text
@@ -168,6 +168,8 @@ class ExpressionUsage(
                     } else {
                         expression.setIdentifier(name)
                     }
+                } else if (ctx.stringLiteral() != null) {
+                    expression.rawType = GenericName.build("String")
                 }
             }
 

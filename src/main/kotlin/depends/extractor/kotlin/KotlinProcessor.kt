@@ -5,7 +5,9 @@ import depends.entity.repo.BuiltInType
 import depends.extractor.AbstractLangProcessor
 import depends.extractor.FileParser
 import depends.extractor.java.JavaImportLookupStrategy
+import depends.relations.IBindingResolver
 import depends.relations.ImportLookupStrategy
+import depends.relations.KotlinBindingResolver
 
 class KotlinProcessor : AbstractLangProcessor() {
     override fun supportedLanguage(): String {
@@ -33,22 +35,27 @@ class KotlinProcessor : AbstractLangProcessor() {
         return false
     }
 
-    override fun supportedRelations(): List<String> {
-        val depedencyTypes = ArrayList<String>()
-        depedencyTypes.add(DependencyType.IMPORT)
-        depedencyTypes.add(DependencyType.CONTAIN)
-        depedencyTypes.add(DependencyType.IMPLEMENT)
-        depedencyTypes.add(DependencyType.INHERIT)
-        depedencyTypes.add(DependencyType.CALL)
-        depedencyTypes.add(DependencyType.PARAMETER)
-        depedencyTypes.add(DependencyType.RETURN)
-        depedencyTypes.add(DependencyType.SET)
-        depedencyTypes.add(DependencyType.CREATE)
-        depedencyTypes.add(DependencyType.USE)
-        depedencyTypes.add(DependencyType.DELEGATE)
-        depedencyTypes.add(DependencyType.CAST)
-        depedencyTypes.add(DependencyType.THROW)
-        depedencyTypes.add(DependencyType.ANNOTATION)
-        return depedencyTypes
+    override fun supportedRelations(): List<String> = listOf(
+        DependencyType.IMPORT,
+        DependencyType.CONTAIN,
+        DependencyType.IMPLEMENT,
+        DependencyType.INHERIT,
+        DependencyType.CALL,
+        DependencyType.PARAMETER,
+        DependencyType.RETURN,
+        DependencyType.SET,
+        DependencyType.CREATE,
+        DependencyType.USE,
+        DependencyType.DELEGATE,
+        DependencyType.CAST,
+        DependencyType.THROW,
+        DependencyType.ANNOTATION,
+    )
+
+    override fun createBindingResolver(
+        isCollectUnsolvedBindings: Boolean,
+        isDuckTypingDeduce: Boolean,
+    ): IBindingResolver {
+        return KotlinBindingResolver(this, isCollectUnsolvedBindings, isDuckTypingDeduce)
     }
 }

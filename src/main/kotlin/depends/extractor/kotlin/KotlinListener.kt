@@ -198,24 +198,19 @@ class KotlinListener(
     override fun enterFunctionDeclaration(ctx: FunctionDeclarationContext) {
         val type = ctx.type()
         val usedAnnotationNames = ctx.modifiers()?.usedAnnotationNames?.map(GenericName::build)
-        if (ctx.receiverType() == null) {
-            val funcName = ctx.simpleIdentifier().text
-            val functionEntity = context.foundMethodDeclarator(funcName, ctx.start.line)
-            handleFunctionParameter(functionEntity, ctx.functionValueParameters())
-            if (type != null) {
-                functionEntity.addReturnType(GenericName.build(type.typeClassName))
-            }
-            usedAnnotationNames?.let { functionEntity.addAnnotations(it) }
-        } else {
-            logReceiverTypeNotSupport()
+        val receiverType = ctx.receiverType()
+        val funcName = ctx.simpleIdentifier().text
+        val functionEntity = context.foundMethodDeclarator(funcName, ctx.start.line, receiverType)
+        handleFunctionParameter(functionEntity, ctx.functionValueParameters())
+        if (type != null) {
+            functionEntity.addReturnType(GenericName.build(type.typeClassName))
         }
+        usedAnnotationNames?.let { functionEntity.addAnnotations(it) }
         super.enterFunctionDeclaration(ctx)
     }
 
     override fun exitFunctionDeclaration(ctx: FunctionDeclarationContext) {
-        if (ctx.receiverType() == null) {
-            exitLastEntity()
-        }
+        exitLastEntity()
         super.exitFunctionDeclaration(ctx)
     }
 
@@ -402,7 +397,7 @@ class KotlinListener(
         variableDeclaration: KotlinParser.VariableDeclarationContext,
         ctx: KotlinParser.PropertyDeclarationContext,
     ): VarEntity {
-        val newExpression = KotlinExpression(entityRepo.generateId())
+        val newExpression = KotlinExpression(entityRepo.generateId(), context.currentExtensionsContainer)
         context.lastContainer().addExpression(ctx, newExpression)
         newExpression.text = ctx.text
         newExpression.setStart(ctx.start.startIndex)

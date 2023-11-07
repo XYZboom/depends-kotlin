@@ -88,7 +88,7 @@ class InheritTest : KotlinParserTest() {
                 assertEquals("ParentInherit3", relation.entity.rawName.name)
             } else {
                 assertTrue(relation.entity.rawName.name == "InterfaceInherit3"
-                        || relation.entity.rawName.name == "built-in")
+                        || relation.entity.rawName.name == "Runnable")
             }
         }
     }
