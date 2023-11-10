@@ -61,6 +61,54 @@ class CallExpressionTest : KotlinParserTest() {
     }
 
     @Test
+    fun shouldHandleCallWithReverseInputSuccess0() {
+        // see fixme in depends.extractor.kotlin.context.ExpressionUsage
+        val src0 = "./src/test/resources/kotlin-code-examples/expression/call/call0/ProviderCall0.kt"
+        val src1 = "./src/test/resources/kotlin-code-examples/expression/call/call0/TestCall0.kt"
+        val parser = createParser()
+        // reverse input
+        parser.parse(src1)
+        parser.parse(src0)
+        resolveAllBindings()
+        run {
+            val relations = entityRepo.getEntity("${myPackageName}0.TestCall0.test0").relations
+            assertEquals(
+                setOf(
+                    DependencyType.CALL, DependencyType.USE,
+                    DependencyType.CONTAIN, DependencyType.CREATE
+                ),
+                relations.map { it.type }.toSet()
+            )
+            for (relation in relations) {
+                when (relation.type) {
+                    DependencyType.CALL -> {
+                        assertTrue(
+                            relation.entity.rawName.name == "func0"
+                                    || relation.entity.rawName.name == "func1"
+                                    || relation.entity.rawName.name == "ProviderCall0"
+                        )
+                    }
+
+                    DependencyType.USE -> {
+                        assertTrue(
+                            relation.entity.rawName.name == "providerCall0"
+                                    || relation.entity.rawName.name == "ProviderCall0"
+                        )
+                    }
+
+                    DependencyType.CONTAIN -> {
+                        assertEquals("ProviderCall0", relation.entity.rawName.name)
+                    }
+
+                    DependencyType.CREATE -> {
+                        assertEquals("ProviderCall0", relation.entity.rawName.name)
+                    }
+                }
+            }
+        }
+    }
+
+    @Test
     fun shouldHandleContinuousCallSuccess1() {
         val src0 = "./src/test/resources/kotlin-code-examples/expression/call/call1/ProviderCall1.kt"
         val src1 = "./src/test/resources/kotlin-code-examples/expression/call/call1/TestCall1.kt"

@@ -160,6 +160,7 @@ class ExpressionUsage(
             is PrimaryExpressionContext -> {
                 if (ctx.simpleIdentifier() != null) {
                     val name = ctx.simpleIdentifier().text
+                    // FIXME 在此处推导表达式时，类型系统尚未构建完毕
                     val typeEntity = context.foundEntityWithName(GenericName.build(name))
                     if (typeEntity is TypeEntity && typeEntity.id > 0) {
                         expression.isCreate = true
