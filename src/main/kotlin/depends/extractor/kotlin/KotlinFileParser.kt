@@ -12,28 +12,34 @@ import org.antlr.v4.runtime.Lexer
 import org.antlr.v4.runtime.atn.LexerATNSimulator
 import org.antlr.v4.runtime.atn.ParserATNSimulator
 import org.antlr.v4.runtime.atn.PredictionContextCache
+import org.antlr.v4.runtime.tree.ParseTreeListener
 import org.antlr.v4.runtime.tree.ParseTreeWalker
 import java.io.IOException
 
 class KotlinFileParser(entityRepo: EntityRepo?, bindingResolver: IBindingResolver) : FileParser() {
+
     @Throws(IOException::class)
-    override fun parseFile(fileFullPath: String) {
-        val input = CharStreams.fromFileName(fileFullPath)
-        if (fileFullPath.endsWith(".kt")) {
+    override fun parseFile(filePath: String, extraListeners: MutableList<ParseTreeListener>) {
+        val input = CharStreams.fromFileName(filePath)
+        if (filePath.endsWith(".kt")) {
             val lexer: Lexer = KotlinLexer(input)
             val tokens = CommonTokenStream(lexer)
             val parser = KotlinParser(tokens)
-            val bridge = KotlinListener(fileFullPath, entityRepo, bindingResolver)
+            val bridge = KotlinListener(filePath, entityRepo, bindingResolver)
             val walker = ParseTreeWalker()
-            walker.walk(bridge, parser.kotlinFile())
-        } else if (fileFullPath.endsWith(".java")) {
+            val kotlinFileContext = parser.kotlinFile()
+            walker.walk(bridge, kotlinFileContext)
+            extraListeners.forEach {
+                walker.walk(it, kotlinFileContext)
+            }
+        } else if (filePath.endsWith(".java")) {
             val lexer: Lexer = JavaLexer(input)
             lexer.interpreter = LexerATNSimulator(lexer, lexer.atn, lexer.interpreter.decisionToDFA, PredictionContextCache())
             val tokens = CommonTokenStream(lexer)
             val parser = JavaParser(tokens)
             val interpreter = ParserATNSimulator(parser, parser.atn, parser.interpreter.decisionToDFA, PredictionContextCache())
             parser.interpreter = interpreter
-            val bridge = JavaListener(fileFullPath, entityRepo, bindingResolver)
+            val bridge = JavaListener(filePath, entityRepo, bindingResolver)
             val walker = ParseTreeWalker()
             try {
                 walker.walk(bridge, parser.compilationUnit())
