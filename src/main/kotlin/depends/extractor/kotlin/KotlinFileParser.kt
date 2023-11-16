@@ -42,7 +42,11 @@ class KotlinFileParser(entityRepo: EntityRepo?, bindingResolver: IBindingResolve
             val bridge = JavaListener(filePath, entityRepo, bindingResolver)
             val walker = ParseTreeWalker()
             try {
-                walker.walk(bridge, parser.compilationUnit())
+                val compilationUnit = parser.compilationUnit()
+                walker.walk(bridge, compilationUnit)
+                extraListeners.forEach {
+                    walker.walk(it, compilationUnit)
+                }
                 interpreter.clearDFA()
             } catch (e: Exception) {
                 System.err.println("error encountered during parse...")
