@@ -25,18 +25,15 @@ class KotlinDelegateTest : KotlinParserTest() {
         val relations = entityRepo.getEntity("${myPackageName}0.DelegateUser0").relations
         assertEquals(
             setOf(
-                DependencyType.CALL,
                 DependencyType.IMPLEMENT,
                 DependencyType.DELEGATE,
                 DependencyType.CREATE,
-                DependencyType.USE
             ),
             relations.map { it.type }.toSet()
         )
         for (relation in relations) {
             when (relation.type) {
-                DependencyType.CALL, DependencyType.DELEGATE, DependencyType.CREATE,
-                DependencyType.USE,
+                DependencyType.DELEGATE, DependencyType.CREATE,
                 -> assertEquals("DelegateProvider0", relation.entity.rawName.name)
 
                 DependencyType.IMPLEMENT -> {

@@ -4,6 +4,7 @@ import depends.deptypes.DependencyType
 import depends.extractor.kotlin.KotlinParserTest
 import depends.extractor.kotlin.packageName
 import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 
@@ -32,22 +33,23 @@ class AsExpressionTest : KotlinParserTest() {
         }
         run {
             val relationsUserAs0 = entityRepo.getEntity("${myPackageName}0.UserAs0.func").relations
-            assertEquals(4, relationsUserAs0.size)
+            assertEquals(2, relationsUserAs0.size)
             assertEquals(
-                setOf(
-                    DependencyType.CALL, DependencyType.CAST,
-                    DependencyType.CREATE, DependencyType.USE,
-                ),
+                setOf(DependencyType.CAST, DependencyType.CREATE),
                 relationsUserAs0.map { it.type }.toSet()
             )
             for (relation in relationsUserAs0) {
                 when (relation.type) {
-                    DependencyType.CALL, DependencyType.USE, DependencyType.CREATE -> {
+                    DependencyType.CREATE -> {
                         assertEquals("ChildAs0", relation.entity.rawName.name)
                     }
 
                     DependencyType.CAST -> {
                         assertEquals("ProviderAs0", relation.entity.rawName.name)
+                    }
+
+                    else -> {
+                        assertTrue(false, "relations should not has type: ${relation.type}")
                     }
                 }
             }

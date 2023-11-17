@@ -157,10 +157,11 @@ class ExpressionUsage(
             }
 
             is PrimaryExpressionContext -> {
-                if (ctx.simpleIdentifier() != null) {
+                if (ctx.simpleIdentifier() != null && (expression !is KotlinExpression || !expression.identifierPushedToParent)) {
                     val name = ctx.simpleIdentifier().text
                     // 在此处推导表达式时，类型系统尚未构建完毕，在框架中进行延迟推导，此处仅设置标识符
                     expression.setIdentifier(name)
+                    tryPushIdentifierToParent(expression)
                 } else if (ctx.stringLiteral() != null) {
                     expression.rawType = GenericName.build("String")
                 }
@@ -192,28 +193,32 @@ class ExpressionUsage(
         if (navigationSuffix?.simpleIdentifier() != null) {
             expression.setIdentifier(navigationSuffix.simpleIdentifier().text)
         }
+        tryPushIdentifierToParent(expression)
+    }
+
+    /**
+     * 由于函数的调用延迟发生，例如表达式a.foo()解析为
+     *              a.foo()
+     *              |     \
+     *           a.foo     ()
+     *           |    \
+     *           a    .foo
+     * 生成的表达式树如下
+     *          a.foo()
+     *             |
+     *          a.foo
+     *            |
+     *            a
+     * 类型推导至a.foo时才能解析a.foo中foo的标识符为foo，此时上推标识符到父表达式
+     */
+    private fun tryPushIdentifierToParent(expression: Expression) {
         val parent = expression.parent
-        if (parent?.isCall == true && parent.text == "${expression.text}()") {
-            /**
-             * 由于函数的调用延迟发生，例如表达式a.foo()解析为
-             *              a.foo()
-             *              |     \
-             *           a.foo   ()
-             *           |         \
-             *           a        .foo
-             * 生成的表达式树如下
-             *          a.foo()
-             *             |
-             *          a.foo
-             *            |
-             *            a
-             * 类型推导至a.foo时，应当将a.foo视为函数调用，
-             * 同时推导a.foo()的类型，并且a.foo()不能视为函数调用
-             * 否则a.foo()的类型(此处假设为MyType型)会被视为对MyType的函数调用
-             */
-            // TODO 对函数对象的调用；调用运算符重载
-            expression.isCall = true
-            expression.parent.isCall = false
+        if (parent?.isCall == true && expression.identifier != null && parent.identifier == null) {
+            if (expression is KotlinExpression) {
+                expression.identifierPushedToParent = true
+            }
+            parent.identifier = expression.identifier
+            expression.setIdentifierToNull()
         }
     }
 }

@@ -8,6 +8,7 @@ class KotlinExpression(
     @Transient
     private var myContainer: IKotlinExtensionsContainer? = null,
 ) : Expression(id) {
+    internal var identifierPushedToParent = false
     @Transient
     private var deducedTypeDelegates: ArrayList<KotlinTypeEntity>? = ArrayList()
     private val deducedTypeDelegateIds = ArrayList<Int>()
