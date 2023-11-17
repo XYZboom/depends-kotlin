@@ -62,7 +62,6 @@ class CallExpressionTest : KotlinParserTest() {
 
     @Test
     fun shouldHandleCallWithReverseInputSuccess0() {
-        // see fixme in depends.extractor.kotlin.context.ExpressionUsage
         val src0 = "./src/test/resources/kotlin-code-examples/expression/call/call0/ProviderCall0.kt"
         val src1 = "./src/test/resources/kotlin-code-examples/expression/call/call0/TestCall0.kt"
         val parser = createParser()

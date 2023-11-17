@@ -3,7 +3,6 @@ package depends.extractor.kotlin.context
 import depends.entity.Expression
 import depends.entity.GenericName
 import depends.entity.KotlinExpression
-import depends.entity.TypeEntity
 import depends.entity.repo.EntityRepo
 import depends.entity.repo.IdGenerator
 import depends.extractor.kotlin.KotlinHandlerContext
@@ -160,15 +159,8 @@ class ExpressionUsage(
             is PrimaryExpressionContext -> {
                 if (ctx.simpleIdentifier() != null) {
                     val name = ctx.simpleIdentifier().text
-                    // FIXME 在此处推导表达式时，类型系统尚未构建完毕
-                    val typeEntity = context.foundEntityWithName(GenericName.build(name))
-                    if (typeEntity is TypeEntity && typeEntity.id > 0) {
-                        expression.isCreate = true
-                        expression.setType(typeEntity.type, typeEntity, bindingResolver)
-                        expression.rawType = typeEntity.rawName
-                    } else {
-                        expression.setIdentifier(name)
-                    }
+                    // 在此处推导表达式时，类型系统尚未构建完毕，在框架中进行延迟推导，此处仅设置标识符
+                    expression.setIdentifier(name)
                 } else if (ctx.stringLiteral() != null) {
                     expression.rawType = GenericName.build("String")
                 }

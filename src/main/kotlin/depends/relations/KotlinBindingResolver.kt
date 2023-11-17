@@ -11,6 +11,10 @@ class KotlinBindingResolver(
     isDuckTypingDeduce: Boolean,
 ) : BindingResolver(langProcessor, isCollectUnsolvedBindings, isDuckTypingDeduce) {
 
+    override fun isDelayHandleCreateExpression(): Boolean {
+        return true
+    }
+
     private val builtInTypes = HashMap<GenericName, TypeEntity>()
 
     override fun resolveName(fromEntity: Entity?, rawName: GenericName?, searchImport: Boolean): Entity? {
