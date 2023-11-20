@@ -9,9 +9,9 @@ private val logger = KotlinLogging.logger {}
 class KotlinTypeEntity(
     simpleName: GenericName,
     parent: Entity?,
-    override val id: Int,
+    id: Int,
 ) : TypeEntity(simpleName, parent, id), Serializable, IKotlinJvmEntity,
-    IDelegateProviderType, IKotlinExtensionsContainer {
+    IDelegateProviderType, IExtensionContainer {
 
     private companion object {
         @JvmStatic
@@ -40,10 +40,6 @@ class KotlinTypeEntity(
 
     override fun getDelegateProviderType(): TypeEntity? {
         return delegateProviderType
-    }
-
-    override fun setFunctionIsExtension(functionEntity: FunctionEntity) {
-        extensionMap[functionEntity] = Companion
     }
 
     private fun isExtension(it: Entity, type: TypeEntity): Boolean {
@@ -83,8 +79,10 @@ class KotlinTypeEntity(
         return null
     }
 
-    override fun lookupExtensionFunctionInVisibleScope(
+    /*override fun lookupExtensionFunctionInVisibleScope(
         type: TypeEntity,
         genericName: GenericName,
-    ): FunctionEntity? = lookupExtensionFunctionInVisibleScope(type, genericName, true)
+    ): FunctionEntity? {
+        return lookupExtensionFunctionInVisibleScope(type, genericName, true)
+    }*/
 }

@@ -1,0 +1,3 @@
+package extension.function.function1
+
+class MyClassExtFunc1

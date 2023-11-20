@@ -16,11 +16,11 @@ private val logger = KotlinLogging.logger {}
 class KotlinHandlerContext(entityRepo: EntityRepo, bindingResolver: IBindingResolver) :
     JavaHandlerContext(entityRepo, bindingResolver) {
 
-    val currentExtensionsContainer: IKotlinExtensionsContainer
+    val currentExtensionsContainer: IExtensionContainer
         get() {
             for (i in entityStack.indices.reversed()) {
                 val t = entityStack[i]
-                if (t is IKotlinExtensionsContainer) return t
+                if (t is IExtensionContainer) return t
             }
             return currentTopLevelType
         }
@@ -92,7 +92,7 @@ class KotlinHandlerContext(entityRepo: EntityRepo, bindingResolver: IBindingReso
                         ?.let { addAnnotations(it) }
                 }
             )
-            currentExtensionsContainer.setFunctionIsExtension(functionEntity)
+            functionEntity.isExtension = true
         }
         return functionEntity
     }

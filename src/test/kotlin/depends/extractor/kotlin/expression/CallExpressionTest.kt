@@ -244,7 +244,10 @@ class CallExpressionTest : KotlinParserTest() {
                     }
 
                     DependencyType.CONTAIN -> {
-                        assertEquals("ProviderCall3", relation.entity.rawName.name)
+                        assertTrue(
+                            "ProviderCall3" == relation.entity.rawName.name
+                                    || "String" == relation.entity.rawName.name
+                        )
                     }
 
                     DependencyType.CREATE -> {

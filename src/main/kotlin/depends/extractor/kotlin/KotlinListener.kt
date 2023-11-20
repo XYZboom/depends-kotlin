@@ -226,7 +226,8 @@ class KotlinListener(
 
     override fun exitPropertyDeclaration(ctx: KotlinParser.PropertyDeclarationContext) {
         val currentType = context.currentType()
-        if (currentType is KotlinTypeEntity) {
+        val currentFunction = context.currentFunction()
+        if (currentType is KotlinTypeEntity && currentFunction == null) {
             exitLastEntity()
         }
         super.exitPropertyDeclaration(ctx)

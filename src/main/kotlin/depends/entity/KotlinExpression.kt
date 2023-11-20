@@ -6,7 +6,7 @@ import depends.relations.IBindingResolver
 class KotlinExpression(
     id: Int,
     @Transient
-    private var myContainer: IKotlinExtensionsContainer? = null,
+    private var myContainer: IExtensionContainer? = null,
 ) : Expression(id) {
     internal var identifierPushedToParent = false
     @Transient
@@ -32,7 +32,7 @@ class KotlinExpression(
             }
         }
         if (myContainerId != null) {
-            myContainer = repo.getEntity(myContainerId) as? IKotlinExtensionsContainer
+            myContainer = repo.getEntity(myContainerId) as? IExtensionContainer
         }
     }
 

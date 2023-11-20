@@ -33,4 +33,6 @@ class KotlinBindingResolver(
         }
         return superResult
     }
+
+    override fun allowExtensions(): Boolean = true
 }
