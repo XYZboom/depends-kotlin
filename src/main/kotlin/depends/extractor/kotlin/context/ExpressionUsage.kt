@@ -219,6 +219,9 @@ class ExpressionUsage(
             }
             parent.identifier = expression.identifier
             expression.setIdentifierToNull()
+            if (expression.isDot) {
+                parent.isDot = true
+            }
         }
     }
 }

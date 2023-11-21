@@ -9,6 +9,8 @@ class KotlinExpression(
     private var myContainer: IExtensionContainer? = null,
 ) : Expression(id) {
     internal var identifierPushedToParent = false
+    internal var typePushedFromChild: TypeEntity? = null
+
     @Transient
     private var deducedTypeDelegates: ArrayList<KotlinTypeEntity>? = ArrayList()
     private val deducedTypeDelegateIds = ArrayList<Int>()
@@ -47,41 +49,44 @@ class KotlinExpression(
     }
 
     override fun deduceTheParentType(bindingResolver: IBindingResolver) {
-        if (type == null) return
-        if (parent == null) return
         val parent = parent
-        if (parent.type != null) return
-        if (!parent.deriveTypeFromChild) return
-        // parent's type depends on first child's type
-        if (parent.deduceTypeBasedId != id) return
+        if (!identifierPushedToParent) {
+            if (type == null) return
+            if (parent == null) return
+            if (parent.type != null) return
+            if (!parent.deriveTypeFromChild) return
+            // parent's type depends on first child's type
+            if (parent.deduceTypeBasedId != id) return
 
-        // if child is a built-in/external type, then parent must also a built-in/external type.
-        // in kotlin or c# expression must not be TypeEntity.buildInType in order to
-        // handle extension functions.
-        if (type === TypeEntity.buildInType) {
-            parent.setType(TypeEntity.buildInType, TypeEntity.buildInType, bindingResolver)
-            return
+            // if child is a built-in/external type, then parent must also a built-in/external type.
+            // in kotlin or c# expression must not be TypeEntity.buildInType in order to
+            // handle extension functions.
+            if (type === TypeEntity.buildInType) {
+                parent.setType(TypeEntity.buildInType, TypeEntity.buildInType, bindingResolver)
+                return
+            }
         }
 
         /* if it is a logic expression, the return type/type is boolean. */
         if (parent.isLogic) {
             parent.setType(TypeEntity.buildInType, null, bindingResolver)
         } else if (parent.isDot) {
-            if (parent.isCall) {
-                val funcs = type.lookupFunctionInVisibleScope(parent.identifier) ?: ArrayList<Entity>()
-                if (myContainer != null) {
-                    val extensionFunction = myContainer!!.lookupExtensionFunctionInVisibleScope(type, parent.identifier)
-                    extensionFunction?.let {  funcs.add(it) }
-                }
-                parent.setReferredFunctions(bindingResolver, funcs)
+            if (parent is KotlinExpression && parent.identifierPushedToParent) {
+                parent.typePushedFromChild = type
+                parent.deduceTheParentType(bindingResolver)
+                return
+            }
+            /*if (parent.parent?.isCall == true) {
+                parent.setType(type, null, bindingResolver)
+            } else */if (parent.isCall) {
+                deduceParentIsFuncCall(parent, bindingResolver)
             } else {
                 val variable = type.lookupVarInVisibleScope(parent.identifier)
                 if (variable != null) {
                     parent.setType(variable.type, variable, bindingResolver)
                     parent.referredEntity = variable
                 } else {
-                    val funcs = type.lookupFunctionInVisibleScope(parent.identifier)
-                    parent.setReferredFunctions(bindingResolver, funcs)
+                    deduceParentIsFuncCall(parent, bindingResolver)
                 }
             }
             if (parent.type == null) {
@@ -91,5 +96,15 @@ class KotlinExpression(
             parent.setType(type, null, bindingResolver)
         }
         if (parent.referredEntity == null) parent.referredEntity = parent.type
+    }
+
+    private fun deduceParentIsFuncCall(parent: Expression, bindingResolver: IBindingResolver) {
+        val typeNow = (type ?: typePushedFromChild)!!
+        val funcs = typeNow.lookupFunctionInVisibleScope(parent.identifier) ?: ArrayList<Entity>()
+        if (myContainer != null) {
+            val extensionFunction = myContainer!!.lookupExtensionFunctionInVisibleScope(typeNow, parent.identifier, true)
+            extensionFunction?.let { funcs.add(it) }
+        }
+        parent.setReferredFunctions(bindingResolver, funcs)
     }
 }

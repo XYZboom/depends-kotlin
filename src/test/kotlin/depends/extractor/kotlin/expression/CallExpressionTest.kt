@@ -26,7 +26,8 @@ class CallExpressionTest : KotlinParserTest() {
             val relations = entityRepo.getEntity("${myPackageName}0.TestCall0.test0").relations
             assertEquals(
                 setOf(
-                    DependencyType.USE, DependencyType.CONTAIN, DependencyType.CREATE
+                    DependencyType.USE, DependencyType.CALL,
+                    DependencyType.CONTAIN, DependencyType.CREATE
                 ),
                 relations.map { it.type }.toSet()
             )
@@ -72,7 +73,7 @@ class CallExpressionTest : KotlinParserTest() {
             val relations = entityRepo.getEntity("${myPackageName}0.TestCall0.test0").relations
             assertEquals(
                 setOf(
-                    DependencyType.USE,
+                    DependencyType.USE, DependencyType.CALL,
                     DependencyType.CONTAIN, DependencyType.CREATE
                 ),
                 relations.map { it.type }.toSet()
@@ -122,7 +123,7 @@ class CallExpressionTest : KotlinParserTest() {
             val relations = entityRepo.getEntity("${myPackageName}1.TestCall1.test0").relations
             assertEquals(
                 setOf(
-                    DependencyType.USE,
+                    DependencyType.USE, DependencyType.CALL,
                     DependencyType.CONTAIN, DependencyType.CREATE
                 ),
                 relations.map { it.type }.toSet()
@@ -174,7 +175,7 @@ class CallExpressionTest : KotlinParserTest() {
             val relations = entityRepo.getEntity("${myPackageName}2.TestCall2.test0").relations
             assertEquals(
                 setOf(
-                    DependencyType.USE,
+                    DependencyType.USE, DependencyType.CALL,
                     DependencyType.CONTAIN, DependencyType.CREATE
                 ),
                 relations.map { it.type }.toSet()
@@ -222,7 +223,7 @@ class CallExpressionTest : KotlinParserTest() {
             val relations = entityRepo.getEntity("${myPackageName}3.TestCall3.test0").relations
             assertEquals(
                 setOf(
-                    DependencyType.USE,
+                    DependencyType.USE, DependencyType.CALL,
                     DependencyType.CONTAIN, DependencyType.CREATE
                 ),
                 relations.map { it.type }.toSet()

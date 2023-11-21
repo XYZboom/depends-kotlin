@@ -50,39 +50,4 @@ class KotlinTypeEntity(
         return extensionMap.contains(it)
     }
 
-    private fun lookupExtensionFunctionInVisibleScope(
-        type: TypeEntity,
-        genericName: GenericName,
-        searchPackage: Boolean,
-    ): FunctionEntity? {
-        val functionsInVisibleScope = lookupFunctionInVisibleScope(genericName)
-        val function = functionsInVisibleScope?.first()
-        if (functionsInVisibleScope != null
-            && function is FunctionEntity
-            && isExtension(function, type)
-        ) {
-            return function
-        }
-        if (searchPackage) {
-            getAncestorOfType(PackageEntity::class.java).children.forEach {
-                if (it !is KotlinTypeEntity) return@forEach
-                if (it === this) return@forEach
-
-                val functionEntity = it.lookupExtensionFunctionInVisibleScope(
-                    type, genericName, false
-                )
-                if (functionEntity != null) {
-                    return functionEntity
-                }
-            }
-        }
-        return null
-    }
-
-    /*override fun lookupExtensionFunctionInVisibleScope(
-        type: TypeEntity,
-        genericName: GenericName,
-    ): FunctionEntity? {
-        return lookupExtensionFunctionInVisibleScope(type, genericName, true)
-    }*/
 }
