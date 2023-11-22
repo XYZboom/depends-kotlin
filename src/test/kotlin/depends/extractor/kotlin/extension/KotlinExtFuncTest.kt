@@ -86,4 +86,36 @@ class KotlinExtFuncTest : KotlinParserTest() {
             }
         }
     }
+
+    @Test
+    fun shouldHandleBuiltInExtFuncSuccess2() {
+        val srcs = arrayOf(
+            "./src/test/resources/kotlin-code-examples/extension/function/function2/ProviderExtFunc2.kt",
+            "./src/test/resources/kotlin-code-examples/extension/function/function2/UserExtFunc2.kt",
+        )
+        val parser = createParser()
+        srcs.forEach {
+            parser.parse(it)
+        }
+        resolveAllBindings()
+        val relations = entityRepo.getEntity("${myPackageName}2.UserExtFunc2.test").relations
+        assertEquals(DependencyType.CALL, relations[0].type)
+        assertEquals("func", relations[0].entity.rawName.name)
+    }
+
+    @Test
+    fun shouldHandleBuiltInExtFuncSuccess3() {
+        val srcs = arrayOf(
+            "./src/test/resources/kotlin-code-examples/extension/function/function3/package0/ProviderExtFunc3.kt",
+            "./src/test/resources/kotlin-code-examples/extension/function/function3/package1/UserExtFunc3.kt",
+        )
+        val parser = createParser()
+        srcs.forEach {
+            parser.parse(it)
+        }
+        resolveAllBindings()
+        val relations = entityRepo.getEntity("${myPackageName}3.package1.UserExtFunc3.test").relations
+        assertEquals(DependencyType.CALL, relations[0].type)
+        assertEquals("func", relations[0].entity.rawName.name)
+    }
 }
