@@ -76,9 +76,7 @@ class KotlinExpression(
                 parent.deduceTheParentType(bindingResolver)
                 return
             }
-            /*if (parent.parent?.isCall == true) {
-                parent.setType(type, null, bindingResolver)
-            } else */if (parent.isCall) {
+            if (parent.isCall) {
                 deduceParentIsFuncCall(parent, bindingResolver)
             } else {
                 val variable = type.lookupVarInVisibleScope(parent.identifier)
@@ -100,11 +98,27 @@ class KotlinExpression(
 
     private fun deduceParentIsFuncCall(parent: Expression, bindingResolver: IBindingResolver) {
         val typeNow = (type ?: typePushedFromChild)!!
-        val funcs = typeNow.lookupFunctionInVisibleScope(parent.identifier) ?: ArrayList<Entity>()
-        if (myContainer != null) {
-            val extensionFunction = myContainer!!.lookupExtensionFunctionInVisibleScope(typeNow, parent.identifier, true)
+        val funcs = typeNow.lookupFunctionInVisibleScope(parent.identifier)
+        if (myContainer != null && funcs.isEmpty()) {
+            val extensionFunction =
+                myContainer!!.lookupExtensionFunctionInVisibleScope(typeNow, parent.identifier, true)
             extensionFunction?.let { funcs.add(it) }
         }
+        if (funcs.isEmpty()) {
+            val mayBeFunction = bindingResolver.resolveName(null, parent.identifier, false)
+            if (mayBeFunction is FunctionEntity) {
+                if (mayBeFunction.isExtensionOfType(typeNow)) {
+                    funcs.add(mayBeFunction)
+                }
+            }
+        }
         parent.setReferredFunctions(bindingResolver, funcs)
+    }
+
+    override fun setReferredFunctions(bindingResolver: IBindingResolver, funcs: MutableList<Entity>?) {
+        super.setReferredFunctions(bindingResolver, funcs)
+        if (funcs.isNullOrEmpty()) return
+        val func = funcs.first()
+        func.apply {  }
     }
 }

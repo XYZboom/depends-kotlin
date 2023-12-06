@@ -206,6 +206,9 @@ class KotlinListener(
             functionEntity.addReturnType(GenericName.build(type.typeClassName))
         }
         usedAnnotationNames?.let { functionEntity.addAnnotations(it) }
+        ctx.typeParameters()?.let { typeParameters ->
+            handleFunctionTypeParameter(functionEntity, typeParameters)
+        }
         super.enterFunctionDeclaration(ctx)
     }
 
@@ -362,6 +365,16 @@ class KotlinListener(
                 method, entityRepo.generateId()
             )
             method.addParameter(varEntity)
+        }
+    }
+
+    private fun handleFunctionTypeParameter(
+        functionEntity: FunctionEntity,
+        typeParameters: KotlinParser.TypeParametersContext,
+    ) {
+        foundTypeParametersUse(typeParameters)
+        for (typeParameter in typeParameters.typeParameter()) {
+            functionEntity.addTypeParameter(GenericName.build(typeParameter.simpleIdentifier().text))
         }
     }
 

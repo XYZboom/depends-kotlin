@@ -1,6 +1,5 @@
 package depends.extractor.kotlin.context
 
-import depends.entity.Expression
 import depends.entity.GenericName
 import depends.entity.KotlinExpression
 import depends.entity.repo.EntityRepo
@@ -96,7 +95,7 @@ class ExpressionUsage(
         return expression
     }
 
-    private fun tryDeduceExpression(expression: Expression, ctx: ParserRuleContext) {
+    private fun tryDeduceExpression(expression: KotlinExpression, ctx: ParserRuleContext) {
         //如果就是自己，则无需创建新的Expression
         val booleanName = GenericName.build("boolean")
         // 注意kotlin的运算符重载，因此不能推导算术运算的类型
@@ -157,11 +156,11 @@ class ExpressionUsage(
             }
 
             is PrimaryExpressionContext -> {
-                if (ctx.simpleIdentifier() != null && (expression !is KotlinExpression || !expression.identifierPushedToParent)) {
+                if (ctx.simpleIdentifier() != null && !expression.identifierPushedToParent) {
                     val name = ctx.simpleIdentifier().text
                     // 在此处推导表达式时，类型系统尚未构建完毕，在框架中进行延迟推导，此处仅设置标识符
                     expression.setIdentifier(name)
-                    tryPushIdentifierToParent(expression)
+                    tryPushInfoToParent(expression)
                 } else if (ctx.stringLiteral() != null) {
                     expression.rawType = GenericName.build("String")
                 }
@@ -177,7 +176,7 @@ class ExpressionUsage(
         }
     }
 
-    private fun handlePostfixUnary(ctx: PostfixUnaryExpressionContext, expression: Expression) {
+    private fun handlePostfixUnary(ctx: PostfixUnaryExpressionContext, expression: KotlinExpression) {
         val primaryExpression = ctx.primaryExpression()
         val simpleIdentifier = primaryExpression?.simpleIdentifier()
         if (simpleIdentifier != null) {
@@ -185,15 +184,21 @@ class ExpressionUsage(
         }
         val suffix = ctx.postfixUnarySuffix()
         val navigationSuffix = suffix?.navigationSuffix()
+        val typeArguments = suffix?.typeArguments()
         if (suffix?.callSuffix() != null) {
             expression.isCall = true
         } else if (navigationSuffix != null) {
             expression.isDot = true
         }
+        if (typeArguments != null) {
+            for (typeProjection in typeArguments.typeProjection()) {
+                expression.callTypeArguments.add(GenericName.build(typeProjection.type().typeClassName))
+            }
+        }
         if (navigationSuffix?.simpleIdentifier() != null) {
             expression.setIdentifier(navigationSuffix.simpleIdentifier().text)
         }
-        tryPushIdentifierToParent(expression)
+        tryPushInfoToParent(expression)
     }
 
     /**
@@ -211,12 +216,25 @@ class ExpressionUsage(
      *            a
      * 类型推导至a.foo时才能解析a.foo中foo的标识符为foo，此时上推标识符到父表达式
      */
-    private fun tryPushIdentifierToParent(expression: Expression) {
-        val parent = expression.parent
-        if (parent?.isCall == true && expression.identifier != null && parent.identifier == null) {
-            if (expression is KotlinExpression) {
+    private fun tryPushInfoToParent(expression: KotlinExpression) {
+        val parent = expression.parent as? KotlinExpression
+        if (parent != null && parent.callTypeArguments.isNotEmpty()
+            && expression.identifier != null) {
+            val parent2 = parent.parent as? KotlinExpression
+            if (parent2 != null && parent2.identifier == null) {
+                parent2.callTypeArguments.addAll(parent.callTypeArguments)
+                parent.callTypeArguments.clear()
+                parent.identifierPushedToParent = true
                 expression.identifierPushedToParent = true
+                parent2.identifier = expression.identifier
+                expression.setIdentifierToNull()
+                if (expression.isDot) {
+                    parent.isDot = true
+                    parent2.isDot = true
+                }
             }
+        } else if (parent?.isCall == true && expression.identifier != null && parent.identifier == null) {
+            expression.identifierPushedToParent = true
             parent.identifier = expression.identifier
             expression.setIdentifierToNull()
             if (expression.isDot) {
