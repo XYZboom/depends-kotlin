@@ -57,4 +57,34 @@ class KotlinGenericTest : KotlinParserTest() {
 
         }
     }
+
+    @Test
+    fun implicitGenericArgumentCallShouldSuccess2() {
+        val srcFiles = listOf(
+            "./src/test/resources/kotlin-code-examples/generic/generic2/ClassGeneric2.kt",
+            "./src/test/resources/kotlin-code-examples/generic/generic2/ProviderGeneric2.kt",
+            "./src/test/resources/kotlin-code-examples/generic/generic2/UserGeneric2.kt"
+        )
+        val parser = createParser()
+        srcFiles.forEach(parser::parse)
+        resolveAllBindings()
+        val relations = entityRepo.getEntity("${myPackageName}2.userFunc").relations
+        assertEquals(3, relations.size)
+        assertEquals(
+            listOf(DependencyType.CALL, DependencyType.CREATE, DependencyType.RETURN),
+            relations.map { it.type }
+        )
+        for (relation in relations) {
+            when (relation.type) {
+                DependencyType.RETURN, DependencyType.CREATE -> {
+                    assertEquals("ClassGeneric2", relation.entity.rawName.name)
+                }
+
+                DependencyType.CALL -> {
+                    assertEquals("func", relation.entity.rawName.name)
+                }
+            }
+
+        }
+    }
 }

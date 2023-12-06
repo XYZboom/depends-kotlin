@@ -335,4 +335,23 @@ class CallExpressionTest : KotlinParserTest() {
             assertEquals("provider", relations[0].entity.rawName.name)
         }
     }
+
+    @Test
+    fun shouldHandleCallInDifferentContextSuccess7() {
+        val src0 = "./src/test/resources/kotlin-code-examples/expression/call/call7/ProviderCall7.kt"
+        val src1 = "./src/test/resources/kotlin-code-examples/expression/call/call7/UserCall7.kt"
+        val parser = createParser()
+        parser.parse(src0)
+        parser.parse(src1)
+        resolveAllBindings()
+        run {
+            val relations = entityRepo.getEntity("${myPackageName}7.UserCall7.test").relations
+            assertEquals(1, relations.size)
+            assertEquals(
+                DependencyType.CALL,
+                relations[0].type
+            )
+            assertEquals("provider", relations[0].entity.rawName.name)
+        }
+    }
 }

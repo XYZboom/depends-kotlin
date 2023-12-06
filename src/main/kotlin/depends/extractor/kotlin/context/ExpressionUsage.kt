@@ -6,10 +6,14 @@ import depends.entity.repo.EntityRepo
 import depends.entity.repo.IdGenerator
 import depends.extractor.kotlin.KotlinHandlerContext
 import depends.extractor.kotlin.KotlinParser.*
+import depends.extractor.kotlin.utils.parserException
 import depends.extractor.kotlin.utils.typeClassName
 import depends.relations.IBindingResolver
+import io.github.oshai.kotlinlogging.KotlinLogging
 import org.antlr.v4.runtime.ParserRuleContext
 import org.antlr.v4.runtime.RuleContext
+
+private val logger = KotlinLogging.logger {}
 
 class ExpressionUsage(
     private val context: KotlinHandlerContext,
@@ -68,6 +72,33 @@ class ExpressionUsage(
                 || ctx is JumpExpressionContext
     }
 
+
+    /**
+     * @receiver antlr4的规则上下文
+     * @return 当前表达式上下文是否是某个函数调用中的参数传递
+     */
+    private fun RuleContext.isExplicitFunctionArgument(): Boolean {
+        if (this !is ExpressionContext) return false
+        if (parent !is ValueArgumentContext) return false
+        val valueArgumentsContext = parent.parent as ValueArgumentsContext
+        return when (valueArgumentsContext.parent) {
+            is CallSuffixContext -> {
+                true
+            }
+
+            is ConstructorInvocationContext,
+            is ConstructorDelegationCallContext,
+            is EnumEntryContext,
+            -> {
+                false
+            }
+
+            else -> {
+                throw parserException
+            }
+        }
+    }
+
     fun foundExpression(ctx: ParserRuleContext): KotlinExpression? {
         if (!isExpressionContext(ctx)) {
             return null
@@ -90,6 +121,9 @@ class ExpressionUsage(
             newExpression.setStart(ctx.start.startIndex)
             newExpression.setStop(ctx.stop.stopIndex)
             newExpression
+        }
+        if (ctx.isExplicitFunctionArgument()) {
+            expression.parent.addCallParameter(expression)
         }
         tryDeduceExpression(expression, ctx)
         return expression
@@ -219,7 +253,8 @@ class ExpressionUsage(
     private fun tryPushInfoToParent(expression: KotlinExpression) {
         val parent = expression.parent as? KotlinExpression
         if (parent != null && parent.callTypeArguments.isNotEmpty()
-            && expression.identifier != null) {
+            && expression.identifier != null
+        ) {
             val parent2 = parent.parent as? KotlinExpression
             if (parent2 != null && parent2.identifier == null) {
                 parent2.callTypeArguments.addAll(parent.callTypeArguments)
