@@ -4,6 +4,7 @@ import depends.entity.Entity
 import depends.entity.GenericName
 import depends.entity.TypeEntity
 import depends.extractor.AbstractLangProcessor
+import depends.extractor.kotlin.builtins.KotlinBuiltInEntityHandler
 
 class KotlinBindingResolver(
     langProcessor: AbstractLangProcessor,
@@ -19,7 +20,13 @@ class KotlinBindingResolver(
 
     override fun resolveName(fromEntity: Entity?, rawName: GenericName?, searchImport: Boolean): Entity? {
         val superResult = super.resolveName(fromEntity, rawName, searchImport)
-        if (superResult === null) return null
+        if (superResult === null) {
+            rawName ?: return null
+            if (KotlinBuiltInEntityHandler.instance == null) {
+                KotlinBuiltInEntityHandler.init(repo)
+            }
+            return KotlinBuiltInEntityHandler.instance?.getEntity(rawName)
+        }
         if (superResult === TypeEntity.buildInType) {
             rawName ?: return null
             return if (builtInTypes.containsKey(rawName)) {

@@ -70,6 +70,8 @@ class ExpressionUsage(
                 || ctx is WhenExpressionContext
                 || ctx is TryExpressionContext
                 || ctx is JumpExpressionContext
+                // AnnotatedLambdaContext can be considered as a parameter in a function call
+                || ctx is AnnotatedLambdaContext
     }
 
 
@@ -78,6 +80,7 @@ class ExpressionUsage(
      * @return 当前表达式上下文是否是某个函数调用中的参数传递
      */
     private fun RuleContext.isExplicitFunctionArgument(): Boolean {
+        if (this is AnnotatedLambdaContext) return true
         if (this !is ExpressionContext) return false
         if (parent !is ValueArgumentContext) return false
         val valueArgumentsContext = parent.parent as ValueArgumentsContext
@@ -124,6 +127,12 @@ class ExpressionUsage(
         }
         if (ctx.isExplicitFunctionArgument()) {
             expression.parent.addCallParameter(expression)
+            if (ctx !is AnnotatedLambdaContext) {
+                expression.parent.addResolveFirst(expression)
+            } else {
+                expression.addResolveFirst(expression.parent)
+                expression.isAnnotatedLambda = true
+            }
         }
         tryDeduceExpression(expression, ctx)
         return expression
@@ -252,6 +261,13 @@ class ExpressionUsage(
      */
     private fun tryPushInfoToParent(expression: KotlinExpression) {
         val parent = expression.parent as? KotlinExpression
+        if (parent != null && (parent.isDot || parent.isCall)) {
+            var target = parent
+            while (target?.identifierPushedToParent == true) {
+                target = parent.parent as? KotlinExpression?
+            }
+            target?.setCaller(expression)
+        }
         if (parent != null && parent.callTypeArguments.isNotEmpty()
             && expression.identifier != null
         ) {

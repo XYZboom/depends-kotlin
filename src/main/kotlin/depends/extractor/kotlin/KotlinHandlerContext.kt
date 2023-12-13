@@ -1,6 +1,7 @@
 package depends.extractor.kotlin
 
 import depends.entity.*
+import depends.entity.intf.IExtensionContainer
 import depends.entity.repo.EntityRepo
 import depends.extractor.java.JavaHandlerContext
 import depends.extractor.kotlin.KotlinParser.ClassParameterContext

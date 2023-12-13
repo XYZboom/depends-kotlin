@@ -1,12 +1,14 @@
 package depends.entity
 
+import depends.entity.intf.IDelegateProviderType
+import depends.entity.intf.IExtensionContainer
 import io.github.oshai.kotlinlogging.KotlinLogging
 import java.io.Serializable
 import java.util.WeakHashMap
 
 private val logger = KotlinLogging.logger {}
 
-class KotlinTypeEntity(
+open class KotlinTypeEntity(
     simpleName: GenericName,
     parent: Entity?,
     id: Int,

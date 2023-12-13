@@ -349,13 +349,15 @@ class CallExpressionTest : KotlinParserTest() {
         parser.parse(src1)
         resolveAllBindings()
         run {
-            val relations = entityRepo.getEntity("${myPackageName}7.UserCall7.test").relations
-            assertEquals(1, relations.size)
-            assertEquals(
-                DependencyType.CALL,
-                relations[0].type
+            val testFuncEntity = entityRepo.getEntity("${myPackageName}7.UserCall7.test")
+            assertContainsRelation(
+                testFuncEntity, DependencyType.CALL,
+                "${myPackageName}7.ProviderCall7.func"
             )
-            assertEquals("provider", relations[0].entity.rawName.name)
+            assertContainsRelation(
+                testFuncEntity, DependencyType.CREATE,
+                "${myPackageName}7.ProviderCall7"
+            )
         }
     }
 }

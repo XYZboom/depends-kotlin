@@ -1,6 +1,8 @@
 package depends.entity
 
+import depends.entity.intf.IExtensionContainer
 import depends.entity.repo.EntityRepo
+import depends.extractor.kotlin.builtins.KotlinFunctionType
 import depends.relations.IBindingResolver
 
 class KotlinExpression(
@@ -10,6 +12,7 @@ class KotlinExpression(
 ) : Expression(id) {
     internal var identifierPushedToParent = false
     internal var typePushedFromChild: TypeEntity? = null
+    internal var isAnnotatedLambda = false
 
     @Transient
     private var deducedTypeDelegates: ArrayList<KotlinTypeEntity>? = ArrayList()
@@ -118,7 +121,25 @@ class KotlinExpression(
     override fun setReferredFunctions(bindingResolver: IBindingResolver, funcs: MutableList<Entity>?) {
         super.setReferredFunctions(bindingResolver, funcs)
         if (funcs.isNullOrEmpty()) return
-        val func = funcs.first()
-        func.apply {  }
+        val func = funcs.first() as? FunctionEntity ?: return
+        if (func.parameters.isEmpty()) return
+        if (callParameters.isEmpty()) return
+        val lastParameter = func.parameters.last()
+        val lastParameterExpression = callParameters.last() as? KotlinExpression ?: return
+        val lastParameterType = lastParameter.type
+        if (lastParameterType is KotlinFunctionType
+            && lastParameterType.isExtension
+            && lastParameterExpression.isAnnotatedLambda) {
+            val contextType = if (
+                func.isGenericTypeParameter(lastParameterType.returnRawType)
+            ) {
+                genericTypeInfer[lastParameterType.returnRawType]
+            } else {
+                caller?.type
+            }
+            if (contextType != null) {
+                lastParameterExpression.contextEntity = contextType
+            }
+        }
     }
 }
