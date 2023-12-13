@@ -264,7 +264,7 @@ class ExpressionUsage(
         if (parent != null && (parent.isDot || parent.isCall)) {
             var target = parent
             while (target?.identifierPushedToParent == true) {
-                target = parent.parent as? KotlinExpression?
+                target = target.parent as? KotlinExpression?
             }
             target?.setCaller(expression)
         }
