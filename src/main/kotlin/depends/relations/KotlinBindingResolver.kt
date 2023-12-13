@@ -25,7 +25,9 @@ class KotlinBindingResolver(
             return if (builtInTypes.containsKey(rawName)) {
                 builtInTypes[rawName]
             } else {
-                val typeEntity = TypeEntity(rawName, null, -1)
+                val typeEntity = TypeEntity(rawName, null, repo.generateId()).apply {
+                    setInScope(false)
+                }
                 builtInTypes[rawName] = typeEntity
                 repo.add(typeEntity)
                 typeEntity

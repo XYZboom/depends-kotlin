@@ -1,7 +1,6 @@
 package depends.extractor.kotlin.expression
 
 import depends.deptypes.DependencyType
-import depends.entity.TypeEntity
 import depends.extractor.kotlin.KotlinParserTest
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertTrue
@@ -241,6 +240,7 @@ class CallExpressionTest : KotlinParserTest() {
                         assertTrue(
                             relation.entity.rawName.name == "providerCall3"
                                     || relation.entity.rawName.name == "str" // str is a local variable
+                                    || relation.entity.rawName.name == "String"
                         )
                     }
 
@@ -300,8 +300,12 @@ class CallExpressionTest : KotlinParserTest() {
             )
             for (relation in relations) {
                 when (relation.type) {
-                    DependencyType.RETURN, DependencyType.PARAMETER -> {
-                        assertEquals(TypeEntity.buildInType, relation.entity)
+                    DependencyType.RETURN -> {
+                        assertEquals("void", relation.entity.rawName.name)
+                    }
+
+                    DependencyType.PARAMETER -> {
+                        assertEquals("String", relation.entity.rawName.name)
                     }
 
                     DependencyType.USE -> {
