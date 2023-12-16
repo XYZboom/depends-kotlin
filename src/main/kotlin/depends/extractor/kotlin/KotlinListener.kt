@@ -145,6 +145,14 @@ class KotlinListener(
                 exitLastEntity()
             }
         }
+        context.foundVarDefinition(
+            context.lastContainer(),
+            "this",
+            ctx.start.line
+        ).apply {
+            this.type = type
+            setInScope(false)
+        }
         super.enterClassDeclaration(ctx)
     }
 
