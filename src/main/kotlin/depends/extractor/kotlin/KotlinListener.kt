@@ -371,7 +371,19 @@ class KotlinListener(
                 GenericName.build(param.simpleIdentifier().text),
                 GenericName.build(param.type().typeClassName),
                 method, entityRepo.generateId()
-            )
+            ).apply {
+                val functionType = param.type().functionType()
+                if (functionType != null) {
+                    val kotlinFunctionType = functionType.getFunctionType(entityRepo.generateId())
+                    if (entityRepo.getEntity(kotlinFunctionType.id) == null) {
+                        entityRepo.add(kotlinFunctionType)
+                        context.currentFile().addChild(kotlinFunctionType)
+                        kotlinFunctionType.parent = context.currentFile()
+                    }
+                    this.type = kotlinFunctionType
+                    this.rawType = null
+                }
+            }
             method.addParameter(varEntity)
         }
     }

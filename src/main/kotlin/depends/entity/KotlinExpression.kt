@@ -135,7 +135,7 @@ class KotlinExpression(
             ) {
                 genericTypeInfer[lastParameterType.returnRawType]
             } else {
-                caller?.type
+                lastParameterType.parameterTypes.firstOrNull()
             }
             if (contextType != null) {
                 lastParameterExpression.contextEntity = contextType

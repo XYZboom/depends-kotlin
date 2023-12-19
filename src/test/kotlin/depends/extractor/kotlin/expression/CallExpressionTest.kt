@@ -381,4 +381,35 @@ class CallExpressionTest : KotlinParserTest() {
             )
         }
     }
+
+    @Test
+    fun shouldHandleCallInDifferentContextSuccess9() {
+        val src0 = "./src/test/resources/kotlin-code-examples/expression/call/call9/ProviderCall9.kt"
+        val src1 = "./src/test/resources/kotlin-code-examples/expression/call/call9/UserCall9.kt"
+        val src2 = "./src/test/resources/kotlin-code-examples/expression/call/call9/ReceiverCall9.kt"
+        val parser = createParser()
+        parser.parse(src0)
+        parser.parse(src1)
+        parser.parse(src2)
+        resolveAllBindings()
+        run {
+            val testFuncEntity = entityRepo.getEntity("${myPackageName}9.UserCall9.test")
+            assertContainsRelation(
+                testFuncEntity, DependencyType.CALL,
+                "${myPackageName}9.ProviderCall9.func"
+            )
+            assertContainsRelation(
+                testFuncEntity, DependencyType.CALL,
+                "${myPackageName}9.ReceiverCall9.receiverFunc"
+            )
+            assertContainsRelation(
+                testFuncEntity, DependencyType.CREATE,
+                "${myPackageName}9.ProviderCall9"
+            )
+            assertContainsRelation(
+                testFuncEntity, DependencyType.CREATE,
+                "${myPackageName}9.ReceiverCall9"
+            )
+        }
+    }
 }

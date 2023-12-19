@@ -44,7 +44,7 @@ class EntityRepoDslWrapper(entityRepo: EntityRepo) : EntityRepo by entityRepo {
         returnRawName: String, parameters: List<String>, isExtension: Boolean = false,
         then: KotlinFunctionType.() -> Unit = {},
     ): KotlinFunctionType {
-        return KotlinFunctionType(
+        return KotlinFunctionType.new(
             generateId(), GenericName.build(returnRawName),
             parameters.map(GenericName::build), isExtension
         ).apply(then)
