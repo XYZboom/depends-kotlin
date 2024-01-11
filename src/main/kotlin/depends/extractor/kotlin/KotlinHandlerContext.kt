@@ -44,7 +44,7 @@ class KotlinHandlerContext(entityRepo: EntityRepo, bindingResolver: IBindingReso
         )
         addToRepo(result)
         currentFileEntity.addType(result)
-        currentFileEntity.getAncestorOfType(PackageEntity::class.java).addChild(result)
+        currentFileEntity.getAncestorOfType(PackageEntity::class.java)?.addChild(result)
         result
     }
 

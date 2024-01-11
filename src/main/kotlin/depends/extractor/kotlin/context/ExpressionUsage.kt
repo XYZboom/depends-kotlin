@@ -72,6 +72,8 @@ class ExpressionUsage(
                 || ctx is JumpExpressionContext
                 // AnnotatedLambdaContext can be considered as a parameter in a function call
                 || ctx is AnnotatedLambdaContext
+                || ctx is DirectlyAssignableExpressionContext
+                || ctx is ParenthesizedAssignableExpressionContext
     }
 
 
