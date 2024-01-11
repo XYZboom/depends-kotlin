@@ -85,7 +85,7 @@ class KotlinExpression(
             if (parent.isCall) {
                 deduceParentIsFuncCall(parent, bindingResolver)
             } else {
-                val variable = type.lookupVarInVisibleScope(parent.identifier)
+                val variable = type?.lookupVarInVisibleScope(parent.identifier)
                 if (variable != null) {
                     parent.setType(variable.type, variable, bindingResolver)
                     parent.referredEntity = variable

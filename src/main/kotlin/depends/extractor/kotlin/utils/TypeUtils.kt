@@ -4,6 +4,7 @@ import depends.extractor.kotlin.KotlinBuiltInType
 import depends.extractor.kotlin.KotlinParser
 import io.github.oshai.kotlinlogging.KotlinLogging
 
+
 private val logger = KotlinLogging.logger {}
 
 val parserException = IllegalStateException("error in parser. Maybe caused by g4 file changing")
@@ -165,5 +166,12 @@ val KotlinParser.ReceiverTypeContext.usedTypeArguments: List<String>
 val KotlinParser.TypeModifiersContext.usedTypeArguments: List<String>
     get() {
         val result = ArrayList<String>()
-        TODO()
+        for (typeModifier in typeModifier()) {
+            result.addAll(typeModifier.usedTypeArguments)
+        }
+        return result
+    }
+val KotlinParser.TypeModifierContext.usedTypeArguments: List<String>
+    get() {
+        return annotation().usedAnnotationNames
     }

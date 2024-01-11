@@ -74,6 +74,7 @@ class ExpressionUsage(
                 || ctx is AnnotatedLambdaContext
                 || ctx is DirectlyAssignableExpressionContext
                 || ctx is ParenthesizedAssignableExpressionContext
+                || ctx is AssignableExpressionContext
     }
 
 
