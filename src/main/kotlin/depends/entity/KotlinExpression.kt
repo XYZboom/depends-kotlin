@@ -4,6 +4,9 @@ import depends.entity.intf.IExtensionContainer
 import depends.entity.repo.EntityRepo
 import depends.extractor.kotlin.builtins.KotlinFunctionType
 import depends.relations.IBindingResolver
+import io.github.oshai.kotlinlogging.KotlinLogging
+
+private val logger = KotlinLogging.logger {  }
 
 class KotlinExpression(
     id: Int,
@@ -100,7 +103,11 @@ class KotlinExpression(
     }
 
     private fun deduceParentIsFuncCall(parent: Expression, bindingResolver: IBindingResolver) {
-        val typeNow = (type ?: typePushedFromChild)!!
+        // fixme bug here, type ?: typePushedFromChild must be not null
+        val typeNow = (type ?: typePushedFromChild) ?: run {
+            logger.error { "type ?: typePushedFromChild must be not null" }
+            return
+        }
         val funcs = typeNow.lookupFunctionInVisibleScope(parent.identifier)
         if (myContainer != null && funcs.isEmpty()) {
             val extensionFunction =
