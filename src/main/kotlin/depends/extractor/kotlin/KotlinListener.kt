@@ -5,6 +5,7 @@ import depends.entity.repo.EntityRepo
 import depends.extractor.kotlin.KotlinParser.ClassParametersContext
 import depends.extractor.kotlin.KotlinParser.ExplicitDelegationContext
 import depends.extractor.kotlin.KotlinParser.ExpressionContext
+import depends.extractor.kotlin.KotlinParser.ForStatementContext
 import depends.extractor.kotlin.KotlinParser.FunctionBodyContext
 import depends.extractor.kotlin.KotlinParser.FunctionDeclarationContext
 import depends.extractor.kotlin.KotlinParser.FunctionValueParametersContext
@@ -31,13 +32,12 @@ class KotlinListener(
         }
     }
 
-    private val context: KotlinHandlerContext
+    private val context: KotlinHandlerContext = KotlinHandlerContext(entityRepo, bindingResolver)
     private val expressionUsage: ExpressionUsage
 
     private var expressionDepth = 0
 
     init {
-        context = KotlinHandlerContext(entityRepo, bindingResolver)
         context.startFile(fileFullPath)
         expressionUsage = ExpressionUsage(context, entityRepo, bindingResolver)
     }
@@ -425,6 +425,25 @@ class KotlinListener(
             return
         }
         context.foundNewProperty(ctx)
+    }
+
+    override fun enterVariableDeclaration(ctx: KotlinParser.VariableDeclarationContext) {
+        if (ctx.parent !is ForStatementContext) return
+        val type = ctx.type()
+        if (type != null) {
+            context.foundVarDefinition(
+                ctx.simpleIdentifier().text,
+                GenericName.build(type.typeClassName),
+                type.usedTypeArguments.map(GenericName::build),
+                ctx.start.line
+            )
+        } else {
+            context.foundVarDefinition(
+                context.lastContainer(),
+                ctx.simpleIdentifier().text,
+                ctx.start.line
+            )
+        }
     }
 
     private fun handleVariableDeclaration(

@@ -23,8 +23,11 @@ class KotlinFileParser(entityRepo: EntityRepo?, bindingResolver: IBindingResolve
         val input = CharStreams.fromFileName(filePath)
         if (filePath.endsWith(".kt")) {
             val lexer: Lexer = KotlinLexer(input)
+            lexer.interpreter = LexerATNSimulator(lexer, lexer.atn, lexer.interpreter.decisionToDFA, PredictionContextCache())
             val tokens = CommonTokenStream(lexer)
             val parser = KotlinParser(tokens)
+            val interpreter = ParserATNSimulator(parser, parser.atn, parser.interpreter.decisionToDFA, PredictionContextCache())
+            parser.interpreter = interpreter
             val bridge = KotlinListener(filePath, entityRepo, bindingResolver)
             val walker = ParseTreeWalker()
             val kotlinFileContext = parser.kotlinFile()
