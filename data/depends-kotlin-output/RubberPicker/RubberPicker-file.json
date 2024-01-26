@@ -1,0 +1,87 @@
+{
+  "schemaVersion" : "1.0",
+  "name" : "./build/RubberPicker-file-sdsm",
+  "variables" : [ "F:\\Code\\Java\\train\\samples\\RubberPicker\\app\\src\\androidTest\\java\\com\\jem\\ExampleInstrumentedTest.kt", "F:\\Code\\Java\\train\\samples\\RubberPicker\\app\\src\\androidTest\\java\\com\\jem\\RubberRangePickerTest.kt", "F:\\Code\\Java\\train\\samples\\RubberPicker\\app\\src\\androidTest\\java\\com\\jem\\RubberSeekBarTest.kt", "F:\\Code\\Java\\train\\samples\\RubberPicker\\app\\src\\main\\java\\com\\jem\\MainActivity.kt", "F:\\Code\\Java\\train\\samples\\RubberPicker\\app\\src\\test\\java\\com\\jem\\ExampleUnitTest.kt", "F:\\Code\\Java\\train\\samples\\RubberPicker\\rubberpicker\\src\\androidTest\\java\\com\\jem\\rubberpicker\\ExampleInstrumentedTest.java", "F:\\Code\\Java\\train\\samples\\RubberPicker\\rubberpicker\\src\\main\\java\\com\\jem\\rubberpicker\\ElasticBehavior.kt", "F:\\Code\\Java\\train\\samples\\RubberPicker\\rubberpicker\\src\\main\\java\\com\\jem\\rubberpicker\\RubberRangePicker.kt", "F:\\Code\\Java\\train\\samples\\RubberPicker\\rubberpicker\\src\\main\\java\\com\\jem\\rubberpicker\\RubberSeekBar.kt", "F:\\Code\\Java\\train\\samples\\RubberPicker\\rubberpicker\\src\\main\\java\\com\\jem\\rubberpicker\\Utils.kt", "F:\\Code\\Java\\train\\samples\\RubberPicker\\rubberpicker\\src\\test\\java\\com\\jem\\rubberpicker\\ExampleUnitTest.java" ],
+  "cells" : [ {
+    "src" : 7,
+    "dest" : 6,
+    "values" : {
+      "Return" : 1.0,
+      "Use" : 19.0,
+      "Parameter" : 1.0,
+      "Contain" : 1.0
+    }
+  }, {
+    "src" : 3,
+    "dest" : 6,
+    "values" : {
+      "Import" : 1.0,
+      "Use" : 12.0
+    }
+  }, {
+    "src" : 8,
+    "dest" : 9,
+    "values" : {
+      "Call" : 12.0
+    }
+  }, {
+    "src" : 2,
+    "dest" : 8,
+    "values" : {
+      "Import" : 1.0,
+      "Create" : 1.0,
+      "Contain" : 1.0
+    }
+  }, {
+    "src" : 8,
+    "dest" : 6,
+    "values" : {
+      "Return" : 1.0,
+      "Use" : 19.0,
+      "Parameter" : 1.0,
+      "Contain" : 1.0
+    }
+  }, {
+    "src" : 1,
+    "dest" : 7,
+    "values" : {
+      "Import" : 1.0,
+      "Create" : 1.0,
+      "Contain" : 1.0
+    }
+  }, {
+    "src" : 1,
+    "dest" : 6,
+    "values" : {
+      "Import" : 1.0,
+      "Use" : 12.0
+    }
+  }, {
+    "src" : 3,
+    "dest" : 8,
+    "values" : {
+      "Import" : 1.0,
+      "Parameter" : 3.0
+    }
+  }, {
+    "src" : 7,
+    "dest" : 9,
+    "values" : {
+      "Call" : 12.0
+    }
+  }, {
+    "src" : 3,
+    "dest" : 7,
+    "values" : {
+      "Import" : 1.0,
+      "Parameter" : 3.0
+    }
+  }, {
+    "src" : 2,
+    "dest" : 6,
+    "values" : {
+      "Import" : 1.0,
+      "Use" : 12.0
+    }
+  } ]
+}

@@ -1,9 +1,11 @@
+import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 
 plugins {
     kotlin("jvm") version "1.9.0"
     id("maven-publish")
+    id("com.github.johnrengelman.shadow") version "7.0.0"
     application
 }
 
@@ -68,4 +70,10 @@ tasks.withType<KotlinCompile> {
 
 application {
     mainClass.set("depends.Main")
+}
+
+tasks.withType(ShadowJar::class.java) {
+    manifest {
+        attributes["Main-Class"] = "depends.Main"
+    }
 }
