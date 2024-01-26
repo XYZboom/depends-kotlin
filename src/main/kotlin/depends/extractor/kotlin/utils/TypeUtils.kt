@@ -173,5 +173,5 @@ val KotlinParser.TypeModifiersContext.usedTypeArguments: List<String>
     }
 val KotlinParser.TypeModifierContext.usedTypeArguments: List<String>
     get() {
-        return annotation().usedAnnotationNames
+        return annotation()?.usedAnnotationNames ?: emptyList()
     }

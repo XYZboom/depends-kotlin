@@ -28,7 +28,7 @@ class KotlinListener(
     companion object {
         @JvmStatic
         private fun logReceiverTypeNotSupport() {
-            logger.warn { "does not support extension function now" }
+            logger.warn { "does not support extension property now" }
         }
     }
 
@@ -61,6 +61,10 @@ class KotlinListener(
             }
         }
         super.enterEveryRule(ctx)
+    }
+
+    override fun enterEnumEntry(ctx: KotlinParser.EnumEntryContext) {
+        context.foundVarDefinition(context.currentType(), ctx.text, ctx.start.line)
     }
 
     override fun enterExpression(ctx: ExpressionContext) {
@@ -144,14 +148,6 @@ class KotlinListener(
                 // 退出主构造函数声明
                 exitLastEntity()
             }
-        }
-        context.foundVarDefinition(
-            context.lastContainer(),
-            "this",
-            ctx.start.line
-        ).apply {
-            this.type = type
-            setInScope(false)
         }
         super.enterClassDeclaration(ctx)
     }
@@ -285,7 +281,9 @@ class KotlinListener(
      * 类A中，T1、T2、T3为模板类型，Base为约束类型
      * @param typeParameters
      */
-    private fun foundTypeParametersUse(typeParameters: KotlinParser.TypeParametersContext) {
+    private fun foundTypeParametersUse(
+        typeParameters: KotlinParser.TypeParametersContext
+    ) {
         for (i in typeParameters.typeParameter().indices) {
             val typeParam = typeParameters.typeParameter(i)
             val simpleId = typeParam.simpleIdentifier()
@@ -295,7 +293,7 @@ class KotlinListener(
                 }
             }
             if (typeParam.simpleIdentifier() != null) {
-                context.currentType().addTypeParameter(
+                context.foundTypeParameters(
                     GenericName.build(typeParam.simpleIdentifier().text)
                 )
             }

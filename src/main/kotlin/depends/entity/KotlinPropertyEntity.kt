@@ -42,6 +42,7 @@ class KotlinPropertyEntity(
                         idGenerator.generateId(),
                         rawType
                 ).apply {
+                    setInScope(false)
                     // 自动生成名为field的后备域
                     addVar(VarEntity(
                             GenericName.build(BACK_FIELD_VAR_NAME),
@@ -62,6 +63,7 @@ class KotlinPropertyEntity(
                         idGenerator.generateId(),
                         rawType
                 ).apply {
+                    setInScope(false)
                     // 自动生成名为field的后备域
                     addVar(VarEntity(
                             GenericName.build(BACK_FIELD_VAR_NAME),
