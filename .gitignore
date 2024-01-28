@@ -1,11 +1,1 @@
 gradle.properties
-/src/main/java/depends/extractor/kotlin/KotlinLexer.java
-/src/main/java/depends/extractor/kotlin/KotlinLexer.interp
-/src/main/java/depends/extractor/kotlin/KotlinLexer.tokens
-/src/main/java/depends/extractor/kotlin/KotlinParser.java
-/src/main/java/depends/extractor/kotlin/KotlinParser.interp
-/src/main/java/depends/extractor/kotlin/KotlinParser.tokens
-/src/main/java/depends/extractor/kotlin/KotlinParserBaseListener.java
-/src/main/java/depends/extractor/kotlin/KotlinParserBaseVisitor.java
-/src/main/java/depends/extractor/kotlin/KotlinParserListener.java
-/src/main/java/depends/extractor/kotlin/KotlinParserVisitor.java
