@@ -7,7 +7,7 @@ import io.github.oshai.kotlinlogging.KotlinLogging
 
 private val logger = KotlinLogging.logger {}
 
-val parserException = IllegalStateException("error in parser. Maybe caused by g4 file changing")
+val antlr4ParserException = IllegalStateException("error in parser. Maybe caused by g4 file changing")
 
 val KotlinParser.TypeContext.typeClassName: String
     get() {
@@ -22,7 +22,7 @@ val KotlinParser.TypeContext.typeClassName: String
             } else if (nullableTypeContext.parenthesizedType() != null) {
                 nullableTypeContext.parenthesizedType().type().typeClassName
             } else {
-                throw parserException
+                throw antlr4ParserException
             }
         } else if (typeReference() != null) {
             typeReference().typeClassName
@@ -31,7 +31,7 @@ val KotlinParser.TypeContext.typeClassName: String
             logger.error { "does not support deduce union type now" }
             "Object"
         } else {
-            throw parserException
+            throw antlr4ParserException
         }
     }
 
@@ -46,12 +46,12 @@ val KotlinParser.ReceiverTypeContext.typeClassName: String
             } else if (nullableTypeContext.parenthesizedType() != null) {
                 nullableTypeContext.parenthesizedType().type().typeClassName
             } else {
-                throw parserException
+                throw antlr4ParserException
             }
         } else if (typeReference() != null) {
             typeReference().typeClassName
         } else {
-            throw parserException
+            throw antlr4ParserException
         }
     }
 
@@ -85,7 +85,7 @@ val KotlinParser.ParenthesizedUserTypeContext.usedTypeArguments: List<String>
         } else if (userType() != null) {
             userType().usedTypeArguments
         } else {
-            throw parserException
+            throw antlr4ParserException
         }
     }
 

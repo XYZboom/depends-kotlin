@@ -48,6 +48,8 @@ publishing {
 }
 
 dependencies {
+    implementation("io.github.bonede:tree-sitter-kotlin:0.3.1")
+    implementation("io.github.bonede:tree-sitter:0.20.8")
     implementation("io.github.oshai:kotlin-logging-jvm:5.1.0")
     implementation("org.apache.logging.log4j:log4j-api:2.20.0")
     implementation("org.slf4j:slf4j-log4j12:2.0.10")

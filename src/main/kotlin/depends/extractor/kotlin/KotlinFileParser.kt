@@ -14,27 +14,38 @@ import org.antlr.v4.runtime.atn.ParserATNSimulator
 import org.antlr.v4.runtime.atn.PredictionContextCache
 import org.antlr.v4.runtime.tree.ParseTreeListener
 import org.antlr.v4.runtime.tree.ParseTreeWalker
+import org.treesitter.TSParser
+import org.treesitter.TreeSitterKotlin
+import org.treesitter.accept
+import java.io.File
 import java.io.IOException
 
 class KotlinFileParser(entityRepo: EntityRepo?, bindingResolver: IBindingResolver) : FileParser() {
 
     @Throws(IOException::class)
     override fun parseFile(filePath: String, extraListeners: MutableList<ParseTreeListener>) {
+        val text = File(filePath).readText()
         val input = CharStreams.fromFileName(filePath)
         if (filePath.endsWith(".kt")) {
-            val lexer: Lexer = KotlinLexer(input)
+            /*val lexer: Lexer = KotlinLexer(input)
             lexer.interpreter = LexerATNSimulator(lexer, lexer.atn, lexer.interpreter.decisionToDFA, PredictionContextCache())
             val tokens = CommonTokenStream(lexer)
             val parser = KotlinParser(tokens)
             val interpreter = ParserATNSimulator(parser, parser.atn, parser.interpreter.decisionToDFA, PredictionContextCache())
             parser.interpreter = interpreter
-            val bridge = KotlinListener(filePath, entityRepo, bindingResolver)
+            val bridge = KotlinAntlr4Listener(filePath, entityRepo, bindingResolver)
             val walker = ParseTreeWalker()
             val kotlinFileContext = parser.kotlinFile()
             walker.walk(bridge, kotlinFileContext)
             extraListeners.forEach {
                 walker.walk(it, kotlinFileContext)
-            }
+            }*/
+            val tsParser = TSParser()
+            val treeSitterKotlin = TreeSitterKotlin()
+            tsParser.setLanguage(treeSitterKotlin)
+            val tree = tsParser.parseString(null, text)
+            val rootNode = tree.rootNode
+            rootNode.accept(KotlinTSListener(filePath, entityRepo, bindingResolver, text))
         } else if (filePath.endsWith(".java")) {
             val lexer: Lexer = JavaLexer(input)
             lexer.interpreter = LexerATNSimulator(lexer, lexer.atn, lexer.interpreter.decisionToDFA, PredictionContextCache())

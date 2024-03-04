@@ -20,7 +20,7 @@ val KotlinParser.AnnotationContext.usedAnnotationNames: List<String>
             listOf(singleAnnotation.usedAnnotationName)
         } else {
             multiAnnotation?.usedAnnotationNames
-                    ?: throw parserException
+                    ?: throw antlr4ParserException
         }
     }
 
@@ -41,5 +41,5 @@ val KotlinParser.UnescapedAnnotationContext.usedAnnotationName: String
         val userType = userType()
         return constructorInvocation?.userType()?.typeClassName
                 ?: (userType?.typeClassName
-                        ?: throw parserException)
+                        ?: throw antlr4ParserException)
     }

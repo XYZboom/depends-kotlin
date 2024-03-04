@@ -4,17 +4,19 @@ import depends.entity.*
 import depends.entity.intf.IExtensionContainer
 import depends.entity.repo.EntityRepo
 import depends.extractor.java.JavaHandlerContext
-import depends.extractor.kotlin.KotlinParser.ClassParameterContext
-import depends.extractor.kotlin.KotlinParser.ReceiverTypeContext
 import depends.extractor.kotlin.utils.typeClassName
+import depends.extractor.kotlin.utils.typeModifiers
 import depends.extractor.kotlin.utils.usedTypeArguments
+import depends.extractor.kotlin.utils.*
 import depends.relations.IBindingResolver
 import io.github.oshai.kotlinlogging.KotlinLogging
+import org.treesitter.TSNode
+import org.treesitter.text
 import java.io.File
 
 private val logger = KotlinLogging.logger {}
 
-class KotlinHandlerContext(entityRepo: EntityRepo, bindingResolver: IBindingResolver) :
+class KotlinTSHandlerContext(entityRepo: EntityRepo, bindingResolver: IBindingResolver, private val fileText: String) :
     JavaHandlerContext(entityRepo, bindingResolver) {
 
     val currentExtensionsContainer: IExtensionContainer
@@ -72,7 +74,7 @@ class KotlinHandlerContext(entityRepo: EntityRepo, bindingResolver: IBindingReso
         return foundMethodDeclarator(methodName, startLine, null)
     }
 
-    fun foundMethodDeclarator(methodName: String, startLine: Int, receiverType: ReceiverTypeContext?): FunctionEntity {
+    fun foundMethodDeclarator(methodName: String, startLine: Int, receiverType: TSNode?): FunctionEntity {
         val currentType = currentType()
         val functionEntity = if (currentType !is FileEntity) {
             super.foundMethodDeclarator(methodName, startLine)
@@ -81,20 +83,19 @@ class KotlinHandlerContext(entityRepo: EntityRepo, bindingResolver: IBindingReso
             currentTopLevelType.addFunction(functionEntity)
             functionEntity
         }
-        if (receiverType != null) {
+        if (receiverType != null)
             functionEntity.addParameter(
                 VarEntity(
                     GenericName.build("this"),
-                    GenericName.build(receiverType.typeClassName),
+                    GenericName.build(receiverType.typeClassName(fileText)),
                     functionEntity,
                     entityRepo.generateId()
                 ).apply {
-                    receiverType.typeModifiers()?.usedTypeArguments?.map(GenericName::build)
+                    receiverType.typeModifiers()?.usedTypeArguments(fileText)?.map(GenericName::build)
                         ?.let { addAnnotations(it) }
                 }
             )
-            functionEntity.isExtension = true
-        }
+        functionEntity.isExtension = true
         return functionEntity
     }
 
@@ -108,13 +109,13 @@ class KotlinHandlerContext(entityRepo: EntityRepo, bindingResolver: IBindingReso
     }
 
     fun foundNewPropertyInPrimaryConstructor(
-        ctx: ClassParameterContext,
+        ctx: TSNode,
         typeEntity: KotlinTypeEntity,
     ) {
-        val name = GenericName.build(ctx.simpleIdentifier().text)
-        val type = GenericName.build(ctx.type().typeClassName)
-        val isVal = ctx.VAL() != null
-        val isVar = ctx.VAR() != null
+        val name = GenericName.build(ctx.simpleIdentifier()!!.text(fileText))
+        val type = GenericName.build(ctx.type()!!.typeClassName(fileText))
+        val isVal = ctx.VAL(fileText) != null
+        val isVar = ctx.VAR(fileText) != null
         if (isVal || isVar) {
             val property = KotlinPropertyEntity(
                 name,
@@ -132,7 +133,7 @@ class KotlinHandlerContext(entityRepo: EntityRepo, bindingResolver: IBindingReso
         }
     }
 
-    fun foundNewProperty(ctx: KotlinParser.PropertyDeclarationContext): KotlinPropertyEntity? {
+    fun foundNewProperty(ctx: TSNode): KotlinPropertyEntity? {
         val variableDeclaration = ctx.variableDeclaration()
         if (variableDeclaration == null) {
             logger.warn { "multi variable declaration does not support for class property in kotlin!" }
@@ -160,10 +161,10 @@ class KotlinHandlerContext(entityRepo: EntityRepo, bindingResolver: IBindingReso
         val hasExpression = expressionContext != null
         val hasGetter = hasExpression || getter != null
         // 属性为可变属性则生成setter，如果发现明确的setter则生成setter
-        val hasSetter = (ctx.VAR() != null && hasExpression) || setter != null
-        val type = varType?.typeClassName
-            ?: getter?.type()?.typeClassName
-        val name = variableDeclaration.simpleIdentifier().text
+        val hasSetter = (ctx.VAR(fileText) != null && hasExpression) || setter != null
+        val type = varType?.typeClassName(fileText)
+            ?: getter?.type()?.typeClassName(fileText)
+        val name = variableDeclaration.simpleIdentifier()!!.text(fileText)
         val property = KotlinPropertyEntity(
             GenericName.build(name),
             GenericName.build(type),
@@ -175,9 +176,11 @@ class KotlinHandlerContext(entityRepo: EntityRepo, bindingResolver: IBindingReso
         if (expressionContext != null) {
             val newExpression = KotlinExpression(entityRepo.generateId(), currentExtensionsContainer)
             lastContainer().addExpression(ctx, newExpression)
-            newExpression.text = ctx.text
-            newExpression.setStart(ctx.start.startIndex)
-            newExpression.setStop(ctx.stop.stopIndex)
+            newExpression.text = ctx.text(fileText)
+            newExpression.location.startRow = ctx.startPoint.row
+            newExpression.location.startCol = ctx.startPoint.column
+            newExpression.location.stopRow = ctx.endPoint.row
+            newExpression.location.stopCol = ctx.endPoint.column
             newExpression.setIdentifier(name)
             newExpression.addDeducedTypeVar(property)
         }

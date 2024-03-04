@@ -4,32 +4,31 @@ import depends.entity.GenericName
 import depends.entity.KotlinExpression
 import depends.entity.repo.EntityRepo
 import depends.entity.repo.IdGenerator
-import depends.extractor.kotlin.KotlinAntlr4HandlerContext
-import depends.extractor.kotlin.KotlinParser.*
+import depends.extractor.kotlin.KotlinTSHandlerContext
 import depends.extractor.kotlin.utils.antlr4ParserException
+import depends.extractor.kotlin.utils.callSuffix
 import depends.extractor.kotlin.utils.typeClassName
 import depends.relations.IBindingResolver
-import io.github.oshai.kotlinlogging.KotlinLogging
-import org.antlr.v4.runtime.ParserRuleContext
-import org.antlr.v4.runtime.RuleContext
+import org.treesitter.*
+import org.treesitter.KotlinTSNodeType.*
 
-private val logger = KotlinLogging.logger {}
-
-class ExpressionUsage(
-    private val context: KotlinAntlr4HandlerContext,
+class ExpressionUsageTS(
+    private val context: KotlinTSHandlerContext,
     entityRepo: EntityRepo,
     private val bindingResolver: IBindingResolver,
+    private val fileText: String
 ) {
     private val idGenerator: IdGenerator = entityRepo
 
-    private fun findExpressionInStack(ctx: RuleContext?): KotlinExpression? {
+    private fun findExpressionInStack(ctx: TSNode?): KotlinExpression? {
         if (ctx == null) return null
+        if (ctx.type == "source_file") return null
         if (ctx.parent == null) return null
         if (context.lastContainer() == null) {
             return null
         }
-        return if (context.lastContainer().expressions().containsKey(ctx.parent)) {
-            val result = context.lastContainer().expressions()[ctx.parent]
+        return if (context.lastContainer().expressions().containsKey(ctx.parent.hashable())) {
+            val result = context.lastContainer().expressions()[ctx.parent.hashable()]
             if (result is KotlinExpression) {
                 result
             } else {
@@ -40,41 +39,47 @@ class ExpressionUsage(
         }
     }
 
-    private fun isExpressionContext(ctx: ParserRuleContext): Boolean {
-        return ctx is ExpressionContext
-                || ctx is DisjunctionContext
-                || ctx is ConjunctionContext
-                || ctx is EqualityContext
-                || ctx is ComparisonContext
-                || ctx is GenericCallLikeComparisonContext
-                || ctx is InfixOperationContext
-                || ctx is ElvisExpressionContext
-                || ctx is InfixFunctionCallContext
-                || ctx is RangeExpressionContext
-                || ctx is AdditiveExpressionContext
-                || ctx is MultiplicativeExpressionContext
-                || ctx is AsExpressionContext
-                || ctx is PrefixUnaryExpressionContext
-                || ctx is PostfixUnaryExpressionContext
-                || ctx is PrimaryExpressionContext
-                || ctx is ParenthesizedExpressionContext
-                || ctx is LiteralConstantContext
-                || ctx is StringLiteralContext
-                || ctx is CallableReferenceContext
-                || ctx is FunctionLiteralContext
-                || ctx is ObjectLiteralContext
-                || ctx is CollectionLiteralContext
-                || ctx is ThisExpressionContext
-                || ctx is SuperExpressionContext
-                || ctx is IfExpressionContext
-                || ctx is WhenExpressionContext
-                || ctx is TryExpressionContext
-                || ctx is JumpExpressionContext
+    private fun isExpressionContext(node: TSNode): Boolean {
+        val type = node.enumType
+        return type == Expression
+                || type == Disjunction
+                || type == Conjunction
+                || type == Equality
+                || type == Comparison
+                || type == GenericCallLikeComparison
+                || type == InfixOperation
+                || type == ElvisExpression
+                || type == InfixFunctionCall
+                || type == RangeExpression
+                || type == AdditiveExpression
+                || type == MultiplicativeExpression
+                || type == AsExpression
+                || type == PrefixUnaryExpression
+                || type == PostfixUnaryExpression
+                || type == PrimaryExpression
+                || type == ParenthesizedExpression
+                || type == LiteralConstant
+                || type == StringLiteral
+                || type == CallableReference
+                || type == FunctionLiteral
+                || type == ObjectLiteral
+                || type == CollectionLiteral
+                || type == ThisExpression
+                || type == SuperExpression
+                || type == IfExpression
+                || type == WhenExpression
+                || type == TryExpression
+                || type == JumpExpression
                 // AnnotatedLambdaContext can be considered as a parameter in a function call
-                || ctx is AnnotatedLambdaContext
-                || ctx is DirectlyAssignableExpressionContext
-                || ctx is ParenthesizedAssignableExpressionContext
-                || ctx is AssignableExpressionContext
+                || type == AnnotatedLambda
+                || type == DirectlyAssignableExpression
+                || type == ParenthesizedAssignableExpression
+                || type == AssignableExpression
+                || type == SimpleIdentifier
+                || type == CallSuffix
+                || type == ValueArgument
+                || type == ValueArguments
+                || type == NavigationExpression
     }
 
 
@@ -82,19 +87,19 @@ class ExpressionUsage(
      * @receiver antlr4的规则上下文
      * @return 当前表达式上下文是否是某个函数调用中的参数传递
      */
-    private fun RuleContext.isExplicitFunctionArgument(): Boolean {
-        if (this is AnnotatedLambdaContext) return true
-        if (this !is ExpressionContext) return false
-        if (parent !is ValueArgumentContext) return false
-        val valueArgumentsContext = parent.parent as ValueArgumentsContext
-        return when (valueArgumentsContext.parent) {
-            is CallSuffixContext -> {
+    private fun TSNode.isExplicitFunctionArgument(): Boolean {
+        if (enumType == AnnotatedLambda) return true
+        if (enumType == Expression) return false
+        if (parent.enumType != ValueArgument) return false
+        val valueArgumentsContext = parent.parent
+        return when (valueArgumentsContext.parent.enumType) {
+            CallSuffix -> {
                 true
             }
 
-            is ConstructorInvocationContext,
-            is ConstructorDelegationCallContext,
-            is EnumEntryContext,
+            ConstructorInvocation,
+            ConstructorDelegationCall,
+            EnumEntry,
             -> {
                 false
             }
@@ -105,7 +110,7 @@ class ExpressionUsage(
         }
     }
 
-    fun foundExpression(ctx: ParserRuleContext): KotlinExpression? {
+    fun foundExpression(ctx: TSNode): KotlinExpression? {
         if (!isExpressionContext(ctx)) {
             return null
         }
@@ -115,22 +120,26 @@ class ExpressionUsage(
         /* create expression and link it with parent*/
         val parent = findExpressionInStack(ctx)
         val expression = if (ctx.parent?.childCount == 1 && parent != null
-            && parent.location.startIndex == ctx.start.startIndex
-            && parent.location.stopIndex == ctx.stop.stopIndex
+            && parent.location.startRow == ctx.startPoint.row
+            && parent.location.startCol == ctx.startPoint.column
+            && parent.location.stopRow == ctx.endPoint.row
+            && parent.location.stopCol == ctx.endPoint.column
         ) {
             parent
         } else {
             val newExpression = KotlinExpression(idGenerator.generateId(), context.currentExtensionsContainer)
-            context.lastContainer().addExpression(ctx, newExpression)
+            context.lastContainer().addExpression(ctx.hashable(), newExpression)
             newExpression.parent = parent
-            newExpression.text = ctx.text
-            newExpression.setStart(ctx.start.startIndex)
-            newExpression.setStop(ctx.stop.stopIndex)
+            newExpression.text = ctx.text(fileText)
+            newExpression.location.startRow = ctx.startPoint.row
+            newExpression.location.startCol = ctx.startPoint.column
+            newExpression.location.stopRow = ctx.endPoint.row
+            newExpression.location.stopCol = ctx.endPoint.column
             newExpression
         }
         if (ctx.isExplicitFunctionArgument()) {
             expression.parent.addCallParameter(expression)
-            if (ctx !is AnnotatedLambdaContext) {
+            if (ctx.enumType != AnnotatedLambda) {
                 expression.parent.addResolveFirst(expression)
             } else {
                 expression.addResolveFirst(expression.parent)
@@ -141,108 +150,123 @@ class ExpressionUsage(
         return expression
     }
 
-    private fun tryDeduceExpression(expression: KotlinExpression, ctx: ParserRuleContext) {
+    private fun tryDeduceExpression(expression: KotlinExpression, ctx: TSNode) {
         //如果就是自己，则无需创建新的Expression
         val booleanName = GenericName.build("boolean")
+        val enumType = ctx.enumType
+        if (enumType == SimpleIdentifier) {
+            expression.setIdentifier(ctx.text(fileText))
+        } else if (enumType == Expression) {
+            if (ctx.callSuffix() != null) {
+                expression.isCall = true
+            }
+        }
         // 注意kotlin的运算符重载，因此不能推导算术运算的类型
-        when (ctx) {
-            is DisjunctionContext -> {
-                val conjunctions = ctx.conjunction()
+        when (ctx.enumType) {
+            Disjunction -> {
+                val conjunctions = ctx.getChildrenOfType(Conjunction)
                 if (conjunctions.size > 1) {
                     expression.rawType = booleanName
                     expression.disableDriveTypeFromChild()
                 }
             }
 
-            is ConjunctionContext -> {
-                if (ctx.equality().size > 1) {
+            Conjunction -> {
+                if (ctx.getChildrenOfType(Equality).size > 1) {
                     expression.rawType = booleanName
                     expression.disableDriveTypeFromChild()
                 }
             }
 
-            is EqualityContext -> {
-                if (ctx.comparison().size > 1) {
+            Equality -> {
+                if (ctx.getChildrenOfType(Comparison).size > 1) {
                     expression.rawType = booleanName
                     expression.disableDriveTypeFromChild()
                 }
             }
 
-            is ComparisonContext -> {
-                if (ctx.genericCallLikeComparison().size > 1) {
+            Comparison -> {
+                if (ctx.getChildrenOfType(GenericCallLikeComparison).size > 1) {
                     expression.rawType = booleanName
                     expression.disableDriveTypeFromChild()
                 }
             }
 
-            is InfixOperationContext -> {
-                if (ctx.isOperator.size >= 1 || ctx.inOperator().size >= 1) {
+            InfixOperation -> {
+                if (ctx.getChildrenOfType(IsOperator).isNotEmpty() || ctx.getChildrenOfType(InOperator).isNotEmpty()) {
                     expression.rawType = booleanName
                     expression.disableDriveTypeFromChild()
                 }
             }
 
-            is AsExpressionContext -> {
-                val types = ctx.type()
-                if (types.size >= 1) {
-                    val typeClassName = types.last().typeClassName
+            AsExpression -> {
+                val types = ctx.getChildrenOfType(Type)
+                if (types.isNotEmpty()) {
+                    val typeClassName = types.last().typeClassName(fileText)
                     expression.isCast = true
                     expression.setRawType(typeClassName)
                     expression.disableDriveTypeFromChild()
                 }
             }
 
-            is GenericCallLikeComparisonContext -> {
-                if (ctx.callSuffix().size >= 1)
+            GenericCallLikeComparison -> {
+                if (ctx.getChildrenOfType(CallSuffix).isNotEmpty()) {
                     expression.isCall = true
+                }
             }
 
-            is PostfixUnaryExpressionContext -> {
+            PostfixUnaryExpression -> {
                 handlePostfixUnary(ctx, expression)
             }
 
-            is PrimaryExpressionContext -> {
-                if (ctx.simpleIdentifier() != null && !expression.identifierPushedToParent) {
-                    val name = ctx.simpleIdentifier().text
+            PrimaryExpression -> {
+                if (ctx.getDirectChildOfType(SimpleIdentifier) != null && !expression.identifierPushedToParent) {
+                    val name = ctx.getDirectChildOfType(SimpleIdentifier)!!.text(fileText)
                     // 在此处推导表达式时，类型系统尚未构建完毕，在框架中进行延迟推导，此处仅设置标识符
                     expression.setIdentifier(name)
                     tryPushInfoToParent(expression)
-                } else if (ctx.stringLiteral() != null) {
+                } else if (ctx.getDirectChildOfType(StringLiteral) != null) {
                     expression.rawType = GenericName.build("String")
                 }
             }
 
-            is ThisExpressionContext -> {
+            ThisExpression -> {
                 expression.setIdentifier("this")
             }
 
-            is SuperExpressionContext -> {
+            SuperExpression -> {
                 expression.setIdentifier("super")
             }
+
+            else -> {}
         }
     }
 
-    private fun handlePostfixUnary(ctx: PostfixUnaryExpressionContext, expression: KotlinExpression) {
-        val primaryExpression = ctx.primaryExpression()
-        val simpleIdentifier = primaryExpression?.simpleIdentifier()
+    private fun handlePostfixUnary(ctx: TSNode, expression: KotlinExpression) {
+        val primaryExpression = ctx.getDirectChildOfType(PrimaryExpression)
+        val simpleIdentifier = primaryExpression?.getDirectChildOfType(SimpleIdentifier)
         if (simpleIdentifier != null) {
-            expression.setIdentifier(simpleIdentifier.text)
+            expression.setIdentifier(simpleIdentifier.text(fileText))
         }
-        val suffix = ctx.postfixUnarySuffix()
-        val navigationSuffix = suffix?.navigationSuffix()
-        val typeArguments = suffix?.typeArguments()
-        if (suffix?.callSuffix() != null) {
+        val suffix = ctx.getDirectChildOfType(PostfixUnarySuffix)
+        val navigationSuffix = suffix?.getDirectChildOfType(NavigationSuffix)
+        val typeArguments = suffix?.getDirectChildOfType(TypeArguments)
+        if (suffix?.getDirectChildOfType(CallSuffix) != null) {
             expression.isCall = true
         } else if (navigationSuffix != null) {
             expression.isDot = true
         }
         if (typeArguments != null) {
-            for (typeProjection in typeArguments.typeProjection()) {
-                expression.callTypeArguments.add(GenericName.build(typeProjection.type().typeClassName))
+            for (typeProjection in typeArguments.getChildrenOfType(TypeProjection)) {
+                expression.callTypeArguments.add(
+                    GenericName.build(
+                        typeProjection.getDirectChildOfType(Type)!!.typeClassName(fileText)
+                    )
+                )
             }
         }
-        if (navigationSuffix?.simpleIdentifier() != null) {
-            expression.setIdentifier(navigationSuffix.simpleIdentifier().text)
+        if (navigationSuffix?.getDirectChildOfType(SimpleIdentifier) != null) {
+            expression.setIdentifier(navigationSuffix.getDirectChildOfType(SimpleIdentifier)!!.text(fileText))
         }
         tryPushInfoToParent(expression)
     }
@@ -297,3 +321,5 @@ class ExpressionUsage(
         }
     }
 }
+
+

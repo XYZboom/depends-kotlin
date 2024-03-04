@@ -20,7 +20,8 @@ import org.antlr.v4.runtime.ParserRuleContext
 
 private val logger = KotlinLogging.logger {}
 
-class KotlinListener(
+@Deprecated("antlr4 is too slow", ReplaceWith("KotlinTSListener"))
+class KotlinAntlr4Listener(
     fileFullPath: String,
     private val entityRepo: EntityRepo,
     bindingResolver: IBindingResolver,
@@ -32,7 +33,7 @@ class KotlinListener(
         }
     }
 
-    private val context: KotlinHandlerContext = KotlinHandlerContext(entityRepo, bindingResolver)
+    private val context: KotlinAntlr4HandlerContext = KotlinAntlr4HandlerContext(entityRepo, bindingResolver)
     private val expressionUsage: ExpressionUsage
 
     private var expressionDepth = 0
@@ -46,7 +47,12 @@ class KotlinListener(
         context.exitLastedEntity()
     }
 
+    override fun exitEveryRule(ctx: ParserRuleContext) {
+        logger.info { "exit" + ctx.javaClass }
+    }
+
     override fun enterEveryRule(ctx: ParserRuleContext) {
+        logger.info { "enter" + ctx.javaClass }
         if (ctx is ExpressionContext || expressionDepth > 0) {
             val expression = expressionUsage.foundExpression(ctx)
             if (expression != null) {
@@ -413,7 +419,7 @@ class KotlinListener(
                 usedAnnotationNames?.let { it1 -> varEntity.addAnnotations(it1) }
             }
         } else {
-            throw parserException
+            throw antlr4ParserException
         }
     }
 
