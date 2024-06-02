@@ -50,8 +50,6 @@ class KotlinProcessor : AbstractLangProcessor() {
         DependencyType.CAST,
         DependencyType.THROW,
         DependencyType.ANNOTATION,
-        DependencyType.JDependsOnK,
-        DependencyType.KDependsOnJ,
     )
 
     override fun createBindingResolver(

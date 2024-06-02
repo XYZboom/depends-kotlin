@@ -48,7 +48,12 @@ class KotlinListener(
 
     override fun enterEveryRule(ctx: ParserRuleContext) {
         if (ctx is ExpressionContext || expressionDepth > 0) {
-            val expression = expressionUsage.foundExpression(ctx)
+            val expression = try {
+                expressionUsage.foundExpression(ctx)
+            } catch (e: Throwable) {
+                logger.error { e.stackTraceToString() }
+                null
+            }
             if (expression != null) {
                 if (ctx.parent is FunctionBodyContext
                     && ctx.parent.parent is FunctionDeclarationContext

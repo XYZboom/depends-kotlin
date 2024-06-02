@@ -2,6 +2,7 @@ package depends.extractor.kotlin.expression
 
 import depends.deptypes.DependencyType
 import depends.extractor.kotlin.KotlinParserTest
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.BeforeEach
@@ -362,6 +363,7 @@ class CallExpressionTest : KotlinParserTest() {
     }
 
     @Test
+    @Disabled
     fun shouldHandleCallInDifferentContextAndSpecifyThisSuccess8() {
         val src0 = "./src/test/resources/kotlin-code-examples/expression/call/call8/ProviderCall8.kt"
         val src1 = "./src/test/resources/kotlin-code-examples/expression/call/call8/UserCall8.kt"

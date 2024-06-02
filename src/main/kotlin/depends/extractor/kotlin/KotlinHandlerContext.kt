@@ -178,7 +178,6 @@ class KotlinHandlerContext(entityRepo: EntityRepo, bindingResolver: IBindingReso
             newExpression.text = ctx.text
             newExpression.setStart(ctx.start.startIndex)
             newExpression.setStop(ctx.stop.stopIndex)
-            newExpression.setIdentifier(name)
             newExpression.addDeducedTypeVar(property)
         }
         lastContainer().addVar(property)
