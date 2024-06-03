@@ -240,7 +240,11 @@ class KotlinListener(
         val currentType = context.currentType()
         val currentFunction = context.currentFunction()
         if (currentType is KotlinTypeEntity && currentFunction == null) {
-            exitLastEntity()
+            if (context.isUnsupportedProperty(ctx)) {
+                context.exitLastUnsupportedProperty()
+            }else {
+                exitLastEntity()
+            }
         }
         super.exitPropertyDeclaration(ctx)
     }
@@ -425,6 +429,7 @@ class KotlinListener(
     private fun handleProperty(ctx: KotlinParser.PropertyDeclarationContext) {
         if (ctx.receiverType() != null) {
             logReceiverTypeNotSupport()
+            context.foundUnsupportedProperty(ctx)
             return
         }
         context.foundNewProperty(ctx)

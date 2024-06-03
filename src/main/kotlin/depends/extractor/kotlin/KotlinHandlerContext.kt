@@ -11,6 +11,7 @@ import depends.extractor.kotlin.utils.usedTypeArguments
 import depends.relations.IBindingResolver
 import io.github.oshai.kotlinlogging.KotlinLogging
 import java.io.File
+import java.util.*
 
 private val logger = KotlinLogging.logger {}
 
@@ -34,6 +35,19 @@ class KotlinHandlerContext(entityRepo: EntityRepo, bindingResolver: IBindingReso
             }
             return null
         }
+
+    private val unsupportedPropertyStack: Stack<Nothing?> = Stack()
+
+    private val unsupportedPropertyMap = WeakHashMap<KotlinParser.PropertyDeclarationContext, Nothing?>()
+
+    internal fun isUnsupportedProperty(ctx: KotlinParser.PropertyDeclarationContext): Boolean {
+        return unsupportedPropertyMap.containsKey(ctx)
+    }
+
+    internal fun exitLastUnsupportedProperty() {
+        if (unsupportedPropertyStack.isNotEmpty())
+            unsupportedPropertyStack.pop()
+    }
 
     // kotlin顶层类型所表示的Entity，只有声明了顶层函数或顶层属性才会有此类型生成
     private val currentTopLevelType: KotlinTypeEntity by lazy {
@@ -136,6 +150,7 @@ class KotlinHandlerContext(entityRepo: EntityRepo, bindingResolver: IBindingReso
         val variableDeclaration = ctx.variableDeclaration()
         if (variableDeclaration == null) {
             logger.warn { "multi variable declaration does not support for class property in kotlin!" }
+            foundUnsupportedProperty(ctx)
             return null
         }
         val currentType = currentType()
@@ -144,6 +159,7 @@ class KotlinHandlerContext(entityRepo: EntityRepo, bindingResolver: IBindingReso
                 currentTopLevelType
             } else {
                 logger.warn { "error kotlin type entity: ${currentType.javaClass}" }
+                foundUnsupportedProperty(ctx)
                 null
             }
         // 如果编译通过，那么不带接收器的类属性一定不存在泛型参数和泛型参数约束
@@ -151,6 +167,7 @@ class KotlinHandlerContext(entityRepo: EntityRepo, bindingResolver: IBindingReso
         val propertyDelegate = ctx.propertyDelegate()
         if (propertyDelegate != null) {
             // TODO 分析类的属性的代理
+            foundUnsupportedProperty(ctx)
             return null
         }
         val varType = variableDeclaration.type()
@@ -187,5 +204,10 @@ class KotlinHandlerContext(entityRepo: EntityRepo, bindingResolver: IBindingReso
         property.getter?.let { addToRepo(it) }
         pushToStack(property)
         return property
+    }
+
+    internal fun foundUnsupportedProperty(ctx: KotlinParser.PropertyDeclarationContext) {
+        unsupportedPropertyMap[ctx] = null
+        unsupportedPropertyStack.add(null)
     }
 }
