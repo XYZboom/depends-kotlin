@@ -11,6 +11,11 @@ is the improved version of
 ## Run Tool
 ### Runtime requirement
 Java Runtime Environment (JRE) >= 17
+### Simple usage
+Download jar file in release page.
+```bash
+java depends-kotlin-all.jar kotlin [input-path] [output-file]
+```
 ### Usage
 Depends-Kotlin is based on the JVM platform and requires at least Java 17. 
 The input of Depends-Kotlin is the source folder path of a particular project. 
