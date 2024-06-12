@@ -1,12 +1,46 @@
 ## Introduction
 
-**This is a kotlin(jvm) module of project [Depends](https://github.com/multilang-depends/depends)**
+The project can analyze dependency from kotlin(jvm) projects with
+granularity in file, method and structure.
 
-Since Google introduced Kotlin as an official programming language for developing Android apps in 2017, Kotlin has gained widespread
-adoption in Android development. However, compared to Java, there is limited support for Kotlin code dependency analysis, which is the foundation to software analysis and techniques. To bridge this gap, we introduced Depends-Kotlin to extract entities and their dependencies in Kotlin source code. Not only does Depends-Kotlin support extracting entities’ dependencies in Kotlin code, but it also can extract invocation dependency between Kotlin and Java.
+This is a kotlin(jvm) module of project
+[Depends-Core](https://github.com/XYZboom/depends-core) which
+is the improved version of 
+[Depends](https://github.com/multilang-depends/depends).
 
-## How to Use
+## Run Tool
+### Runtime requirement
+Java Runtime Environment (JRE) >= 17
+### Usage
+Depends-Kotlin is based on the JVM platform and requires at least Java 17. 
+The input of Depends-Kotlin is the source folder path of a particular project. 
+The full command line arguments are as follows:
 
+    Usage: depends [-hms] [--auto-include] [-d=<dir>] [-g=<granularity>]
+                   [-p=<namePathPattern>] [-f=<format>[,<format>...]]...
+                   [-i=<includes>[,<includes>...]]... <lang> <src> <output>
+          <lang>                 The language of project files
+          <src>                  The directory to be analyzed
+          <output>               The output file name
+          --auto-include         auto include all paths under the source path 
+      -i, --includes             The files of searching path
+      -d, --dir                  The output directory
+      -f, --format               The output format
+      -g, --granularity=<granularity>
+                                 Granularity of dependency.  
+      -h, --help                 Display this help and exit
+      -s, --strip-leading-path   Strip the leading path.
+          --show-language        Show language info in dependency type
+      
+      -m, --n-map-files          Output DV8 dependency map file.
+      -p, --namepattern=<namePathPattern>
+                                 The name path separators.[default(/),dot(.)
+
+## Build from source
+### Requirement
+JDK >= 17
+Gradle >= 7.5.1
+### Build steps
 Depends-Kotlin can be built and run by following 3 steps. 
 
 - [x] **Step 1. Clone repository** 
@@ -52,33 +86,3 @@ gradlew shadowJar
 ```
 
 You will see the following output and find an executable jar package with the suffix **. all.jar* in the *projectRoot/build/libs* folder.
-
-## Run Tool
-
-Depends-Kotlin is based on the JVM platform and requires at least Java 17. The input of Depends-Kotlin is the source folder path of a particular project. The full command line arguments are as follows: 
-
-    Usage: depends [-hms] [--auto-include] [-d=<dir>] [-g=<granularity>]
-                   [-p=<namePathPattern>] [-f=<format>[,<format>...]]...
-                   [-i=<includes>[,<includes>...]]... <lang> <src> <output>
-          <lang>                 The language of project files
-          <src>                  The directory to be analyzed
-          <output>               The output file name
-          --auto-include         auto include all paths under the source path 
-      -i, --includes             The files of searching path
-      -d, --dir                  The output directory
-      -f, --format               The output format
-      -g, --granularity=<granularity>
-                                 Granularity of dependency.  
-      -h, --help                 Display this help and exit
-      -s, --strip-leading-path   Strip the leading path.
-      
-      -m, --n-map-files          Output DV8 dependency map file.
-      -p, --namepattern=<namePathPattern>
-                                 The name path separators.[default(/),dot(.)
-
-For example, if we need to analyze a Kotlin(-Java) project “sqlex”, we can execute the command as follows:
-
-```bash
- java -jar depends-kotlin.jar kotlin ./sqlex result -d ./out
-```
-
