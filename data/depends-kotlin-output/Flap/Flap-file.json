@@ -1,0 +1,2176 @@
+{
+  "schemaVersion" : "1.0",
+  "name" : "./build/Flap-file-sdsm",
+  "variables" : {
+    "0" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\app\\src\\androidTest\\java\\me\\yifeiyuan\\flapdev\\ExampleInstrumentedTest.java",
+    "1" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\app\\src\\main\\java\\me\\yifeiyuan\\flapdev\\ConfigMenuView.kt",
+    "2" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\app\\src\\main\\java\\me\\yifeiyuan\\flapdev\\Ext.kt",
+    "3" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\app\\src\\main\\java\\me\\yifeiyuan\\flapdev\\FlapApplication.kt",
+    "4" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\app\\src\\main\\java\\me\\yifeiyuan\\flapdev\\GitHubDemoFragment.kt",
+    "5" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\app\\src\\main\\java\\me\\yifeiyuan\\flapdev\\IMenuView.kt",
+    "6" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\app\\src\\main\\java\\me\\yifeiyuan\\flapdev\\Logger.kt",
+    "7" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\app\\src\\main\\java\\me\\yifeiyuan\\flapdev\\MainActivity.kt",
+    "8" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\app\\src\\main\\java\\me\\yifeiyuan\\flapdev\\MainViewModel.kt",
+    "9" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\app\\src\\main\\java\\me\\yifeiyuan\\flapdev\\Mocks.kt",
+    "10" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\app\\src\\main\\java\\me\\yifeiyuan\\flapdev\\MyLayoutManager.kt",
+    "11" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\app\\src\\main\\java\\me\\yifeiyuan\\flapdev\\Scrollable.kt",
+    "12" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\app\\src\\main\\java\\me\\yifeiyuan\\flapdev\\Services.kt",
+    "13" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\app\\src\\main\\java\\me\\yifeiyuan\\flapdev\\SingleScrollDirection.kt",
+    "14" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\app\\src\\main\\java\\me\\yifeiyuan\\flapdev\\StickyHeaders.java",
+    "15" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\app\\src\\main\\java\\me\\yifeiyuan\\flapdev\\StickyHeadersLinearLayoutManager.java",
+    "16" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\app\\src\\main\\java\\me\\yifeiyuan\\flapdev\\components\\Banner.kt",
+    "17" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\app\\src\\main\\java\\me\\yifeiyuan\\flapdev\\components\\CustomViewTypeComponent.kt",
+    "18" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\app\\src\\main\\java\\me\\yifeiyuan\\flapdev\\components\\DataBindingComponent.kt",
+    "19" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\app\\src\\main\\java\\me\\yifeiyuan\\flapdev\\components\\DiffComponent.kt",
+    "20" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\app\\src\\main\\java\\me\\yifeiyuan\\flapdev\\components\\SimpleImageComponent.kt",
+    "21" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\app\\src\\main\\java\\me\\yifeiyuan\\flapdev\\components\\SimpleTextComponent.kt",
+    "22" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\app\\src\\main\\java\\me\\yifeiyuan\\flapdev\\components\\TestAdapterApiComponent.kt",
+    "23" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\app\\src\\main\\java\\me\\yifeiyuan\\flapdev\\components\\TestClickComponent.kt",
+    "24" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\app\\src\\main\\java\\me\\yifeiyuan\\flapdev\\components\\TestConfig.kt",
+    "25" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\app\\src\\main\\java\\me\\yifeiyuan\\flapdev\\components\\ViewBindingComponent.kt",
+    "26" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\app\\src\\main\\java\\me\\yifeiyuan\\flapdev\\components\\ZeroHeightComponent.kt",
+    "27" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\app\\src\\main\\java\\me\\yifeiyuan\\flapdev\\testcases\\AnimationTestcase.kt",
+    "28" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\app\\src\\main\\java\\me\\yifeiyuan\\flapdev\\testcases\\BaseTestcaseFragment.kt",
+    "29" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\app\\src\\main\\java\\me\\yifeiyuan\\flapdev\\testcases\\ComponentPoolTestcase.kt",
+    "30" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\app\\src\\main\\java\\me\\yifeiyuan\\flapdev\\testcases\\FlapDifferAdapterTestcase.kt",
+    "31" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\app\\src\\main\\java\\me\\yifeiyuan\\flapdev\\testcases\\FlapRecyclerViewTestcase.kt",
+    "32" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\app\\src\\main\\java\\me\\yifeiyuan\\flapdev\\testcases\\HeaderFooterTestcase.kt",
+    "33" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\app\\src\\main\\java\\me\\yifeiyuan\\flapdev\\testcases\\ItemDecorationTestcase.kt",
+    "34" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\app\\src\\main\\java\\me\\yifeiyuan\\flapdev\\testcases\\MultiTypeTestcase.kt",
+    "35" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\app\\src\\main\\java\\me\\yifeiyuan\\flapdev\\testcases\\PreloadTestcase.kt",
+    "36" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\app\\src\\main\\java\\me\\yifeiyuan\\flapdev\\testcases\\ViewPager2Testcase.kt",
+    "37" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\app\\src\\test\\java\\me\\yifeiyuan\\flapdev\\ExampleUnitTest.java",
+    "38" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap-animation\\src\\androidTest\\java\\me\\yifeiyuan\\flap\\animation\\ExampleInstrumentedTest.kt",
+    "39" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap-animation\\src\\main\\java\\me\\yifeiyuan\\flap\\animation\\AlphaInAdapterAnimation.kt",
+    "40" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap-animation\\src\\main\\java\\me\\yifeiyuan\\flap\\animation\\BaseAdapterAnimation.kt",
+    "41" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap-animation\\src\\main\\java\\me\\yifeiyuan\\flap\\animation\\ScaleInAdapterAnimation.kt",
+    "42" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap-animation\\src\\main\\java\\me\\yifeiyuan\\flap\\animation\\SlideInBottomAdapterAnimation.kt",
+    "43" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap-animation\\src\\main\\java\\me\\yifeiyuan\\flap\\animation\\SlideInLeftAdapterAnimation.kt",
+    "44" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap-animation\\src\\main\\java\\me\\yifeiyuan\\flap\\animation\\SlideInRightAdapterAnimation.kt",
+    "45" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap-animation\\src\\test\\java\\me\\yifeiyuan\\flap\\animation\\ExampleUnitTest.kt",
+    "46" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap-annotations\\src\\main\\java\\me\\yifeiyuan\\flap\\annotations\\Delegate.java",
+    "47" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap-compiler\\src\\main\\java\\me\\yifeiyuan\\flap\\compiler\\FlapProcessor.java",
+    "48" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap-dsl-databinding\\src\\androidTest\\java\\me\\yifeiyuan\\flap\\dsl\\databinding\\ExampleInstrumentedTest.kt",
+    "49" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap-dsl-databinding\\src\\main\\java\\me\\yifeiyuan\\flap\\dsl\\databinding\\AdapterDelegateDataBindingDsl.kt",
+    "50" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap-dsl-databinding\\src\\test\\java\\me\\yifeiyuan\\flap\\dsl\\databinding\\ExampleUnitTest.kt",
+    "51" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap-dsl-viewbinding\\src\\androidTest\\java\\me\\yifeiyuan\\flap\\dsl\\viewbinding\\ExampleInstrumentedTest.kt",
+    "52" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap-dsl-viewbinding\\src\\main\\java\\me\\yifeiyuan\\flap\\dsl\\viewbinding\\AdapterDelegateViewBindingDsl.kt",
+    "53" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap-dsl-viewbinding\\src\\test\\java\\me\\yifeiyuan\\flap\\dsl\\viewbinding\\ExampleUnitTest.kt",
+    "54" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap-gradle-plugin\\src\\main\\java\\me\\yifeiyuan\\flap\\plugin\\AutoRegister.java",
+    "55" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap-gradle-plugin\\src\\main\\java\\me\\yifeiyuan\\flap\\plugin\\FlapPlugin.java",
+    "56" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap-gradle-plugin\\src\\main\\java\\me\\yifeiyuan\\flap\\plugin\\FlapTransform.java",
+    "57" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap-gradle-plugin\\src\\main\\java\\me\\yifeiyuan\\flap\\plugin\\Log.java",
+    "58" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap-paging\\src\\androidTest\\java\\me\\yifeiyuan\\flap\\paging\\ExampleInstrumentedTest.kt",
+    "59" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap-paging\\src\\main\\java\\me\\yifeiyuan\\flap\\paging\\FlapPagingDataAdapter.kt",
+    "60" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap-paging\\src\\test\\java\\me\\yifeiyuan\\flap\\paging\\ExampleUnitTest.kt",
+    "61" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\androidTest\\java\\me\\yifeiyuan\\flap\\ExampleInstrumentedTest.java",
+    "62" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\Component.kt",
+    "63" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\ComponentConfig.kt",
+    "64" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\Flap.kt",
+    "65" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\FlapAdapter.kt",
+    "66" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\FlapAdapterDelegation.kt",
+    "67" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\FlapApi.kt",
+    "68" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\FlapDebug.kt",
+    "69" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\FlapInitializer.kt",
+    "70" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\FlapRegistry.kt",
+    "71" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\FlapRuntime.kt",
+    "72" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\ViewTypeGenerator.kt",
+    "73" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\decoration\\LinearItemDecoration.kt",
+    "74" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\decoration\\LinearSpaceItemDecoration.kt",
+    "75" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\decoration\\SizedColorDrawable.kt",
+    "76" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\decoration\\SpaceItemDecoration.kt",
+    "77" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\delegate\\AdapterDelegate.kt",
+    "78" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\delegate\\AdapterDelegateManager.kt",
+    "79" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\delegate\\FallbackAdapterDelegate.kt",
+    "80" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\delegate\\IAdapterDelegateManager.kt",
+    "81" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\differ\\FlapDifferAdapter.kt",
+    "82" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\differ\\IDiffer.kt",
+    "83" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\dsl\\AdapterDelegateDsl.kt",
+    "84" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\dsl\\AdapterHookDsl.kt",
+    "85" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\event\\Event.kt",
+    "86" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\event\\EventObserver.kt",
+    "87" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\ext\\ComponentBinder.kt",
+    "88" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\ext\\EmptyViewHelper.kt",
+    "89" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\ext\\Extendtions.kt__T____T__",
+    "90" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\ext\\ExtraParamsProvider.kt",
+    "91" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\ext\\HeaderFooterAdapter.kt",
+    "92" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\ext\\ItemClicksHelper.kt",
+    "93" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\ext\\OnAdapterDataChangedObserver.kt",
+    "94" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\ext\\SwipeDragHelper.kt",
+    "95" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\hook\\AdapterHook.kt",
+    "96" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\hook\\AdapterHookManager.kt",
+    "97" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\hook\\ApmHook.kt",
+    "98" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\hook\\IAdapterHookManager.kt",
+    "99" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\hook\\LoggingHook.kt",
+    "100" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\hook\\PreloadHook.kt",
+    "101" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\pool\\ComponentPool.kt",
+    "102" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\pool\\RecyclerViewDumpHelper.kt",
+    "103" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\service\\AdapterService.kt",
+    "104" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\service\\AdapterServiceManager.kt",
+    "105" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\service\\IAdapterServiceManager.kt",
+    "106" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\skeleton\\Shimmer.java",
+    "107" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\skeleton\\ShimmerDrawable.java",
+    "108" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\skeleton\\ShimmerFrameLayout.java",
+    "109" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\skeleton\\Skeleton.kt",
+    "110" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\skeleton\\SkeletonAdapter.kt",
+    "111" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\widget\\FlapGridLayoutManager.kt",
+    "112" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\widget\\FlapIndexedStaggeredGridLayoutManager.java",
+    "113" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\widget\\FlapLinearLayoutManager.kt",
+    "114" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\widget\\FlapRecyclerView.kt",
+    "115" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\widget\\FlapStaggeredGridLayoutManager.kt",
+    "116" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\widget\\FlapStickyHeaderLinearLayoutManager.kt",
+    "117" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\widget\\FlapStickyHeaders.kt",
+    "118" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\widget\\IndexedAdapterHelper.java",
+    "119" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\widget\\IndexedLayoutState.java",
+    "120" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\widget\\IndexedOpReorderer.java",
+    "121" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\widget\\IndexedScrollbarHelper.java",
+    "122" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\main\\java\\me\\yifeiyuan\\flap\\widget\\ParallaxHeaderEffect.kt",
+    "123" : "F:\\Other\\Data\\smell-git-analysis-data\\Flap\\flap\\src\\test\\java\\me\\yifeiyuan\\flap\\ExampleUnitTest.java"
+  },
+  "cells" : [ {
+    "src" : 95,
+    "dest" : 65,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 40,
+    "dest" : 95,
+    "values" : {
+      "Kotlin Implement Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 120,
+    "dest" : 118,
+    "values" : {
+      "Java Use Java" : 130.0,
+      "Java Parameter Java" : 7.0,
+      "Java Contain Java" : 6.0,
+      "Java Return Java" : 1.0
+    }
+  }, {
+    "src" : 33,
+    "dest" : 67,
+    "values" : {
+      "Kotlin Call Kotlin" : 3.0
+    }
+  }, {
+    "src" : 99,
+    "dest" : 95,
+    "values" : {
+      "Kotlin Implement Kotlin" : 1.0
+    }
+  }, {
+    "src" : 52,
+    "dest" : 77,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 81,
+    "dest" : 65,
+    "values" : {
+      "Kotlin Implement Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 33,
+    "dest" : 112,
+    "values" : {
+      "Kotlin Call Java" : 2.0
+    }
+  }, {
+    "src" : 49,
+    "dest" : 77,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 83,
+    "dest" : 77,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 52,
+    "dest" : 83,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 3,
+    "dest" : 69,
+    "values" : {
+      "Kotlin Call Kotlin" : 3.0,
+      "Kotlin Import Kotlin" : 1.0,
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 118,
+    "dest" : 120,
+    "values" : {
+      "Java Call Java" : 2.0,
+      "Java Use Java" : 1.0,
+      "Java Implement Java" : 1.0,
+      "Java Contain Java" : 1.0,
+      "Java Create Java" : 1.0
+    }
+  }, {
+    "src" : 21,
+    "dest" : 87,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 16,
+    "dest" : 67,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 21,
+    "dest" : 83,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 16,
+    "dest" : 65,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0,
+      "Kotlin Contain Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 59,
+    "dest" : 117,
+    "values" : {
+      "Kotlin Implement Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 43,
+    "dest" : 40,
+    "values" : {
+      "Kotlin Extend Kotlin" : 1.0
+    }
+  }, {
+    "src" : 7,
+    "dest" : 89,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 49,
+    "dest" : 83,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 64,
+    "dest" : 71,
+    "values" : {
+      "Kotlin Contain Kotlin" : 1.0,
+      "Kotlin Parameter Kotlin" : 2.0,
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 22,
+    "dest" : 12,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 64,
+    "dest" : 72,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0,
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 36,
+    "dest" : 11,
+    "values" : {
+      "Kotlin Implement Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 97,
+    "dest" : 68,
+    "values" : {
+      "Kotlin Call Kotlin" : 4.0,
+      "Kotlin Import Kotlin" : 1.0,
+      "Kotlin Use Kotlin" : 4.0
+    }
+  }, {
+    "src" : 31,
+    "dest" : 65,
+    "values" : {
+      "Kotlin Cast Kotlin" : 1.0,
+      "Kotlin Call Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 111,
+    "dest" : 68,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0,
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 3,
+    "dest" : 79,
+    "values" : {
+      "Kotlin Import Kotlin" : 2.0,
+      "Kotlin Extend Kotlin" : 2.0
+    }
+  }, {
+    "src" : 21,
+    "dest" : 77,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 34,
+    "dest" : 109,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0,
+      "Kotlin Contain Kotlin" : 1.0,
+      "Kotlin Call Kotlin" : 3.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 64,
+    "dest" : 67,
+    "values" : {
+      "Kotlin Implement Kotlin" : 1.0
+    }
+  }, {
+    "src" : 64,
+    "dest" : 68,
+    "values" : {
+      "Kotlin Call Kotlin" : 3.0,
+      "Kotlin Use Kotlin" : 3.0
+    }
+  }, {
+    "src" : 21,
+    "dest" : 72,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0,
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 64,
+    "dest" : 69,
+    "values" : {
+      "Kotlin Use Kotlin" : 10.0
+    }
+  }, {
+    "src" : 78,
+    "dest" : 80,
+    "values" : {
+      "Kotlin Implement Kotlin" : 1.0
+    }
+  }, {
+    "src" : 28,
+    "dest" : 65,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0,
+      "Kotlin Return Kotlin" : 1.0,
+      "Kotlin Contain Kotlin" : 1.0,
+      "Kotlin Call Kotlin" : 4.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 36,
+    "dest" : 21,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 76,
+    "dest" : 68,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0,
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 83,
+    "dest" : 62,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 28,
+    "dest" : 67,
+    "values" : {
+      "Kotlin Call Kotlin" : 4.0
+    }
+  }, {
+    "src" : 105,
+    "dest" : 103,
+    "values" : {
+      "Kotlin Use Kotlin" : 4.0,
+      "Kotlin Parameter Kotlin" : 4.0
+    }
+  }, {
+    "src" : 3,
+    "dest" : 84,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 34,
+    "dest" : 112,
+    "values" : {
+      "Kotlin Import Java" : 1.0
+    }
+  }, {
+    "src" : 34,
+    "dest" : 111,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 3,
+    "dest" : 80,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 31,
+    "dest" : 74,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0,
+      "Kotlin Contain Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0,
+      "Kotlin Use Kotlin" : 2.0
+    }
+  }, {
+    "src" : 34,
+    "dest" : 113,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 34,
+    "dest" : 115,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 33,
+    "dest" : 2,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 101,
+    "dest" : 68,
+    "values" : {
+      "Kotlin Call Kotlin" : 7.0,
+      "Kotlin Import Kotlin" : 1.0,
+      "Kotlin Use Kotlin" : 7.0
+    }
+  }, {
+    "src" : 28,
+    "dest" : 76,
+    "values" : {
+      "Kotlin Create Kotlin" : 3.0,
+      "Kotlin Contain Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 28,
+    "dest" : 73,
+    "values" : {
+      "Kotlin Cast Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0,
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 28,
+    "dest" : 74,
+    "values" : {
+      "Kotlin Cast Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0,
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 35,
+    "dest" : 67,
+    "values" : {
+      "Kotlin Call Kotlin" : 4.0
+    }
+  }, {
+    "src" : 35,
+    "dest" : 65,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 113,
+    "dest" : 68,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0,
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 33,
+    "dest" : 28,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0,
+      "Kotlin Extend Kotlin" : 1.0,
+      "Kotlin Use Kotlin" : 21.0
+    }
+  }, {
+    "src" : 97,
+    "dest" : 95,
+    "values" : {
+      "Kotlin Implement Kotlin" : 1.0
+    }
+  }, {
+    "src" : 3,
+    "dest" : 95,
+    "values" : {
+      "Kotlin Contain Kotlin" : 1.0
+    }
+  }, {
+    "src" : 54,
+    "dest" : 57,
+    "values" : {
+      "Java Call Java" : 4.0,
+      "Java Use Java" : 4.0
+    }
+  }, {
+    "src" : 54,
+    "dest" : 56,
+    "values" : {
+      "Java Use Java" : 4.0
+    }
+  }, {
+    "src" : 27,
+    "dest" : 98,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 3,
+    "dest" : 98,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 3,
+    "dest" : 99,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 40,
+    "dest" : 98,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 95,
+    "dest" : 62,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 32,
+    "dest" : 94,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0,
+      "Kotlin Call Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 39,
+    "dest" : 62,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 32,
+    "dest" : 91,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0,
+      "Kotlin Contain Kotlin" : 1.0,
+      "Kotlin Call Kotlin" : 5.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 34,
+    "dest" : 26,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 34,
+    "dest" : 28,
+    "values" : {
+      "Kotlin Call Kotlin" : 6.0,
+      "Kotlin Extend Kotlin" : 1.0,
+      "Kotlin Use Kotlin" : 7.0
+    }
+  }, {
+    "src" : 15,
+    "dest" : 14,
+    "values" : {
+      "Java Call Java" : 2.0,
+      "Java Use Java" : 5.0,
+      "Java Parameter Java" : 2.0,
+      "Java Cast Java" : 5.0
+    }
+  }, {
+    "src" : 28,
+    "dest" : 89,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 114,
+    "dest" : 112,
+    "values" : {
+      "Kotlin Cast Java" : 1.0,
+      "Kotlin Call Java" : 1.0,
+      "Kotlin Use Java" : 1.0,
+      "Kotlin Create Java" : 1.0
+    }
+  }, {
+    "src" : 114,
+    "dest" : 113,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0
+    }
+  }, {
+    "src" : 114,
+    "dest" : 115,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0
+    }
+  }, {
+    "src" : 3,
+    "dest" : 25,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 3,
+    "dest" : 26,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 69,
+    "dest" : 68,
+    "values" : {
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 3,
+    "dest" : 23,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 3,
+    "dest" : 24,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 35,
+    "dest" : 28,
+    "values" : {
+      "Kotlin Call Kotlin" : 3.0,
+      "Kotlin Extend Kotlin" : 1.0,
+      "Kotlin Use Kotlin" : 8.0
+    }
+  }, {
+    "src" : 3,
+    "dest" : 21,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 3,
+    "dest" : 22,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 114,
+    "dest" : 111,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0
+    }
+  }, {
+    "src" : 3,
+    "dest" : 20,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 88,
+    "dest" : 67,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 62,
+    "dest" : 85,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 25,
+    "dest" : 52,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 65,
+    "dest" : 117,
+    "values" : {
+      "Kotlin Implement Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 91,
+    "dest" : 62,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 91,
+    "dest" : 63,
+    "values" : {
+      "Kotlin Implement Kotlin" : 2.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 91,
+    "dest" : 65,
+    "values" : {
+      "Kotlin Contain Kotlin" : 1.0,
+      "Kotlin Call Kotlin" : 13.0,
+      "Kotlin Import Kotlin" : 1.0,
+      "Kotlin Parameter Kotlin" : 1.0,
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 107,
+    "dest" : 106,
+    "values" : {
+      "Java Call Java" : 2.0,
+      "Java Use Java" : 46.0,
+      "Java Parameter Java" : 1.0,
+      "Java Contain Java" : 1.0,
+      "Java Return Java" : 1.0
+    }
+  }, {
+    "src" : 96,
+    "dest" : 98,
+    "values" : {
+      "Kotlin Implement Kotlin" : 1.0
+    }
+  }, {
+    "src" : 42,
+    "dest" : 62,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 67,
+    "dest" : 100,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0,
+      "Kotlin Use Kotlin" : 6.0
+    }
+  }, {
+    "src" : 59,
+    "dest" : 67,
+    "values" : {
+      "Kotlin Implement Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 34,
+    "dest" : 9,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 112,
+    "dest" : 119,
+    "values" : {
+      "Java Call Java" : 6.0,
+      "Java Use Java" : 184.0,
+      "Java Parameter Java" : 4.0,
+      "Java Contain Java" : 1.0,
+      "Java Create Java" : 3.0
+    }
+  }, {
+    "src" : 59,
+    "dest" : 64,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0,
+      "Kotlin Contain Kotlin" : 1.0,
+      "Kotlin Delegate Kotlin" : 1.0,
+      "Kotlin Call Kotlin" : 9.0,
+      "Kotlin Import Kotlin" : 1.0,
+      "Kotlin Parameter Kotlin" : 1.0
+    }
+  }, {
+    "src" : 112,
+    "dest" : 118,
+    "values" : {
+      "Java Use Java" : 24.0
+    }
+  }, {
+    "src" : 59,
+    "dest" : 62,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 33,
+    "dest" : 89,
+    "values" : {
+      "Kotlin Import Kotlin" : 2.0
+    }
+  }, {
+    "src" : 62,
+    "dest" : 71,
+    "values" : {
+      "Kotlin Contain Kotlin" : 1.0
+    }
+  }, {
+    "src" : 97,
+    "dest" : 62,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 24,
+    "dest" : 2,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 62,
+    "dest" : 64,
+    "values" : {
+      "Kotlin Contain Kotlin" : 2.0,
+      "Kotlin Parameter Kotlin" : 1.0
+    }
+  }, {
+    "src" : 109,
+    "dest" : 110,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0,
+      "Kotlin Contain Kotlin" : 1.0,
+      "Kotlin Use Kotlin" : 7.0
+    }
+  }, {
+    "src" : 108,
+    "dest" : 107,
+    "values" : {
+      "Java Call Java" : 12.0,
+      "Java Contain Java" : 1.0,
+      "Java Create Java" : 1.0
+    }
+  }, {
+    "src" : 108,
+    "dest" : 106,
+    "values" : {
+      "Java Call Java" : 5.0,
+      "Java Use Java" : 1.0,
+      "Java Parameter Java" : 1.0,
+      "Java Contain Java" : 1.0,
+      "Java Create Java" : 3.0,
+      "Java Return Java" : 1.0
+    }
+  }, {
+    "src" : 28,
+    "dest" : 9,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 28,
+    "dest" : 5,
+    "values" : {
+      "Kotlin Implement Kotlin" : 1.0
+    }
+  }, {
+    "src" : 43,
+    "dest" : 62,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 4,
+    "dest" : 21,
+    "values" : {
+      "Kotlin Create Kotlin" : 6.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 35,
+    "dest" : 21,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 28,
+    "dest" : 1,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0,
+      "Kotlin Contain Kotlin" : 1.0,
+      "Kotlin Use Kotlin" : 2.0
+    }
+  }, {
+    "src" : 70,
+    "dest" : 98,
+    "values" : {
+      "Kotlin Implement Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 67,
+    "dest" : 92,
+    "values" : {
+      "Kotlin Import Kotlin" : 2.0,
+      "Kotlin Parameter Kotlin" : 2.0
+    }
+  }, {
+    "src" : 62,
+    "dest" : 63,
+    "values" : {
+      "Kotlin Implement Kotlin" : 1.0
+    }
+  }, {
+    "src" : 112,
+    "dest" : 121,
+    "values" : {
+      "Java Call Java" : 3.0,
+      "Java Use Java" : 3.0
+    }
+  }, {
+    "src" : 23,
+    "dest" : 87,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 23,
+    "dest" : 83,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 4,
+    "dest" : 28,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0,
+      "Kotlin Extend Kotlin" : 1.0,
+      "Kotlin Use Kotlin" : 3.0
+    }
+  }, {
+    "src" : 87,
+    "dest" : 62,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 67,
+    "dest" : 85,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 22,
+    "dest" : 83,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 76,
+    "dest" : 112,
+    "values" : {
+      "Kotlin Cast Java" : 1.0,
+      "Kotlin Contain Java" : 1.0,
+      "Kotlin Use Java" : 6.0,
+      "Kotlin Import Java" : 1.0
+    }
+  }, {
+    "src" : 22,
+    "dest" : 85,
+    "values" : {
+      "Kotlin Create Kotlin" : 2.0,
+      "Kotlin Contain Kotlin" : 2.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 29,
+    "dest" : 102,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0,
+      "Kotlin Contain Kotlin" : 1.0,
+      "Kotlin Call Kotlin" : 3.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 22,
+    "dest" : 87,
+    "values" : {
+      "Kotlin Call Kotlin" : 3.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 67,
+    "dest" : 88,
+    "values" : {
+      "Kotlin Return Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 4,
+    "dest" : 74,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 7,
+    "dest" : 8,
+    "values" : {
+      "Kotlin Contain Kotlin" : 1.0
+    }
+  }, {
+    "src" : 36,
+    "dest" : 89,
+    "values" : {
+      "Kotlin Call Kotlin" : 2.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 65,
+    "dest" : 67,
+    "values" : {
+      "Kotlin Implement Kotlin" : 1.0
+    }
+  }, {
+    "src" : 9,
+    "dest" : 20,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0
+    }
+  }, {
+    "src" : 19,
+    "dest" : 87,
+    "values" : {
+      "Kotlin Call Kotlin" : 6.0,
+      "Kotlin Import Kotlin" : 2.0
+    }
+  }, {
+    "src" : 7,
+    "dest" : 4,
+    "values" : {
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 19,
+    "dest" : 83,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 110,
+    "dest" : 108,
+    "values" : {
+      "Kotlin Contain Java" : 1.0,
+      "Kotlin Use Java" : 1.0,
+      "Kotlin Create Java" : 1.0
+    }
+  }, {
+    "src" : 27,
+    "dest" : 40,
+    "values" : {
+      "Kotlin Contain Kotlin" : 1.0,
+      "Kotlin Call Kotlin" : 7.0
+    }
+  }, {
+    "src" : 9,
+    "dest" : 24,
+    "values" : {
+      "Kotlin Create Kotlin" : 14.0
+    }
+  }, {
+    "src" : 44,
+    "dest" : 40,
+    "values" : {
+      "Kotlin Extend Kotlin" : 1.0
+    }
+  }, {
+    "src" : 19,
+    "dest" : 82,
+    "values" : {
+      "Kotlin Implement Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 9,
+    "dest" : 22,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0
+    }
+  }, {
+    "src" : 27,
+    "dest" : 42,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0
+    }
+  }, {
+    "src" : 84,
+    "dest" : 95,
+    "values" : {
+      "Kotlin Return Kotlin" : 1.0,
+      "Kotlin Implement Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 27,
+    "dest" : 41,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0
+    }
+  }, {
+    "src" : 9,
+    "dest" : 21,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0
+    }
+  }, {
+    "src" : 27,
+    "dest" : 44,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0
+    }
+  }, {
+    "src" : 27,
+    "dest" : 43,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0
+    }
+  }, {
+    "src" : 98,
+    "dest" : 95,
+    "values" : {
+      "Kotlin Parameter Kotlin" : 4.0
+    }
+  }, {
+    "src" : 77,
+    "dest" : 62,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 9,
+    "dest" : 25,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 77,
+    "dest" : 64,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0,
+      "Kotlin Parameter Kotlin" : 1.0
+    }
+  }, {
+    "src" : 4,
+    "dest" : 87,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 29,
+    "dest" : 113,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0,
+      "Kotlin Contain Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 4,
+    "dest" : 80,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 67,
+    "dest" : 70,
+    "values" : {
+      "Kotlin Implement Kotlin" : 1.0
+    }
+  }, {
+    "src" : 67,
+    "dest" : 71,
+    "values" : {
+      "Kotlin Parameter Kotlin" : 2.0,
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 94,
+    "dest" : 63,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 4,
+    "dest" : 83,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 70,
+    "dest" : 80,
+    "values" : {
+      "Kotlin Implement Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 100,
+    "dest" : 68,
+    "values" : {
+      "Kotlin Call Kotlin" : 2.0,
+      "Kotlin Import Kotlin" : 1.0,
+      "Kotlin Use Kotlin" : 2.0
+    }
+  }, {
+    "src" : 69,
+    "dest" : 95,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 100,
+    "dest" : 62,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 34,
+    "dest" : 67,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 69,
+    "dest" : 103,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 114,
+    "dest" : 68,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0,
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 27,
+    "dest" : 39,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0
+    }
+  }, {
+    "src" : 114,
+    "dest" : 65,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0,
+      "Kotlin Contain Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 88,
+    "dest" : 95,
+    "values" : {
+      "Kotlin Implement Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 88,
+    "dest" : 93,
+    "values" : {
+      "Kotlin Extend Kotlin" : 1.0
+    }
+  }, {
+    "src" : 91,
+    "dest" : 117,
+    "values" : {
+      "Kotlin Implement Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 39,
+    "dest" : 40,
+    "values" : {
+      "Kotlin Extend Kotlin" : 1.0
+    }
+  }, {
+    "src" : 88,
+    "dest" : 98,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 92,
+    "dest" : 63,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 67,
+    "dest" : 66,
+    "values" : {
+      "Kotlin Implement Kotlin" : 1.0
+    }
+  }, {
+    "src" : 89,
+    "dest" : 62,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 65,
+    "dest" : 94,
+    "values" : {
+      "Kotlin Implement Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 89,
+    "dest" : 65,
+    "values" : {
+      "Kotlin Extension Kotlin" : 6.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 91,
+    "dest" : 94,
+    "values" : {
+      "Kotlin Implement Kotlin" : 1.0
+    }
+  }, {
+    "src" : 34,
+    "dest" : 94,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0,
+      "Kotlin Call Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 24,
+    "dest" : 83,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 44,
+    "dest" : 62,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 24,
+    "dest" : 82,
+    "values" : {
+      "Kotlin Implement Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 100,
+    "dest" : 95,
+    "values" : {
+      "Kotlin Implement Kotlin" : 1.0
+    }
+  }, {
+    "src" : 24,
+    "dest" : 87,
+    "values" : {
+      "Kotlin Call Kotlin" : 2.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 91,
+    "dest" : 112,
+    "values" : {
+      "Kotlin Cast Java" : 1.0,
+      "Kotlin Contain Java" : 1.0,
+      "Kotlin Use Java" : 2.0,
+      "Kotlin Import Java" : 1.0
+    }
+  }, {
+    "src" : 27,
+    "dest" : 21,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0,
+      "Kotlin Contain Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 100,
+    "dest" : 93,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 30,
+    "dest" : 19,
+    "values" : {
+      "Kotlin Create Kotlin" : 2.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 70,
+    "dest" : 105,
+    "values" : {
+      "Kotlin Implement Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 27,
+    "dest" : 28,
+    "values" : {
+      "Kotlin Call Kotlin" : 2.0,
+      "Kotlin Extend Kotlin" : 1.0,
+      "Kotlin Use Kotlin" : 14.0
+    }
+  }, {
+    "src" : 32,
+    "dest" : 67,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 32,
+    "dest" : 65,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 3,
+    "dest" : 18,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 3,
+    "dest" : 19,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 3,
+    "dest" : 16,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 109,
+    "dest" : 93,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0,
+      "Kotlin Extend Kotlin" : 1.0
+    }
+  }, {
+    "src" : 3,
+    "dest" : 17,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 116,
+    "dest" : 117,
+    "values" : {
+      "Kotlin Contain Kotlin" : 1.0,
+      "Kotlin Call Kotlin" : 2.0
+    }
+  }, {
+    "src" : 69,
+    "dest" : 70,
+    "values" : {
+      "Kotlin Implement Kotlin" : 1.0
+    }
+  }, {
+    "src" : 64,
+    "dest" : 103,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 30,
+    "dest" : 28,
+    "values" : {
+      "Kotlin Extend Kotlin" : 1.0,
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 79,
+    "dest" : 62,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 79,
+    "dest" : 68,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 64,
+    "dest" : 100,
+    "values" : {
+      "Kotlin Create Kotlin" : 2.0,
+      "Kotlin Contain Kotlin" : 2.0,
+      "Kotlin Call Kotlin" : 2.0,
+      "Kotlin Import Kotlin" : 1.0,
+      "Kotlin Use Kotlin" : 14.0
+    }
+  }, {
+    "src" : 64,
+    "dest" : 101,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0,
+      "Kotlin Contain Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 9,
+    "dest" : 17,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0
+    }
+  }, {
+    "src" : 42,
+    "dest" : 40,
+    "values" : {
+      "Kotlin Extend Kotlin" : 1.0
+    }
+  }, {
+    "src" : 69,
+    "dest" : 79,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0,
+      "Kotlin Contain Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0,
+      "Kotlin Parameter Kotlin" : 1.0
+    }
+  }, {
+    "src" : 9,
+    "dest" : 16,
+    "values" : {
+      "Kotlin Create Kotlin" : 4.0,
+      "Kotlin Contain Kotlin" : 1.0
+    }
+  }, {
+    "src" : 3,
+    "dest" : 12,
+    "values" : {
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 109,
+    "dest" : 88,
+    "values" : {
+      "Kotlin Contain Kotlin" : 1.0,
+      "Kotlin Call Kotlin" : 4.0,
+      "Kotlin Import Kotlin" : 1.0,
+      "Kotlin Parameter Kotlin" : 1.0
+    }
+  }, {
+    "src" : 31,
+    "dest" : 2,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 9,
+    "dest" : 18,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 12,
+    "dest" : 103,
+    "values" : {
+      "Kotlin Implement Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 62,
+    "dest" : 103,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0,
+      "Kotlin Use Kotlin" : 1.0,
+      "Kotlin Parameter Kotlin" : 1.0
+    }
+  }, {
+    "src" : 55,
+    "dest" : 57,
+    "values" : {
+      "Java Call Java" : 1.0,
+      "Java Use Java" : 1.0
+    }
+  }, {
+    "src" : 41,
+    "dest" : 62,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 30,
+    "dest" : 82,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 30,
+    "dest" : 81,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0,
+      "Kotlin Call Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 35,
+    "dest" : 100,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0,
+      "Kotlin Use Kotlin" : 4.0
+    }
+  }, {
+    "src" : 29,
+    "dest" : 17,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 2.0,
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 99,
+    "dest" : 62,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 73,
+    "dest" : 75,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0
+    }
+  }, {
+    "src" : 28,
+    "dest" : 11,
+    "values" : {
+      "Kotlin Implement Kotlin" : 1.0
+    }
+  }, {
+    "src" : 28,
+    "dest" : 12,
+    "values" : {
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 55,
+    "dest" : 56,
+    "values" : {
+      "Java Call Java" : 1.0,
+      "Java Create Java" : 1.0
+    }
+  }, {
+    "src" : 29,
+    "dest" : 28,
+    "values" : {
+      "Kotlin Extend Kotlin" : 1.0,
+      "Kotlin Use Kotlin" : 4.0
+    }
+  }, {
+    "src" : 104,
+    "dest" : 105,
+    "values" : {
+      "Kotlin Implement Kotlin" : 1.0
+    }
+  }, {
+    "src" : 63,
+    "dest" : 94,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0,
+      "Kotlin Use Kotlin" : 4.0
+    }
+  }, {
+    "src" : 7,
+    "dest" : 36,
+    "values" : {
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 115,
+    "dest" : 68,
+    "values" : {
+      "Kotlin Call Kotlin" : 2.0,
+      "Kotlin Import Kotlin" : 1.0,
+      "Kotlin Use Kotlin" : 2.0
+    }
+  }, {
+    "src" : 64,
+    "dest" : 85,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 28,
+    "dest" : 111,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0,
+      "Kotlin Contain Kotlin" : 1.0
+    }
+  }, {
+    "src" : 28,
+    "dest" : 21,
+    "values" : {
+      "Kotlin Create Kotlin" : 2.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 7,
+    "dest" : 34,
+    "values" : {
+      "Kotlin Use Kotlin" : 2.0
+    }
+  }, {
+    "src" : 64,
+    "dest" : 86,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0,
+      "Kotlin Contain Kotlin" : 1.0,
+      "Kotlin Call Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 2.0
+    }
+  }, {
+    "src" : 28,
+    "dest" : 112,
+    "values" : {
+      "Kotlin Cast Java" : 2.0,
+      "Kotlin Contain Java" : 1.0,
+      "Kotlin Use Java" : 2.0,
+      "Kotlin Create Java" : 1.0
+    }
+  }, {
+    "src" : 7,
+    "dest" : 35,
+    "values" : {
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 28,
+    "dest" : 113,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0,
+      "Kotlin Contain Kotlin" : 1.0
+    }
+  }, {
+    "src" : 28,
+    "dest" : 114,
+    "values" : {
+      "Kotlin Cast Kotlin" : 1.0,
+      "Kotlin Call Kotlin" : 1.0,
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 28,
+    "dest" : 115,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0,
+      "Kotlin Contain Kotlin" : 1.0
+    }
+  }, {
+    "src" : 32,
+    "dest" : 122,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 28,
+    "dest" : 116,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0,
+      "Kotlin Cast Kotlin" : 1.0,
+      "Kotlin Contain Kotlin" : 1.0,
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 17,
+    "dest" : 83,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 36,
+    "dest" : 65,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 28,
+    "dest" : 26,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 41,
+    "dest" : 40,
+    "values" : {
+      "Kotlin Extend Kotlin" : 1.0
+    }
+  }, {
+    "src" : 7,
+    "dest" : 32,
+    "values" : {
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 31,
+    "dest" : 28,
+    "values" : {
+      "Kotlin Call Kotlin" : 4.0,
+      "Kotlin Extend Kotlin" : 1.0,
+      "Kotlin Use Kotlin" : 5.0
+    }
+  }, {
+    "src" : 17,
+    "dest" : 87,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 7,
+    "dest" : 33,
+    "values" : {
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 7,
+    "dest" : 30,
+    "values" : {
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 7,
+    "dest" : 31,
+    "values" : {
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 16,
+    "dest" : 83,
+    "values" : {
+      "Kotlin Call Kotlin" : 2.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 47,
+    "dest" : 46,
+    "values" : {
+      "Java Call Java" : 4.0,
+      "Java Use Java" : 4.0,
+      "Java Parameter Java" : 1.0,
+      "Java Contain Java" : 1.0,
+      "Java Import Java" : 1.0
+    }
+  }, {
+    "src" : 99,
+    "dest" : 68,
+    "values" : {
+      "Kotlin Call Kotlin" : 15.0,
+      "Kotlin Import Kotlin" : 1.0,
+      "Kotlin Use Kotlin" : 15.0
+    }
+  }, {
+    "src" : 27,
+    "dest" : 65,
+    "values" : {
+      "Kotlin Call Kotlin" : 2.0
+    }
+  }, {
+    "src" : 31,
+    "dest" : 114,
+    "values" : {
+      "Kotlin Cast Kotlin" : 1.0,
+      "Kotlin Contain Kotlin" : 1.0,
+      "Kotlin Call Kotlin" : 4.0,
+      "Kotlin Import Kotlin" : 1.0,
+      "Kotlin Use Kotlin" : 6.0
+    }
+  }, {
+    "src" : 32,
+    "dest" : 28,
+    "values" : {
+      "Kotlin Call Kotlin" : 10.0,
+      "Kotlin Extend Kotlin" : 1.0,
+      "Kotlin Use Kotlin" : 6.0
+    }
+  }, {
+    "src" : 27,
+    "dest" : 67,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 31,
+    "dest" : 115,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 64,
+    "dest" : 77,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 31,
+    "dest" : 113,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 40,
+    "dest" : 65,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0,
+      "Kotlin Parameter Kotlin" : 1.0
+    }
+  }, {
+    "src" : 64,
+    "dest" : 79,
+    "values" : {
+      "Kotlin Contain Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 31,
+    "dest" : 111,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 21,
+    "dest" : 62,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 56,
+    "dest" : 57,
+    "values" : {
+      "Java Call Java" : 13.0,
+      "Java Use Java" : 13.0
+    }
+  }, {
+    "src" : 64,
+    "dest" : 95,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 74,
+    "dest" : 68,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0,
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 40,
+    "dest" : 62,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 64,
+    "dest" : 98,
+    "values" : {
+      "Kotlin Call Kotlin" : 6.0
+    }
+  }, {
+    "src" : 56,
+    "dest" : 54,
+    "values" : {
+      "Java Call Java" : 2.0,
+      "Java Create Java" : 1.0
+    }
+  }, {
+    "src" : 92,
+    "dest" : 95,
+    "values" : {
+      "Kotlin Implement Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 7,
+    "dest" : 29,
+    "values" : {
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 64,
+    "dest" : 92,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0,
+      "Kotlin Parameter Kotlin" : 2.0
+    }
+  }, {
+    "src" : 7,
+    "dest" : 27,
+    "values" : {
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 32,
+    "dest" : 9,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 89,
+    "dest" : 95,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 64,
+    "dest" : 90,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0,
+      "Kotlin Contain Kotlin" : 1.0,
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 18,
+    "dest" : 49,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 65,
+    "dest" : 64,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0,
+      "Kotlin Contain Kotlin" : 1.0,
+      "Kotlin Delegate Kotlin" : 1.0,
+      "Kotlin Call Kotlin" : 10.0,
+      "Kotlin Parameter Kotlin" : 1.0
+    }
+  }, {
+    "src" : 20,
+    "dest" : 87,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 114,
+    "dest" : 82,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 20,
+    "dest" : 83,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 30,
+    "dest" : 65,
+    "values" : {
+      "Kotlin Return Kotlin" : 1.0,
+      "Kotlin Call Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 114,
+    "dest" : 81,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 84,
+    "dest" : 62,
+    "values" : {
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 83,
+    "dest" : 89,
+    "values" : {
+      "Kotlin Import Kotlin" : 2.0,
+      "Kotlin Parameter Kotlin" : 7.0
+    }
+  }, {
+    "src" : 26,
+    "dest" : 83,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0,
+      "Kotlin Import Kotlin" : 1.0
+    }
+  }, {
+    "src" : 64,
+    "dest" : 88,
+    "values" : {
+      "Kotlin Create Kotlin" : 1.0,
+      "Kotlin Return Kotlin" : 1.0
+    }
+  } ]
+}

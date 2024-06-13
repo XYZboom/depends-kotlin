@@ -1,0 +1,3931 @@
+{
+  "schemaVersion" : "1.0",
+  "name" : "./build/DSU-method-sdsm",
+  "variables" : {
+    "0" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Default.abort)",
+    "1" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Default.asBinder)",
+    "2" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Default.closePartition)",
+    "3" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Default.createPartition)",
+    "4" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Default.destroy)",
+    "5" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Default.exit)",
+    "6" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Default.finishInstallation)",
+    "7" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Default.forceStopPackage)",
+    "8" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Default.getInstallationProgress)",
+    "9" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Default.getUid)",
+    "10" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Default.getVolumes)",
+    "11" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Default.grantPermission)",
+    "12" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Default.isEnabled)",
+    "13" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Default.isInUse)",
+    "14" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Default.isInstalled)",
+    "15" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Default.mount)",
+    "16" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Default.remove)",
+    "17" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Default.setAshmem)",
+    "18" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Default.setDynProp)",
+    "19" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Default.setEnable)",
+    "20" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Default.startActivity)",
+    "21" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Default.startInstallation)",
+    "22" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Default.submitFromAshmem)",
+    "23" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Default.suggestScratchSize)",
+    "24" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Default.unmount)",
+    "25" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Stub.Proxy.Proxy)",
+    "26" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Stub.Proxy.abort)",
+    "27" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Stub.Proxy.asBinder)",
+    "28" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Stub.Proxy.closePartition)",
+    "29" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Stub.Proxy.createPartition)",
+    "30" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Stub.Proxy.destroy)",
+    "31" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Stub.Proxy.exit)",
+    "32" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Stub.Proxy.finishInstallation)",
+    "33" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Stub.Proxy.forceStopPackage)",
+    "34" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Stub.Proxy.getInstallationProgress)",
+    "35" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Stub.Proxy.getInterfaceDescriptor)",
+    "36" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Stub.Proxy.getUid)",
+    "37" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Stub.Proxy.getVolumes)",
+    "38" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Stub.Proxy.grantPermission)",
+    "39" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Stub.Proxy.isEnabled)",
+    "40" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Stub.Proxy.isInUse)",
+    "41" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Stub.Proxy.isInstalled)",
+    "42" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Stub.Proxy.mount)",
+    "43" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Stub.Proxy.remove)",
+    "44" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Stub.Proxy.setAshmem)",
+    "45" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Stub.Proxy.setDynProp)",
+    "46" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Stub.Proxy.setEnable)",
+    "47" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Stub.Proxy.startActivity)",
+    "48" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Stub.Proxy.startInstallation)",
+    "49" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Stub.Proxy.submitFromAshmem)",
+    "50" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Stub.Proxy.suggestScratchSize)",
+    "51" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Stub.Proxy.unmount)",
+    "52" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Stub.Stub)",
+    "53" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Stub.asBinder)",
+    "54" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Stub.asInterface)",
+    "55" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Stub.getDefaultImpl)",
+    "56" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Stub.onTransact)",
+    "57" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.Stub.setDefaultImpl)",
+    "58" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.abort)",
+    "59" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.closePartition)",
+    "60" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.createPartition)",
+    "61" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.destroy)",
+    "62" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.exit)",
+    "63" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.finishInstallation)",
+    "64" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.forceStopPackage)",
+    "65" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.getInstallationProgress)",
+    "66" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.getUid)",
+    "67" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.getVolumes)",
+    "68" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.grantPermission)",
+    "69" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.isEnabled)",
+    "70" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.isInUse)",
+    "71" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.isInstalled)",
+    "72" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.mount)",
+    "73" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.remove)",
+    "74" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.setAshmem)",
+    "75" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.setDynProp)",
+    "76" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.setEnable)",
+    "77" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.startActivity)",
+    "78" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.startInstallation)",
+    "79" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.submitFromAshmem)",
+    "80" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.suggestScratchSize)",
+    "81" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\build\\generated\\aidl_source_output_dir\\release\\out\\vegabobo\\dsusideloader\\IPrivilegedService.java(vegabobo.dsusideloader.IPrivilegedService.unmount)",
+    "82" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\DSUSideloaderApplication.kt(vegabobo.dsusideloader.DSUSideloaderApplication.DSUSideloaderApplication)",
+    "83" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\MainActivity.kt(vegabobo.dsusideloader.MainActivity.MainActivity)",
+    "84" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\MainActivity.kt(vegabobo.dsusideloader.MainActivity.addShizukuListeners)",
+    "85" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\MainActivity.kt(vegabobo.dsusideloader.MainActivity.askShizukuPermission)",
+    "86" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\MainActivity.kt(vegabobo.dsusideloader.MainActivity.attachBaseContext)",
+    "87" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\MainActivity.kt(vegabobo.dsusideloader.MainActivity.bindShizuku)",
+    "88" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\MainActivity.kt(vegabobo.dsusideloader.MainActivity.onCreate)",
+    "89" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\MainActivity.kt(vegabobo.dsusideloader.MainActivity.onDestroy)",
+    "90" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\MainActivity.kt(vegabobo.dsusideloader.MainActivity.onRequestPermissionResult)",
+    "91" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\MainActivity.kt(vegabobo.dsusideloader.MainActivity.removeShizukuListeners)",
+    "92" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\MainActivity.kt(vegabobo.dsusideloader.MainActivity.setupService)",
+    "93" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\MainActivity.kt(vegabobo.dsusideloader.MainActivity.setupSessionOperationMode)",
+    "94" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\core\\BaseViewModel.kt(vegabobo.dsusideloader.core.BaseViewModel.BaseViewModel)",
+    "95" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\core\\BaseViewModel.kt(vegabobo.dsusideloader.core.BaseViewModel.readBoolPref)",
+    "96" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\core\\BaseViewModel.kt(vegabobo.dsusideloader.core.BaseViewModel.readStringPref)",
+    "97" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\core\\BaseViewModel.kt(vegabobo.dsusideloader.core.BaseViewModel.updateBoolPref)",
+    "98" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\core\\BaseViewModel.kt(vegabobo.dsusideloader.core.BaseViewModel.updateStringPref)",
+    "99" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\core\\StorageManager.kt(vegabobo.dsusideloader.core.StorageManager.StorageManager)",
+    "100" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\core\\StorageManager.kt(vegabobo.dsusideloader.core.StorageManager.arePermissionsGrantedToFolder)",
+    "101" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\core\\StorageManager.kt(vegabobo.dsusideloader.core.StorageManager.cleanWorkspaceFolder)",
+    "102" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\core\\StorageManager.kt(vegabobo.dsusideloader.core.StorageManager.copyFileToSafFolder)",
+    "103" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\core\\StorageManager.kt(vegabobo.dsusideloader.core.StorageManager.createDocumentFile)",
+    "104" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\core\\StorageManager.kt(vegabobo.dsusideloader.core.StorageManager.getFilenameFromUri)",
+    "105" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\core\\StorageManager.kt(vegabobo.dsusideloader.core.StorageManager.getFilesizeFromUri)",
+    "106" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\core\\StorageManager.kt(vegabobo.dsusideloader.core.StorageManager.getUriSafe)",
+    "107" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\core\\StorageManager.kt(vegabobo.dsusideloader.core.StorageManager.getWorkspaceFolder)",
+    "108" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\core\\StorageManager.kt(vegabobo.dsusideloader.core.StorageManager.isPathWrong)",
+    "109" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\core\\StorageManager.kt(vegabobo.dsusideloader.core.StorageManager.openInputStream)",
+    "110" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\core\\StorageManager.kt(vegabobo.dsusideloader.core.StorageManager.openOutputStream)",
+    "111" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\core\\StorageManager.kt(vegabobo.dsusideloader.core.StorageManager.readFileFromAssets)",
+    "112" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\core\\StorageManager.kt(vegabobo.dsusideloader.core.StorageManager.writeStringToExternalFileDir)",
+    "113" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\core\\StorageManager.kt(vegabobo.dsusideloader.core.StorageManager.writeStringToFile)",
+    "114" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\core\\StorageManager.kt(vegabobo.dsusideloader.core.StorageManager.writeStringToUri)",
+    "115" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\di\\DataModules.kt(vegabobo.dsusideloader.di.DataModules.providePreferencesDataStore)",
+    "116" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\di\\DataModules.kt(vegabobo.dsusideloader.di.DataModules.provideSession)",
+    "117" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\di\\DataModules.kt(vegabobo.dsusideloader.di.DataModules.providesStorageManager)",
+    "118" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\adb\\AdbInstallationHandler.kt(vegabobo.dsusideloader.installer.adb.AdbInstallationHandler.AdbInstallationHandler)",
+    "119" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\adb\\AdbInstallationHandler.kt(vegabobo.dsusideloader.installer.adb.AdbInstallationHandler.generate)",
+    "120" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\adb\\GenerateInstallationScript.kt(vegabobo.dsusideloader.installer.adb.GenerateInstallationScript.GenerateInstallationScript)",
+    "121" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\adb\\GenerateInstallationScript.kt(vegabobo.dsusideloader.installer.adb.GenerateInstallationScript.getShellScript)",
+    "122" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\adb\\GenerateInstallationScript.kt(vegabobo.dsusideloader.installer.adb.GenerateInstallationScript.writeToFile)",
+    "123" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\adb\\InstallationCmdline.kt(vegabobo.dsusideloader.installer.adb.InstallationCmdline.InstallationCmdline)",
+    "124" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\adb\\InstallationCmdline.kt(vegabobo.dsusideloader.installer.adb.InstallationCmdline.addArgument)",
+    "125" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\adb\\InstallationCmdline.kt(vegabobo.dsusideloader.installer.adb.InstallationCmdline.addArgument)",
+    "126" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\adb\\InstallationCmdline.kt(vegabobo.dsusideloader.installer.adb.InstallationCmdline.genInstallationArguments)",
+    "127" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\adb\\InstallationCmdline.kt(vegabobo.dsusideloader.installer.adb.InstallationCmdline.getCmd)",
+    "128" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\privileged\\DsuInstallationHandler.kt(vegabobo.dsusideloader.installer.privileged.DsuInstallationHandler.DsuInstallationHandler)",
+    "129" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\privileged\\DsuInstallationHandler.kt(vegabobo.dsusideloader.installer.privileged.DsuInstallationHandler.forwardInstallationToDSU)",
+    "130" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\privileged\\DsuInstallationHandler.kt(vegabobo.dsusideloader.installer.privileged.DsuInstallationHandler.startInstallation)",
+    "131" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\privileged\\DsuInstallationHandler.kt(vegabobo.dsusideloader.installer.privileged.DsuInstallationHandler.unmountSdTemporary)",
+    "132" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\privileged\\LogcatDiagnostic.kt(vegabobo.dsusideloader.installer.privileged.LogcatDiagnostic.LogcatDiagnostic)",
+    "133" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\privileged\\LogcatDiagnostic.kt(vegabobo.dsusideloader.installer.privileged.LogcatDiagnostic.destroy)",
+    "134" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\privileged\\LogcatDiagnostic.kt(vegabobo.dsusideloader.installer.privileged.LogcatDiagnostic.startLogging)",
+    "135" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\DSUInstaller.kt(vegabobo.dsusideloader.installer.root.DSUInstaller.DSUInstaller)",
+    "136" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\DSUInstaller.kt(vegabobo.dsusideloader.installer.root.DSUInstaller.MappedMemoryBuffer.MappedMemoryBuffer)",
+    "137" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\DSUInstaller.kt(vegabobo.dsusideloader.installer.root.DSUInstaller.MappedMemoryBuffer.close)",
+    "138" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\DSUInstaller.kt(vegabobo.dsusideloader.installer.root.DSUInstaller.createNewPartition)",
+    "139" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\DSUInstaller.kt(vegabobo.dsusideloader.installer.root.DSUInstaller.getFdDup)",
+    "140" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\DSUInstaller.kt(vegabobo.dsusideloader.installer.root.DSUInstaller.installImage)",
+    "141" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\DSUInstaller.kt(vegabobo.dsusideloader.installer.root.DSUInstaller.installImage)",
+    "142" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\DSUInstaller.kt(vegabobo.dsusideloader.installer.root.DSUInstaller.installImageFromAnEntry)",
+    "143" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\DSUInstaller.kt(vegabobo.dsusideloader.installer.root.DSUInstaller.installImages)",
+    "144" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\DSUInstaller.kt(vegabobo.dsusideloader.installer.root.DSUInstaller.installStreamingZipUpdate)",
+    "145" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\DSUInstaller.kt(vegabobo.dsusideloader.installer.root.DSUInstaller.installWritablePartition)",
+    "146" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\DSUInstaller.kt(vegabobo.dsusideloader.installer.root.DSUInstaller.invoke)",
+    "147" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\DSUInstaller.kt(vegabobo.dsusideloader.installer.root.DSUInstaller.isPartitionSupported)",
+    "148" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\DSUInstaller.kt(vegabobo.dsusideloader.installer.root.DSUInstaller.openInputStream)",
+    "149" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\DSUInstaller.kt(vegabobo.dsusideloader.installer.root.DSUInstaller.publishProgress)",
+    "150" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\DSUInstaller.kt(vegabobo.dsusideloader.installer.root.DSUInstaller.shouldInstallEntry)",
+    "151" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\DSUInstaller.kt(vegabobo.dsusideloader.installer.root.DSUInstaller.startInstallation)",
+    "152" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\DynamicSystemImpl.kt(vegabobo.dsusideloader.installer.root.DynamicSystemImpl.DynamicSystemImpl)",
+    "153" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\DynamicSystemImpl.kt(vegabobo.dsusideloader.installer.root.DynamicSystemImpl.abort)",
+    "154" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\DynamicSystemImpl.kt(vegabobo.dsusideloader.installer.root.DynamicSystemImpl.asBinder)",
+    "155" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\DynamicSystemImpl.kt(vegabobo.dsusideloader.installer.root.DynamicSystemImpl.closePartition)",
+    "156" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\DynamicSystemImpl.kt(vegabobo.dsusideloader.installer.root.DynamicSystemImpl.createPartition)",
+    "157" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\DynamicSystemImpl.kt(vegabobo.dsusideloader.installer.root.DynamicSystemImpl.finishInstallation)",
+    "158" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\DynamicSystemImpl.kt(vegabobo.dsusideloader.installer.root.DynamicSystemImpl.forceStopDSU)",
+    "159" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\DynamicSystemImpl.kt(vegabobo.dsusideloader.installer.root.DynamicSystemImpl.getInstallationProgress)",
+    "160" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\DynamicSystemImpl.kt(vegabobo.dsusideloader.installer.root.DynamicSystemImpl.isEnabled)",
+    "161" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\DynamicSystemImpl.kt(vegabobo.dsusideloader.installer.root.DynamicSystemImpl.isInUse)",
+    "162" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\DynamicSystemImpl.kt(vegabobo.dsusideloader.installer.root.DynamicSystemImpl.isInstalled)",
+    "163" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\DynamicSystemImpl.kt(vegabobo.dsusideloader.installer.root.DynamicSystemImpl.remove)",
+    "164" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\DynamicSystemImpl.kt(vegabobo.dsusideloader.installer.root.DynamicSystemImpl.setAshmem)",
+    "165" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\DynamicSystemImpl.kt(vegabobo.dsusideloader.installer.root.DynamicSystemImpl.setEnable)",
+    "166" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\DynamicSystemImpl.kt(vegabobo.dsusideloader.installer.root.DynamicSystemImpl.startInstallation)",
+    "167" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\DynamicSystemImpl.kt(vegabobo.dsusideloader.installer.root.DynamicSystemImpl.submitFromAshmem)",
+    "168" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\DynamicSystemImpl.kt(vegabobo.dsusideloader.installer.root.DynamicSystemImpl.suggestScratchSize)",
+    "169" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\SparseInputStream.java(vegabobo.dsusideloader.installer.root.SparseInputStream.SparseChunk.toString)",
+    "170" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\SparseInputStream.java(vegabobo.dsusideloader.installer.root.SparseInputStream.SparseInputStream)",
+    "171" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\SparseInputStream.java(vegabobo.dsusideloader.installer.root.SparseInputStream.getUnsparseSize)",
+    "172" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\SparseInputStream.java(vegabobo.dsusideloader.installer.root.SparseInputStream.prepareChunk)",
+    "173" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\SparseInputStream.java(vegabobo.dsusideloader.installer.root.SparseInputStream.read)",
+    "174" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\SparseInputStream.java(vegabobo.dsusideloader.installer.root.SparseInputStream.read)",
+    "175" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\SparseInputStream.java(vegabobo.dsusideloader.installer.root.SparseInputStream.readBuffer)",
+    "176" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\SparseInputStream.java(vegabobo.dsusideloader.installer.root.SparseInputStream.readChunk)",
+    "177" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\installer\\root\\SparseInputStream.java(vegabobo.dsusideloader.installer.root.SparseInputStream.readFull)",
+    "178" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\model\\DSUInstallationSource.kt(vegabobo.dsusideloader.model.DSUInstallationSource.DSUInstallationSource)",
+    "179" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\model\\DSUInstallationSource.kt(vegabobo.dsusideloader.model.DSUInstallationSource.DsuPackage.DsuPackage)",
+    "180" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\model\\DSUInstallationSource.kt(vegabobo.dsusideloader.model.DSUInstallationSource.MultipleImages.MultipleImages)",
+    "181" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\model\\DSUInstallationSource.kt(vegabobo.dsusideloader.model.DSUInstallationSource.SingleSystemImage.SingleSystemImage)",
+    "182" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\model\\DSUInstallationSource.kt(vegabobo.dsusideloader.model.DSUInstallationSource.Url.Url)",
+    "183" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\model\\DSUInstallationSource.kt(vegabobo.dsusideloader.model.ImagePartition.ImagePartition)",
+    "184" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\model\\DSUInstallationSource.kt(vegabobo.dsusideloader.model.Type.Type)",
+    "185" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\model\\Session.kt(vegabobo.dsusideloader.model.InstallationPreferences.InstallationPreferences)",
+    "186" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\model\\Session.kt(vegabobo.dsusideloader.model.Session.Session)",
+    "187" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\model\\Session.kt(vegabobo.dsusideloader.model.Session.getInstallationParameters)",
+    "188" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\model\\Session.kt(vegabobo.dsusideloader.model.Session.getOperationMode)",
+    "189" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\model\\Session.kt(vegabobo.dsusideloader.model.Session.isRoot)",
+    "190" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\model\\Session.kt(vegabobo.dsusideloader.model.Session.setOperationMode)",
+    "191" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\model\\Session.kt(vegabobo.dsusideloader.model.Session.toString)",
+    "192" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\model\\Session.kt(vegabobo.dsusideloader.model.UserSelection.UserSelection)",
+    "193" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\model\\Session.kt(vegabobo.dsusideloader.model.UserSelection.getUserDataSizeAsGB)",
+    "194" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\model\\Session.kt(vegabobo.dsusideloader.model.UserSelection.isCustomImageSize)",
+    "195" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\model\\Session.kt(vegabobo.dsusideloader.model.UserSelection.setImageSize)",
+    "196" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\model\\Session.kt(vegabobo.dsusideloader.model.UserSelection.setUserDataSize)",
+    "197" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\model\\Session.kt(vegabobo.dsusideloader.model.UserSelection.toString)",
+    "198" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\preparation\\FileUnPacker.kt(vegabobo.dsusideloader.preparation.FileUnPacker.FileUnPacker)",
+    "199" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\preparation\\FileUnPacker.kt(vegabobo.dsusideloader.preparation.FileUnPacker.copy)",
+    "200" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\preparation\\FileUnPacker.kt(vegabobo.dsusideloader.preparation.FileUnPacker.pack)",
+    "201" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\preparation\\FileUnPacker.kt(vegabobo.dsusideloader.preparation.FileUnPacker.unpack)",
+    "202" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\preparation\\FileUnPacker.kt(vegabobo.dsusideloader.preparation.FileUnPacker.updateProgress)",
+    "203" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\preparation\\InstallationStep.kt(vegabobo.dsusideloader.preparation.InstallationStep.InstallationStep)",
+    "204" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\preparation\\Preparation.kt(vegabobo.dsusideloader.preparation.Preparation.Preparation)",
+    "205" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\preparation\\Preparation.kt(vegabobo.dsusideloader.preparation.Preparation.extractFile)",
+    "206" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\preparation\\Preparation.kt(vegabobo.dsusideloader.preparation.Preparation.extractFile)",
+    "207" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\preparation\\Preparation.kt(vegabobo.dsusideloader.preparation.Preparation.getExtension)",
+    "208" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\preparation\\Preparation.kt(vegabobo.dsusideloader.preparation.Preparation.getFileName)",
+    "209" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\preparation\\Preparation.kt(vegabobo.dsusideloader.preparation.Preparation.getSafeUri)",
+    "210" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\preparation\\Preparation.kt(vegabobo.dsusideloader.preparation.Preparation.invoke)",
+    "211" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\preparation\\Preparation.kt(vegabobo.dsusideloader.preparation.Preparation.prepareForDSU)",
+    "212" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\preparation\\Preparation.kt(vegabobo.dsusideloader.preparation.Preparation.prepareGz)",
+    "213" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\preparation\\Preparation.kt(vegabobo.dsusideloader.preparation.Preparation.prepareImage)",
+    "214" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\preparation\\Preparation.kt(vegabobo.dsusideloader.preparation.Preparation.prepareRooted)",
+    "215" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\preparation\\Preparation.kt(vegabobo.dsusideloader.preparation.Preparation.prepareXz)",
+    "216" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\preparation\\Preparation.kt(vegabobo.dsusideloader.preparation.Preparation.prepareZip)",
+    "217" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\Connection.kt(vegabobo.dsusideloader.service.Connection.Connection)",
+    "218" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\Connection.kt(vegabobo.dsusideloader.service.Connection.onServiceConnected)",
+    "219" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\Connection.kt(vegabobo.dsusideloader.service.Connection.onServiceDisconnected)",
+    "220" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\Connection.kt(vegabobo.dsusideloader.service.Connection.set)",
+    "221" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\PrivilegedBinder.kt(vegabobo.dsusideloader.service.PrivilegedRootService.PrivilegedRootService)",
+    "222" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\PrivilegedBinder.kt(vegabobo.dsusideloader.service.PrivilegedRootService.onBind)",
+    "223" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\PrivilegedBinder.kt(vegabobo.dsusideloader.service.PrivilegedSystemService.PrivilegedSystemService)",
+    "224" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\PrivilegedBinder.kt(vegabobo.dsusideloader.service.PrivilegedSystemService.onBind)",
+    "225" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\PrivilegedProvider.kt(vegabobo.dsusideloader.service.PrivilegedProvider.getService)",
+    "226" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\PrivilegedProvider.kt(vegabobo.dsusideloader.service.PrivilegedProvider.isConnected)",
+    "227" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\PrivilegedProvider.kt(vegabobo.dsusideloader.service.PrivilegedProvider.isRoot)",
+    "228" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\PrivilegedProvider.kt(vegabobo.dsusideloader.service.PrivilegedProvider.run)",
+    "229" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\PrivilegedProvider.kt(vegabobo.dsusideloader.service.PrivilegedProvider.run.service)",
+    "230" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\PrivilegedService.kt(vegabobo.dsusideloader.service.PrivilegedService.PrivilegedService)",
+    "231" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\PrivilegedService.kt(vegabobo.dsusideloader.service.PrivilegedService.abort)",
+    "232" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\PrivilegedService.kt(vegabobo.dsusideloader.service.PrivilegedService.closePartition)",
+    "233" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\PrivilegedService.kt(vegabobo.dsusideloader.service.PrivilegedService.createPartition)",
+    "234" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\PrivilegedService.kt(vegabobo.dsusideloader.service.PrivilegedService.destroy)",
+    "235" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\PrivilegedService.kt(vegabobo.dsusideloader.service.PrivilegedService.exit)",
+    "236" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\PrivilegedService.kt(vegabobo.dsusideloader.service.PrivilegedService.finishInstallation)",
+    "237" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\PrivilegedService.kt(vegabobo.dsusideloader.service.PrivilegedService.forceStopPackage)",
+    "238" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\PrivilegedService.kt(vegabobo.dsusideloader.service.PrivilegedService.getBinder)",
+    "239" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\PrivilegedService.kt(vegabobo.dsusideloader.service.PrivilegedService.getInstallationProgress)",
+    "240" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\PrivilegedService.kt(vegabobo.dsusideloader.service.PrivilegedService.getUid)",
+    "241" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\PrivilegedService.kt(vegabobo.dsusideloader.service.PrivilegedService.getVolumes)",
+    "242" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\PrivilegedService.kt(vegabobo.dsusideloader.service.PrivilegedService.grantPermission)",
+    "243" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\PrivilegedService.kt(vegabobo.dsusideloader.service.PrivilegedService.isEnabled)",
+    "244" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\PrivilegedService.kt(vegabobo.dsusideloader.service.PrivilegedService.isInUse)",
+    "245" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\PrivilegedService.kt(vegabobo.dsusideloader.service.PrivilegedService.isInstalled)",
+    "246" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\PrivilegedService.kt(vegabobo.dsusideloader.service.PrivilegedService.mount)",
+    "247" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\PrivilegedService.kt(vegabobo.dsusideloader.service.PrivilegedService.remove)",
+    "248" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\PrivilegedService.kt(vegabobo.dsusideloader.service.PrivilegedService.requiresActivityManager)",
+    "249" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\PrivilegedService.kt(vegabobo.dsusideloader.service.PrivilegedService.requiresDynamicSystem)",
+    "250" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\PrivilegedService.kt(vegabobo.dsusideloader.service.PrivilegedService.requiresPackageManager)",
+    "251" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\PrivilegedService.kt(vegabobo.dsusideloader.service.PrivilegedService.requiresStorageManager)",
+    "252" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\PrivilegedService.kt(vegabobo.dsusideloader.service.PrivilegedService.setAshmem)",
+    "253" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\PrivilegedService.kt(vegabobo.dsusideloader.service.PrivilegedService.setDynProp)",
+    "254" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\PrivilegedService.kt(vegabobo.dsusideloader.service.PrivilegedService.setEnable)",
+    "255" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\PrivilegedService.kt(vegabobo.dsusideloader.service.PrivilegedService.setProp)",
+    "256" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\PrivilegedService.kt(vegabobo.dsusideloader.service.PrivilegedService.startActivity)",
+    "257" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\PrivilegedService.kt(vegabobo.dsusideloader.service.PrivilegedService.startInstallation)",
+    "258" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\PrivilegedService.kt(vegabobo.dsusideloader.service.PrivilegedService.submitFromAshmem)",
+    "259" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\PrivilegedService.kt(vegabobo.dsusideloader.service.PrivilegedService.suggestScratchSize)",
+    "260" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\service\\PrivilegedService.kt(vegabobo.dsusideloader.service.PrivilegedService.unmount)",
+    "261" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\cards\\CopyableTextCard.kt(vegabobo.dsusideloader.ui.cards.CopyableTextCard)",
+    "262" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\cards\\ImageSizeCard.kt(vegabobo.dsusideloader.ui.cards.ImageSizeCard)",
+    "263" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\cards\\LogcatCard.kt(vegabobo.dsusideloader.ui.cards.LogcatCard)",
+    "264" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\cards\\UserdataCard.kt(vegabobo.dsusideloader.ui.cards.UserdataCard)",
+    "265" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\cards\\WhatIsDsuCard.kt(vegabobo.dsusideloader.ui.cards.DsuInfoCard)",
+    "266" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\cards\\installation\\InstallationCard.kt(vegabobo.dsusideloader.ui.cards.installation.InstallationCard)",
+    "267" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\cards\\installation\\InstallationCardStep.kt(vegabobo.dsusideloader.ui.cards.installation.InstallationCardStep)",
+    "268" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\cards\\installation\\content\\NotInstallingCardContent.kt(vegabobo.dsusideloader.ui.cards.installation.content.NotInstallingCardContent)",
+    "269" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\cards\\installation\\content\\ProgressableCardContent.kt(vegabobo.dsusideloader.ui.cards.installation.content.ProgressableCardContent)",
+    "270" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\cards\\updater\\UpdaterCard.kt(vegabobo.dsusideloader.ui.cards.updater.UpdaterCard)",
+    "271" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\cards\\updater\\UpdaterCard.kt(vegabobo.dsusideloader.ui.cards.updater.UpdaterCard.isCheckingForUpdates)",
+    "272" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\cards\\updater\\UpdaterCard.kt(vegabobo.dsusideloader.ui.cards.updater.UpdaterCard.isDownloading)",
+    "273" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\cards\\updater\\UpdaterCard.kt(vegabobo.dsusideloader.ui.cards.updater.UpdaterCard.isUpdateFound)",
+    "274" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\cards\\warnings\\LoadingCard.kt(vegabobo.dsusideloader.ui.cards.warnings.GrantingPermissionCard)",
+    "275" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\cards\\warnings\\RequiresLogPermissionCard.kt(vegabobo.dsusideloader.ui.cards.warnings.RequiresLogPermissionCard)",
+    "276" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\cards\\warnings\\SetupStorage.kt(vegabobo.dsusideloader.ui.cards.warnings.SetupStorage)",
+    "277" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\cards\\warnings\\StorageWarningCard.kt(vegabobo.dsusideloader.ui.cards.warnings.StorageWarningCard)",
+    "278" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\cards\\warnings\\UnlockedBootloaderCard.kt(vegabobo.dsusideloader.ui.cards.warnings.UnlockedBootloaderCard)",
+    "279" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\cards\\warnings\\UnsupportedCard.kt(vegabobo.dsusideloader.ui.cards.warnings.UnsupportedCard)",
+    "280" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\components\\ApplicationScreen.kt(vegabobo.dsusideloader.ui.components.ApplicationScreen)",
+    "281" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\components\\BottomSheetContent.kt(vegabobo.dsusideloader.ui.components.BottomSheetContent)",
+    "282" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\components\\CardBox.kt(vegabobo.dsusideloader.ui.components.CardBox)",
+    "283" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\components\\CardTitle.kt(vegabobo.dsusideloader.ui.components.CardTitle)",
+    "284" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\components\\CustomBottomSheet.kt(vegabobo.dsusideloader.ui.components.CustomBottomSheet)",
+    "285" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\components\\Dialog.kt(vegabobo.dsusideloader.ui.components.Dialog)",
+    "286" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\components\\DialogItem.kt(vegabobo.dsusideloader.ui.components.DialogItem)",
+    "287" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\components\\DialogLikeBottomSheet.kt(vegabobo.dsusideloader.ui.components.DialogLikeBottomSheet)",
+    "288" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\components\\DynamicListItem.kt(vegabobo.dsusideloader.ui.components.DynamicListItem)",
+    "289" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\components\\FileSelectionBox.kt(vegabobo.dsusideloader.ui.components.FileSelectionBox)",
+    "290" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\components\\PreferenceItem.kt(vegabobo.dsusideloader.ui.components.PreferenceItem)",
+    "291" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\components\\SimpleCard.kt(vegabobo.dsusideloader.ui.components.SimpleCard)",
+    "292" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\components\\Title.kt(vegabobo.dsusideloader.ui.components.Title)",
+    "293" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\components\\TopBar.kt(vegabobo.dsusideloader.ui.components.TopBar)",
+    "294" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\components\\buttons\\ActionButton.kt(vegabobo.dsusideloader.ui.components.buttons.ActionButton)",
+    "295" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\components\\buttons\\ErrorButton.kt(vegabobo.dsusideloader.ui.components.buttons.ErrorButton)",
+    "296" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\components\\buttons\\PrimaryButton.kt(vegabobo.dsusideloader.ui.components.buttons.PrimaryButton)",
+    "297" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\components\\buttons\\SecondaryButton.kt(vegabobo.dsusideloader.ui.components.buttons.SecondaryButton)",
+    "298" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\components\\buttons\\SecondaryButton.kt(vegabobo.dsusideloader.ui.components.buttons.SecondaryButton.addAlpha)",
+    "299" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\Navigation.kt(vegabobo.dsusideloader.ui.screen.Navigation)",
+    "300" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\Navigation.kt(vegabobo.dsusideloader.ui.screen.Navigation.navigate)",
+    "301" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\about\\AboutScreen.kt(vegabobo.dsusideloader.ui.screen.about.AboutScreen)",
+    "302" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\about\\AboutUiState.kt(vegabobo.dsusideloader.ui.screen.about.AboutScreenUiState.AboutScreenUiState)",
+    "303" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\about\\AboutUiState.kt(vegabobo.dsusideloader.ui.screen.about.DevOptToastDisplay.DevOptToastDisplay)",
+    "304" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\about\\AboutUiState.kt(vegabobo.dsusideloader.ui.screen.about.UpdateStatus.UpdateStatus)",
+    "305" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\about\\AboutUiState.kt(vegabobo.dsusideloader.ui.screen.about.UpdaterCardState.UpdaterCardState)",
+    "306" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\about\\AboutViewModel.kt(vegabobo.dsusideloader.ui.screen.about.AboutViewModel.AboutViewModel)",
+    "307" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\about\\AboutViewModel.kt(vegabobo.dsusideloader.ui.screen.about.AboutViewModel.onClickCheckUpdates)",
+    "308" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\about\\AboutViewModel.kt(vegabobo.dsusideloader.ui.screen.about.AboutViewModel.onClickDownloadUpdate)",
+    "309" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\about\\AboutViewModel.kt(vegabobo.dsusideloader.ui.screen.about.AboutViewModel.onClickImage)",
+    "310" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\about\\AboutViewModel.kt(vegabobo.dsusideloader.ui.screen.about.AboutViewModel.resetDeveloperOptionsCounter)",
+    "311" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\about\\AboutViewModel.kt(vegabobo.dsusideloader.ui.screen.about.AboutViewModel.updateUpdaterCard)",
+    "312" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\about\\AboutViewModel.kt(vegabobo.dsusideloader.ui.screen.about.UpdaterResponse.UpdaterResponse)",
+    "313" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\adb\\AdbScreen.kt(vegabobo.dsusideloader.ui.screen.adb.AdbScreen)",
+    "314" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\adb\\AdbViewModel.kt(vegabobo.dsusideloader.ui.screen.adb.AdbViewModel.AdbViewModel)",
+    "315" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\adb\\AdbViewModel.kt(vegabobo.dsusideloader.ui.screen.adb.AdbViewModel.obtainScriptPath)",
+    "316" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeScreen.kt(vegabobo.dsusideloader.ui.screen.home.Home)",
+    "317" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeUiState.kt(vegabobo.dsusideloader.ui.screen.home.AdditionalCardState.AdditionalCardState)",
+    "318" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeUiState.kt(vegabobo.dsusideloader.ui.screen.home.HomeUiState.HomeUiState)",
+    "319" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeUiState.kt(vegabobo.dsusideloader.ui.screen.home.HomeUiState.isInstalling)",
+    "320" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeUiState.kt(vegabobo.dsusideloader.ui.screen.home.ImageSizeCardState.ImageSizeCardState)",
+    "321" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeUiState.kt(vegabobo.dsusideloader.ui.screen.home.InstallationCardState.InstallationCardState)",
+    "322" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeUiState.kt(vegabobo.dsusideloader.ui.screen.home.SheetDisplayState.SheetDisplayState)",
+    "323" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeUiState.kt(vegabobo.dsusideloader.ui.screen.home.UserDataCardState.UserDataCardState)",
+    "324" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.HomeViewModel)",
+    "325" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.dismissSheet)",
+    "326" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.generateUsefulLogInfo)",
+    "327" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.grantReadLogs)",
+    "328" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.initialChecks)",
+    "329" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.obtainSelectedFilename)",
+    "330" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.onCheckImageSizeCard)",
+    "331" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.onCheckUserdataCard)",
+    "332" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.onClickBootloaderUnlockedWarning)",
+    "333" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.onClickCancel)",
+    "334" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.onClickCancelInstallationButton)",
+    "335" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.onClickDiscardGsi)",
+    "336" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.onClickDiscardGsiAndStartInstallation)",
+    "337" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.onClickInstall)",
+    "338" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.onClickRebootToDynOS)",
+    "339" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.onClickRetryInstallation)",
+    "340" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.onClickSetSeLinuxPermissive)",
+    "341" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.onClickUnmountSdCardAndRetry)",
+    "342" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.onConfirmInstallationSheet)",
+    "343" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.onCreatePartition)",
+    "344" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.onFileSelectionResult)",
+    "345" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.onInstallationError)",
+    "346" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.onInstallationProgressUpdate)",
+    "347" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.onInstallationSuccess)",
+    "348" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.onLogLineReceived)",
+    "349" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.onPreparationFinished)",
+    "350" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.onPreparationProgressUpdate)",
+    "351" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.onRootInstallationSuccess)",
+    "352" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.onStepUpdate)",
+    "353" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.overrideDynamicPartitionCheck)",
+    "354" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.overrideUnavaiableStorage)",
+    "355" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.refuseReadLogs)",
+    "356" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.resetInstallationCard)",
+    "357" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.saveLogs)",
+    "358" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.setupAdbInstallation)",
+    "359" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.setupUserPreferences)",
+    "360" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.showDiscardSheet)",
+    "361" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.showLogsWarning)",
+    "362" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.startDSUInstallation)",
+    "363" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.startInstallation)",
+    "364" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.startLogging)",
+    "365" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.startPrivilegedInstallation)",
+    "366" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.takeUriPermission)",
+    "367" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.updateAdditionalCardState)",
+    "368" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.updateImageSize)",
+    "369" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.updateImageSizeCard)",
+    "370" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.updateInstallationCard)",
+    "371" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.updateSheetState)",
+    "372" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.updateUserdataCard)",
+    "373" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\home\\HomeViewModel.kt(vegabobo.dsusideloader.ui.screen.home.HomeViewModel.updateUserdataSize)",
+    "374" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\libraries\\LibrariesScreen.kt(vegabobo.dsusideloader.ui.screen.libraries.LibrariesScreen)",
+    "375" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\settings\\SettingsScreen.kt(vegabobo.dsusideloader.ui.screen.settings.Settings)",
+    "376" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\settings\\SettingsUiState.kt(vegabobo.dsusideloader.ui.screen.settings.DialogSheetState.DialogSheetState)",
+    "377" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\settings\\SettingsUiState.kt(vegabobo.dsusideloader.ui.screen.settings.SettingsUiState.SettingsUiState)",
+    "378" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\settings\\SettingsViewModel.kt(vegabobo.dsusideloader.ui.screen.settings.SettingsViewModel.SettingsViewModel)",
+    "379" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\settings\\SettingsViewModel.kt(vegabobo.dsusideloader.ui.screen.settings.SettingsViewModel.checkDevOpt)",
+    "380" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\settings\\SettingsViewModel.kt(vegabobo.dsusideloader.ui.screen.settings.SettingsViewModel.checkOperationMode)",
+    "381" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\settings\\SettingsViewModel.kt(vegabobo.dsusideloader.ui.screen.settings.SettingsViewModel.getOperationMode)",
+    "382" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\settings\\SettingsViewModel.kt(vegabobo.dsusideloader.ui.screen.settings.SettingsViewModel.isAndroidQ)",
+    "383" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\settings\\SettingsViewModel.kt(vegabobo.dsusideloader.ui.screen.settings.SettingsViewModel.reloadPreferences)",
+    "384" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\settings\\SettingsViewModel.kt(vegabobo.dsusideloader.ui.screen.settings.SettingsViewModel.togglePreference)",
+    "385" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\screen\\settings\\SettingsViewModel.kt(vegabobo.dsusideloader.ui.screen.settings.SettingsViewModel.updateSheetDisplay)",
+    "386" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\sdialogs\\CancelSheet.kt(vegabobo.dsusideloader.ui.sdialogs.CancelSheet)",
+    "387" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\sdialogs\\ConfirmInstallationSheet.kt(vegabobo.dsusideloader.ui.sdialogs.ConfirmInstallationSheet)",
+    "388" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\sdialogs\\DiscardDSUSheet.kt(vegabobo.dsusideloader.ui.sdialogs.DiscardDSUSheet)",
+    "389" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\sdialogs\\ImageSizeWarningSheet.kt(vegabobo.dsusideloader.ui.sdialogs.ImageSizeWarningSheet)",
+    "390" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\sdialogs\\ViewLogsSheet.kt(vegabobo.dsusideloader.ui.sdialogs.ViewLogsBottomSheet)",
+    "391" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\theme\\Theme.kt(vegabobo.dsusideloader.ui.theme.DSUHelperTheme)",
+    "392" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\util\\ActivityResult.kt(vegabobo.dsusideloader.ui.util.launcherAcResult)",
+    "393" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\ui\\util\\KeepScreenOn.kt(vegabobo.dsusideloader.ui.util.KeepScreenOn)",
+    "394" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\util\\CmdRunner.kt(vegabobo.dsusideloader.util.CmdRunner.destroy)",
+    "395" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\util\\CmdRunner.kt(vegabobo.dsusideloader.util.CmdRunner.run)",
+    "396" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\util\\CmdRunner.kt(vegabobo.dsusideloader.util.CmdRunner.runCommand)",
+    "397" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\util\\CmdRunner.kt(vegabobo.dsusideloader.util.CmdRunner.runCommand)",
+    "398" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\util\\CmdRunner.kt(vegabobo.dsusideloader.util.CmdRunner.runReadEachLine)",
+    "399" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\util\\CmdRunner.kt(vegabobo.dsusideloader.util.CmdRunner.runReadEachLine.onAddElement)",
+    "400" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\util\\CollectAsStateWithLifecycle.kt(vegabobo.dsusideloader.util.collectAsStateWithLifecycle)",
+    "401" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\util\\CollectAsStateWithLifecycle.kt(vegabobo.dsusideloader.util.collectAsStateWithLifecycle)",
+    "402" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\util\\DataStoreUtils.kt(vegabobo.dsusideloader.util.DataStoreUtils.DataStoreUtils)",
+    "403" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\util\\DataStoreUtils.kt(vegabobo.dsusideloader.util.DataStoreUtils.readBoolPref)",
+    "404" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\util\\DataStoreUtils.kt(vegabobo.dsusideloader.util.DataStoreUtils.readStringPref)",
+    "405" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\util\\DataStoreUtils.kt(vegabobo.dsusideloader.util.DataStoreUtils.readStringPref)",
+    "406" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\util\\DataStoreUtils.kt(vegabobo.dsusideloader.util.DataStoreUtils.updateBoolPref)",
+    "407" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\util\\DataStoreUtils.kt(vegabobo.dsusideloader.util.DataStoreUtils.updateStringPref)",
+    "408" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\util\\DevicePropUtils.kt(vegabobo.dsusideloader.util.DevicePropUtils.DevicePropUtils)",
+    "409" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\util\\DevicePropUtils.kt(vegabobo.dsusideloader.util.DevicePropUtils.getGsidBinaryAllowedPerc)",
+    "410" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\util\\DevicePropUtils.kt(vegabobo.dsusideloader.util.DevicePropUtils.getSystemProperty)",
+    "411" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\util\\DevicePropUtils.kt(vegabobo.dsusideloader.util.DevicePropUtils.hasDynamicPartitions)",
+    "412" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\util\\FilenameUtils.kt(vegabobo.dsusideloader.util.FilenameUtils.FilenameUtils)",
+    "413" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\util\\FilenameUtils.kt(vegabobo.dsusideloader.util.FilenameUtils.appendToDigitsToString)",
+    "414" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\util\\FilenameUtils.kt(vegabobo.dsusideloader.util.FilenameUtils.getDigits)",
+    "415" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\util\\FilenameUtils.kt(vegabobo.dsusideloader.util.FilenameUtils.getFilePath)",
+    "416" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\util\\FilenameUtils.kt(vegabobo.dsusideloader.util.FilenameUtils.getLengthFromFile)",
+    "417" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\util\\FilenameUtils.kt(vegabobo.dsusideloader.util.FilenameUtils.queryName)",
+    "418" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\util\\OperationModeUtils.kt(vegabobo.dsusideloader.util.OperationMode.OperationMode)",
+    "419" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\util\\OperationModeUtils.kt(vegabobo.dsusideloader.util.OperationModeUtils.OperationModeUtils)",
+    "420" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\util\\OperationModeUtils.kt(vegabobo.dsusideloader.util.OperationModeUtils.getOperationMode)",
+    "421" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\util\\OperationModeUtils.kt(vegabobo.dsusideloader.util.OperationModeUtils.getOperationModeAsString)",
+    "422" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\util\\OperationModeUtils.kt(vegabobo.dsusideloader.util.OperationModeUtils.isDsuPermissionGranted)",
+    "423" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\util\\OperationModeUtils.kt(vegabobo.dsusideloader.util.OperationModeUtils.isPermissionGranted)",
+    "424" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\util\\OperationModeUtils.kt(vegabobo.dsusideloader.util.OperationModeUtils.isReadLogsPermissionGranted)",
+    "425" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\util\\OperationModeUtils.kt(vegabobo.dsusideloader.util.OperationModeUtils.isShizukuPermissionGranted)",
+    "426" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\util\\SignatureUtils.kt(vegabobo.dsusideloader.util.getSignatures)",
+    "427" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\util\\SignatureUtils.kt(vegabobo.dsusideloader.util.isBuildSignedByAuthor)",
+    "428" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\util\\SignatureUtils.kt(vegabobo.dsusideloader.util.signatureDigest)",
+    "429" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\util\\SignatureUtils.kt(vegabobo.dsusideloader.util.signatureDigest)",
+    "430" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\util\\StorageUtils.kt(vegabobo.dsusideloader.util.StorageUtils.StorageUtils)",
+    "431" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\app\\src\\main\\java\\vegabobo\\dsusideloader\\util\\StorageUtils.kt(vegabobo.dsusideloader.util.StorageUtils.getAllocInfo)",
+    "432" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\hidden-api-stub\\src\\main\\java\\android\\app\\IActivityManager.java(android.app.IActivityManager.Stub.asInterface)",
+    "433" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\hidden-api-stub\\src\\main\\java\\android\\app\\IActivityManager.java(android.app.IActivityManager.forceStopPackage)",
+    "434" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\hidden-api-stub\\src\\main\\java\\android\\app\\IActivityManager.java(android.app.IActivityManager.startActivityAsUser)",
+    "435" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\hidden-api-stub\\src\\main\\java\\android\\app\\IActivityManager.java(android.app.IActivityManager.startActivityAsUserWithFeature)",
+    "436" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\hidden-api-stub\\src\\main\\java\\android\\content\\pm\\IPackageManager.java(android.content.pm.IPackageManager.Stub.asInterface)",
+    "437" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\hidden-api-stub\\src\\main\\java\\android\\content\\pm\\IPackageManager.java(android.content.pm.IPackageManager.grantRuntimePermission)",
+    "438" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\hidden-api-stub\\src\\main\\java\\android\\gsi\\GsiProgress.java(android.gsi.GsiProgress.GsiProgress)",
+    "439" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\hidden-api-stub\\src\\main\\java\\android\\gsi\\GsiProgress.java(android.gsi.GsiProgress.createFromParcel)",
+    "440" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\hidden-api-stub\\src\\main\\java\\android\\gsi\\GsiProgress.java(android.gsi.GsiProgress.describeContents)",
+    "441" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\hidden-api-stub\\src\\main\\java\\android\\gsi\\GsiProgress.java(android.gsi.GsiProgress.newArray)",
+    "442" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\hidden-api-stub\\src\\main\\java\\android\\gsi\\GsiProgress.java(android.gsi.GsiProgress.writeToParcel)",
+    "443" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\hidden-api-stub\\src\\main\\java\\android\\os\\SystemProperties.java(android.os.SystemProperties.set)",
+    "444" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\hidden-api-stub\\src\\main\\java\\android\\os\\image\\IDynamicSystemService.java(android.os.image.IDynamicSystemService.Stub.asInterface)",
+    "445" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\hidden-api-stub\\src\\main\\java\\android\\os\\image\\IDynamicSystemService.java(android.os.image.IDynamicSystemService.abort)",
+    "446" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\hidden-api-stub\\src\\main\\java\\android\\os\\image\\IDynamicSystemService.java(android.os.image.IDynamicSystemService.closePartition)",
+    "447" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\hidden-api-stub\\src\\main\\java\\android\\os\\image\\IDynamicSystemService.java(android.os.image.IDynamicSystemService.createPartition)",
+    "448" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\hidden-api-stub\\src\\main\\java\\android\\os\\image\\IDynamicSystemService.java(android.os.image.IDynamicSystemService.finishInstallation)",
+    "449" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\hidden-api-stub\\src\\main\\java\\android\\os\\image\\IDynamicSystemService.java(android.os.image.IDynamicSystemService.getInstallationProgress)",
+    "450" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\hidden-api-stub\\src\\main\\java\\android\\os\\image\\IDynamicSystemService.java(android.os.image.IDynamicSystemService.isEnabled)",
+    "451" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\hidden-api-stub\\src\\main\\java\\android\\os\\image\\IDynamicSystemService.java(android.os.image.IDynamicSystemService.isInUse)",
+    "452" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\hidden-api-stub\\src\\main\\java\\android\\os\\image\\IDynamicSystemService.java(android.os.image.IDynamicSystemService.isInstalled)",
+    "453" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\hidden-api-stub\\src\\main\\java\\android\\os\\image\\IDynamicSystemService.java(android.os.image.IDynamicSystemService.remove)",
+    "454" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\hidden-api-stub\\src\\main\\java\\android\\os\\image\\IDynamicSystemService.java(android.os.image.IDynamicSystemService.setAshmem)",
+    "455" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\hidden-api-stub\\src\\main\\java\\android\\os\\image\\IDynamicSystemService.java(android.os.image.IDynamicSystemService.setEnable)",
+    "456" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\hidden-api-stub\\src\\main\\java\\android\\os\\image\\IDynamicSystemService.java(android.os.image.IDynamicSystemService.startInstallation)",
+    "457" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\hidden-api-stub\\src\\main\\java\\android\\os\\image\\IDynamicSystemService.java(android.os.image.IDynamicSystemService.submitFromAshmem)",
+    "458" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\hidden-api-stub\\src\\main\\java\\android\\os\\image\\IDynamicSystemService.java(android.os.image.IDynamicSystemService.suggestScratchSize)",
+    "459" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\hidden-api-stub\\src\\main\\java\\android\\os\\storage\\IStorageManager.java(android.os.storage.IStorageManager.Stub.asInterface)",
+    "460" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\hidden-api-stub\\src\\main\\java\\android\\os\\storage\\IStorageManager.java(android.os.storage.IStorageManager.getVolumes)",
+    "461" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\hidden-api-stub\\src\\main\\java\\android\\os\\storage\\IStorageManager.java(android.os.storage.IStorageManager.mount)",
+    "462" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\hidden-api-stub\\src\\main\\java\\android\\os\\storage\\IStorageManager.java(android.os.storage.IStorageManager.unmount)",
+    "463" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\hidden-api-stub\\src\\main\\java\\android\\os\\storage\\VolumeInfo.java(android.os.storage.VolumeInfo.VolumeInfo)",
+    "464" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\hidden-api-stub\\src\\main\\java\\android\\os\\storage\\VolumeInfo.java(android.os.storage.VolumeInfo.createFromParcel)",
+    "465" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\hidden-api-stub\\src\\main\\java\\android\\os\\storage\\VolumeInfo.java(android.os.storage.VolumeInfo.describeContents)",
+    "466" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\hidden-api-stub\\src\\main\\java\\android\\os\\storage\\VolumeInfo.java(android.os.storage.VolumeInfo.newArray)",
+    "467" : "F:\\Other\\Data\\smell-git-analysis-data\\DSU-Sideloader\\hidden-api-stub\\src\\main\\java\\android\\os\\storage\\VolumeInfo.java(android.os.storage.VolumeInfo.writeToParcel)"
+  },
+  "cells" : [ {
+    "src" : 379,
+    "dest" : 383,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 256,
+    "dest" : 248,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 33,
+    "dest" : 64,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 262,
+    "dest" : 282,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 361,
+    "dest" : 371,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 49,
+    "dest" : 79,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 211,
+    "dest" : 101,
+    "values" : {
+      "Kotlin Call Kotlin" : 2.0
+    }
+  }, {
+    "src" : 106,
+    "dest" : 102,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 342,
+    "dest" : 334,
+    "values" : {
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 106,
+    "dest" : 108,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 337,
+    "dest" : 196,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 243,
+    "dest" : 249,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 337,
+    "dest" : 195,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 342,
+    "dest" : 210,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 327,
+    "dest" : 68,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 45,
+    "dest" : 55,
+    "values" : {
+      "Java Call Java" : 2.0
+    }
+  }, {
+    "src" : 327,
+    "dest" : 64,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 313,
+    "dest" : 261,
+    "values" : {
+      "Kotlin Call Kotlin" : 2.0
+    }
+  }, {
+    "src" : 129,
+    "dest" : 75,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 50,
+    "dest" : 55,
+    "values" : {
+      "Java Call Java" : 2.0
+    }
+  }, {
+    "src" : 211,
+    "dest" : 213,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 129,
+    "dest" : 77,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 211,
+    "dest" : 216,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 211,
+    "dest" : 215,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 144,
+    "dest" : 150,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 339,
+    "dest" : 370,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 251,
+    "dest" : 459,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 160,
+    "dest" : 225,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 334,
+    "dest" : 356,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 158,
+    "dest" : 64,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 33,
+    "dest" : 55,
+    "values" : {
+      "Java Call Java" : 2.0
+    }
+  }, {
+    "src" : 414,
+    "dest" : 413,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 176,
+    "dest" : 175,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 28,
+    "dest" : 59,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 344,
+    "dest" : 417,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 28,
+    "dest" : 55,
+    "values" : {
+      "Java Call Java" : 2.0
+    }
+  }, {
+    "src" : 211,
+    "dest" : 212,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 201,
+    "dest" : 199,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 270,
+    "dest" : 272,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 270,
+    "dest" : 273,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 332,
+    "dest" : 97,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 270,
+    "dest" : 271,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 275,
+    "dest" : 291,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 159,
+    "dest" : 225,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 144,
+    "dest" : 142,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 441,
+    "dest" : 438,
+    "values" : {
+      "Java Return Java" : 1.0
+    }
+  }, {
+    "src" : 232,
+    "dest" : 446,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 342,
+    "dest" : 325,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 342,
+    "dest" : 324,
+    "values" : {
+      "Kotlin Use Kotlin" : 4.0
+    }
+  }, {
+    "src" : 129,
+    "dest" : 64,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 245,
+    "dest" : 452,
+    "values" : {
+      "Kotlin Use Java" : 1.0
+    }
+  }, {
+    "src" : 211,
+    "dest" : 207,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 328,
+    "dest" : 424,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 163,
+    "dest" : 73,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 57,
+    "dest" : 52,
+    "values" : {
+      "Java Use Java" : 2.0
+    }
+  }, {
+    "src" : 347,
+    "dest" : 370,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 342,
+    "dest" : 352,
+    "values" : {
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 342,
+    "dest" : 350,
+    "values" : {
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 114,
+    "dest" : 415,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 87,
+    "dest" : 93,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 334,
+    "dest" : 133,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 355,
+    "dest" : 328,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 420,
+    "dest" : 422,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 420,
+    "dest" : 425,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 427,
+    "dest" : 426,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 340,
+    "dest" : 363,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 340,
+    "dest" : 370,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 262,
+    "dest" : 289,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 50,
+    "dest" : 80,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 358,
+    "dest" : 370,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 327,
+    "dest" : 77,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 342,
+    "dest" : 349,
+    "values" : {
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 237,
+    "dest" : 248,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 151,
+    "dest" : 75,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 374,
+    "dest" : 288,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 363,
+    "dest" : 358,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 88,
+    "dest" : 299,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 296,
+    "dest" : 294,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 328,
+    "dest" : 367,
+    "values" : {
+      "Kotlin Call Kotlin" : 6.0
+    }
+  }, {
+    "src" : 374,
+    "dest" : 293,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 374,
+    "dest" : 290,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 307,
+    "dest" : 311,
+    "values" : {
+      "Kotlin Call Kotlin" : 5.0
+    }
+  }, {
+    "src" : 42,
+    "dest" : 72,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 218,
+    "dest" : 220,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 336,
+    "dest" : 228,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 425,
+    "dest" : 423,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 42,
+    "dest" : 55,
+    "values" : {
+      "Java Call Java" : 2.0
+    }
+  }, {
+    "src" : 256,
+    "dest" : 435,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 256,
+    "dest" : 434,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 200,
+    "dest" : 202,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 196,
+    "dest" : 414,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 293,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 141,
+    "dest" : 138,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 358,
+    "dest" : 119,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 141,
+    "dest" : 139,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 422,
+    "dest" : 423,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 166,
+    "dest" : 78,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 358,
+    "dest" : 356,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 368,
+    "dest" : 413,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 248,
+    "dest" : 238,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 167,
+    "dest" : 225,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 374,
+    "dest" : 280,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 264,
+    "dest" : 282,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 300,
+    "dest" : 299,
+    "values" : {
+      "Kotlin Use Kotlin" : 2.0
+    }
+  }, {
+    "src" : 398,
+    "dest" : 397,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 273,
+    "dest" : 270,
+    "values" : {
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 264,
+    "dest" : 289,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 349,
+    "dest" : 363,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 265,
+    "dest" : 297,
+    "values" : {
+      "Kotlin Call Kotlin" : 2.0
+    }
+  }, {
+    "src" : 334,
+    "dest" : 228,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 309,
+    "dest" : 310,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 49,
+    "dest" : 55,
+    "values" : {
+      "Java Call Java" : 2.0
+    }
+  }, {
+    "src" : 380,
+    "dest" : 188,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 328,
+    "dest" : 96,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 88,
+    "dest" : 391,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 328,
+    "dest" : 95,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 328,
+    "dest" : 100,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 288,
+    "dest" : 282,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 345,
+    "dest" : 189,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 165,
+    "dest" : 225,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 365,
+    "dest" : 424,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 200,
+    "dest" : 105,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 193,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 251,
+    "dest" : 238,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 245,
+    "dest" : 249,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 272,
+    "dest" : 270,
+    "values" : {
+      "Kotlin Use Kotlin" : 2.0
+    }
+  }, {
+    "src" : 313,
+    "dest" : 315,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 133,
+    "dest" : 394,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 265,
+    "dest" : 291,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 270,
+    "dest" : 296,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 270,
+    "dest" : 297,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 267,
+    "dest" : 268,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 270,
+    "dest" : 290,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 270,
+    "dest" : 291,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 267,
+    "dest" : 269,
+    "values" : {
+      "Kotlin Call Kotlin" : 28.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 388,
+    "values" : {
+      "Kotlin Use Kotlin" : 2.0
+    }
+  }, {
+    "src" : 156,
+    "dest" : 225,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 387,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 266,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 201,
+    "dest" : 104,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 389,
+    "values" : {
+      "Kotlin Use Kotlin" : 2.0
+    }
+  }, {
+    "src" : 201,
+    "dest" : 105,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 157,
+    "dest" : 63,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 262,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 46,
+    "dest" : 55,
+    "values" : {
+      "Java Call Java" : 2.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 265,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 386,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 264,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 141,
+    "dest" : 167,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 424,
+    "dest" : 423,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 259,
+    "dest" : 249,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 142,
+    "dest" : 141,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 163,
+    "dest" : 225,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 357,
+    "dest" : 114,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 141,
+    "dest" : 174,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 134,
+    "dest" : 395,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 48,
+    "dest" : 78,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 297,
+    "dest" : 298,
+    "values" : {
+      "Kotlin Call Kotlin" : 2.0
+    }
+  }, {
+    "src" : 134,
+    "dest" : 398,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 103,
+    "dest" : 107,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 255,
+    "dest" : 443,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 364,
+    "dest" : 134,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 373,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 93,
+    "dest" : 190,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 254,
+    "dest" : 455,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 246,
+    "dest" : 251,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 215,
+    "dest" : 201,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 105,
+    "dest" : 416,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 51,
+    "dest" : 81,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 215,
+    "dest" : 208,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 380,
+    "dest" : 421,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 214,
+    "dest" : 105,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 44,
+    "dest" : 55,
+    "values" : {
+      "Java Call Java" : 2.0
+    }
+  }, {
+    "src" : 160,
+    "dest" : 69,
+    "values" : {
+      "Kotlin Use Java" : 1.0
+    }
+  }, {
+    "src" : 260,
+    "dest" : 251,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 34,
+    "dest" : 65,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 364,
+    "dest" : 345,
+    "values" : {
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 383,
+    "dest" : 95,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 373,
+    "dest" : 413,
+    "values" : {
+      "Kotlin Call Kotlin" : 2.0
+    }
+  }, {
+    "src" : 104,
+    "dest" : 417,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 280,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 373,
+    "dest" : 414,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 254,
+    "dest" : 249,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 364,
+    "dest" : 348,
+    "values" : {
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 141,
+    "dest" : 148,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 151,
+    "dest" : 225,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 215,
+    "dest" : 213,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 364,
+    "dest" : 346,
+    "values" : {
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 141,
+    "dest" : 149,
+    "values" : {
+      "Kotlin Call Kotlin" : 3.0
+    }
+  }, {
+    "src" : 364,
+    "dest" : 347,
+    "values" : {
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 48,
+    "dest" : 55,
+    "values" : {
+      "Java Call Java" : 2.0
+    }
+  }, {
+    "src" : 164,
+    "dest" : 74,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 366,
+    "dest" : 328,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 299,
+    "dest" : 375,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 278,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 277,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 299,
+    "dest" : 374,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 363,
+    "dest" : 362,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 279,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 274,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 363,
+    "dest" : 365,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 157,
+    "dest" : 225,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 364,
+    "dest" : 352,
+    "values" : {
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 276,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 275,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 297,
+    "dest" : 294,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 38,
+    "dest" : 68,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 141,
+    "dest" : 155,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 390,
+    "values" : {
+      "Kotlin Use Kotlin" : 2.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 393,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 41,
+    "dest" : 71,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 44,
+    "dest" : 74,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 162,
+    "dest" : 225,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 51,
+    "dest" : 55,
+    "values" : {
+      "Java Call Java" : 2.0
+    }
+  }, {
+    "src" : 141,
+    "dest" : 163,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 141,
+    "dest" : 164,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 332,
+    "dest" : 328,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 362,
+    "dest" : 146,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 363,
+    "dest" : 370,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 253,
+    "dest" : 255,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 344,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 56,
+    "dest" : 68,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 56,
+    "dest" : 67,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 56,
+    "dest" : 66,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 56,
+    "dest" : 65,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 92,
+    "dest" : 84,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 340,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 56,
+    "dest" : 64,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 56,
+    "dest" : 63,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 38,
+    "dest" : 55,
+    "values" : {
+      "Java Call Java" : 2.0
+    }
+  }, {
+    "src" : 208,
+    "dest" : 104,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 210,
+    "dest" : 211,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 342,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 56,
+    "dest" : 62,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 213,
+    "dest" : 208,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 341,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 56,
+    "dest" : 61,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 56,
+    "dest" : 60,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 206,
+    "dest" : 201,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 210,
+    "dest" : 214,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 365,
+    "dest" : 370,
+    "values" : {
+      "Kotlin Call Kotlin" : 2.0
+    }
+  }, {
+    "src" : 365,
+    "dest" : 130,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 41,
+    "dest" : 55,
+    "values" : {
+      "Java Call Java" : 2.0
+    }
+  }, {
+    "src" : 368,
+    "dest" : 369,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 143,
+    "dest" : 147,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 143,
+    "dest" : 141,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 366,
+    "dest" : 100,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 167,
+    "dest" : 79,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 216,
+    "dest" : 209,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 335,
+    "dest" : 64,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 213,
+    "dest" : 200,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 56,
+    "dest" : 59,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 56,
+    "dest" : 58,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 56,
+    "dest" : 79,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 333,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 56,
+    "dest" : 78,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 332,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 56,
+    "dest" : 77,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 363,
+    "dest" : 188,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 56,
+    "dest" : 76,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 56,
+    "dest" : 75,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 363,
+    "dest" : 189,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 56,
+    "dest" : 74,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 146,
+    "dest" : 151,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 56,
+    "dest" : 73,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 331,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 330,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 56,
+    "dest" : 72,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 36,
+    "dest" : 55,
+    "values" : {
+      "Java Call Java" : 2.0
+    }
+  }, {
+    "src" : 56,
+    "dest" : 71,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 365,
+    "dest" : 364,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 56,
+    "dest" : 70,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 155,
+    "dest" : 225,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 187,
+    "dest" : 194,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 328,
+    "dest" : 411,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 258,
+    "dest" : 457,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 313,
+    "dest" : 293,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 138,
+    "dest" : 156,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 113,
+    "dest" : 415,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 337,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 336,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 373,
+    "dest" : 372,
+    "values" : {
+      "Kotlin Call Kotlin" : 3.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 339,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 56,
+    "dest" : 69,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 338,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 366,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 368,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 46,
+    "dest" : 76,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 145,
+    "dest" : 155,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 361,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 200,
+    "dest" : 199,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 36,
+    "dest" : 66,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 101,
+    "dest" : 107,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 151,
+    "dest" : 144,
+    "values" : {
+      "Kotlin Call Kotlin" : 2.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 360,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 151,
+    "dest" : 145,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 151,
+    "dest" : 148,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 102,
+    "dest" : 110,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 258,
+    "dest" : 249,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 143,
+    "dest" : 163,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 213,
+    "dest" : 105,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 313,
+    "dest" : 280,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 355,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 212,
+    "dest" : 109,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 162,
+    "dest" : 71,
+    "values" : {
+      "Kotlin Use Java" : 1.0
+    }
+  }, {
+    "src" : 102,
+    "dest" : 104,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 354,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 150,
+    "dest" : 147,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 356,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 102,
+    "dest" : 103,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 212,
+    "dest" : 105,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 89,
+    "dest" : 91,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 102,
+    "dest" : 109,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 353,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 145,
+    "dest" : 149,
+    "values" : {
+      "Kotlin Call Kotlin" : 3.0
+    }
+  }, {
+    "src" : 214,
+    "dest" : 207,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 259,
+    "dest" : 458,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 214,
+    "dest" : 206,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 151,
+    "dest" : 143,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 151,
+    "dest" : 141,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 359,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 207,
+    "dest" : 104,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 257,
+    "dest" : 249,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 335,
+    "dest" : 73,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 195,
+    "dest" : 414,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 166,
+    "dest" : 225,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 282,
+    "dest" : 283,
+    "values" : {
+      "Kotlin Call Kotlin" : 2.0
+    }
+  }, {
+    "src" : 236,
+    "dest" : 249,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 145,
+    "dest" : 138,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 341,
+    "dest" : 370,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 249,
+    "dest" : 238,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 153,
+    "dest" : 225,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 341,
+    "dest" : 363,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 287,
+    "dest" : 297,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 287,
+    "dest" : 296,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 113,
+    "dest" : 103,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 257,
+    "dest" : 456,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 161,
+    "dest" : 70,
+    "values" : {
+      "Kotlin Use Java" : 1.0
+    }
+  }, {
+    "src" : 212,
+    "dest" : 208,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 330,
+    "dest" : 325,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 379,
+    "dest" : 95,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 327,
+    "dest" : 228,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 335,
+    "dest" : 228,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 212,
+    "dest" : 201,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 151,
+    "dest" : 157,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 151,
+    "dest" : 158,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 31,
+    "dest" : 55,
+    "values" : {
+      "Java Call Java" : 2.0
+    }
+  }, {
+    "src" : 96,
+    "dest" : 405,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 209,
+    "dest" : 106,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 151,
+    "dest" : 161,
+    "values" : {
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 295,
+    "dest" : 294,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 89,
+    "dest" : 188,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 439,
+    "dest" : 438,
+    "values" : {
+      "Java Return Java" : 1.0
+    }
+  }, {
+    "src" : 47,
+    "dest" : 55,
+    "values" : {
+      "Java Call Java" : 2.0
+    }
+  }, {
+    "src" : 151,
+    "dest" : 162,
+    "values" : {
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 287,
+    "dest" : 284,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 31,
+    "dest" : 62,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 333,
+    "dest" : 371,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 212,
+    "dest" : 209,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 335,
+    "dest" : 356,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 299,
+    "dest" : 300,
+    "values" : {
+      "Kotlin Call Kotlin" : 5.0
+    }
+  }, {
+    "src" : 231,
+    "dest" : 249,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 426,
+    "dest" : 429,
+    "values" : {
+      "Kotlin Call Kotlin" : 4.0
+    }
+  }, {
+    "src" : 161,
+    "dest" : 225,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 56,
+    "dest" : 81,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 56,
+    "dest" : 80,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 299,
+    "dest" : 301,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 126,
+    "dest" : 125,
+    "values" : {
+      "Kotlin Call Kotlin" : 3.0
+    }
+  }, {
+    "src" : 276,
+    "dest" : 392,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 26,
+    "dest" : 58,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 261,
+    "dest" : 296,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 268,
+    "dest" : 289,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 26,
+    "dest" : 55,
+    "values" : {
+      "Java Call Java" : 2.0
+    }
+  }, {
+    "src" : 261,
+    "dest" : 291,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 274,
+    "dest" : 291,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 329,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 325,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 328,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 158,
+    "dest" : 225,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 316,
+    "dest" : 327,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 279,
+    "dest" : 291,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 244,
+    "dest" : 451,
+    "values" : {
+      "Kotlin Use Java" : 1.0
+    }
+  }, {
+    "src" : 279,
+    "dest" : 297,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 121,
+    "dest" : 111,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 279,
+    "dest" : 295,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 342,
+    "dest" : 95,
+    "values" : {
+      "Kotlin Call Kotlin" : 2.0
+    }
+  }, {
+    "src" : 365,
+    "dest" : 189,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 242,
+    "dest" : 250,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 346,
+    "dest" : 370,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 47,
+    "dest" : 77,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 268,
+    "dest" : 297,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 268,
+    "dest" : 296,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 43,
+    "dest" : 73,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 375,
+    "dest" : 379,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 175,
+    "dest" : 177,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 271,
+    "dest" : 270,
+    "values" : {
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 39,
+    "dest" : 69,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 364,
+    "dest" : 326,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 301,
+    "dest" : 280,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 325,
+    "dest" : 371,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 266,
+    "dest" : 282,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 464,
+    "dest" : 463,
+    "values" : {
+      "Java Return Java" : 1.0
+    }
+  }, {
+    "src" : 375,
+    "dest" : 380,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 375,
+    "dest" : 381,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 301,
+    "dest" : 290,
+    "values" : {
+      "Kotlin Call Kotlin" : 6.0
+    }
+  }, {
+    "src" : 233,
+    "dest" : 447,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 92,
+    "dest" : 189,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 260,
+    "dest" : 462,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 92,
+    "dest" : 188,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 309,
+    "dest" : 97,
+    "values" : {
+      "Kotlin Call Kotlin" : 3.0
+    }
+  }, {
+    "src" : 330,
+    "dest" : 369,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 210,
+    "dest" : 189,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 39,
+    "dest" : 55,
+    "values" : {
+      "Java Call Java" : 2.0
+    }
+  }, {
+    "src" : 381,
+    "dest" : 188,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 299,
+    "dest" : 316,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 384,
+    "dest" : 97,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 301,
+    "dest" : 292,
+    "values" : {
+      "Kotlin Call Kotlin" : 2.0
+    }
+  }, {
+    "src" : 375,
+    "dest" : 384,
+    "values" : {
+      "Kotlin Call Kotlin" : 7.0
+    }
+  }, {
+    "src" : 299,
+    "dest" : 313,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 301,
+    "dest" : 291,
+    "values" : {
+      "Kotlin Call Kotlin" : 2.0
+    }
+  }, {
+    "src" : 375,
+    "dest" : 385,
+    "values" : {
+      "Kotlin Call Kotlin" : 6.0
+    }
+  }, {
+    "src" : 225,
+    "dest" : 226,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 375,
+    "dest" : 382,
+    "values" : {
+      "Kotlin Call Kotlin" : 2.0
+    }
+  }, {
+    "src" : 301,
+    "dest" : 293,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 244,
+    "dest" : 249,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 330,
+    "dest" : 371,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 164,
+    "dest" : 225,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 247,
+    "dest" : 249,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 252,
+    "dest" : 249,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 201,
+    "dest" : 202,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 43,
+    "dest" : 55,
+    "values" : {
+      "Java Call Java" : 2.0
+    }
+  }, {
+    "src" : 266,
+    "dest" : 267,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 246,
+    "dest" : 461,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 231,
+    "dest" : 445,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 366,
+    "dest" : 98,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 250,
+    "dest" : 238,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 466,
+    "dest" : 463,
+    "values" : {
+      "Java Return Java" : 1.0
+    }
+  }, {
+    "src" : 252,
+    "dest" : 454,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 375,
+    "dest" : 280,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 34,
+    "dest" : 55,
+    "values" : {
+      "Java Call Java" : 2.0
+    }
+  }, {
+    "src" : 362,
+    "dest" : 351,
+    "values" : {
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 362,
+    "dest" : 352,
+    "values" : {
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 383,
+    "dest" : 384,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 90,
+    "dest" : 87,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 134,
+    "dest" : 133,
+    "values" : {
+      "Kotlin Call Kotlin" : 12.0
+    }
+  }, {
+    "src" : 309,
+    "dest" : 95,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 335,
+    "dest" : 325,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 165,
+    "dest" : 76,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 308,
+    "dest" : 311,
+    "values" : {
+      "Kotlin Call Kotlin" : 5.0
+    }
+  }, {
+    "src" : 375,
+    "dest" : 287,
+    "values" : {
+      "Kotlin Call Kotlin" : 2.0
+    }
+  }, {
+    "src" : 301,
+    "dest" : 270,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 266,
+    "dest" : 392,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 399,
+    "dest" : 398,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 375,
+    "dest" : 292,
+    "values" : {
+      "Kotlin Call Kotlin" : 3.0
+    }
+  }, {
+    "src" : 331,
+    "dest" : 372,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 375,
+    "dest" : 293,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 360,
+    "dest" : 371,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 375,
+    "dest" : 290,
+    "values" : {
+      "Kotlin Call Kotlin" : 7.0
+    }
+  }, {
+    "src" : 249,
+    "dest" : 444,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 113,
+    "dest" : 110,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 362,
+    "dest" : 343,
+    "values" : {
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 327,
+    "dest" : 367,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 362,
+    "dest" : 346,
+    "values" : {
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 338,
+    "dest" : 76,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 362,
+    "dest" : 345,
+    "values" : {
+      "Kotlin Use Kotlin" : 1.0
+    }
+  }, {
+    "src" : 156,
+    "dest" : 60,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 32,
+    "dest" : 55,
+    "values" : {
+      "Java Call Java" : 2.0
+    }
+  }, {
+    "src" : 390,
+    "dest" : 284,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 131,
+    "dest" : 81,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 351,
+    "dest" : 370,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 233,
+    "dest" : 249,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 155,
+    "dest" : 59,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 277,
+    "dest" : 296,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 242,
+    "dest" : 437,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 247,
+    "dest" : 453,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 29,
+    "dest" : 55,
+    "values" : {
+      "Java Call Java" : 2.0
+    }
+  }, {
+    "src" : 364,
+    "dest" : 95,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 174,
+    "dest" : 172,
+    "values" : {
+      "Java Call Java" : 2.0
+    }
+  }, {
+    "src" : 388,
+    "dest" : 287,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 344,
+    "dest" : 370,
+    "values" : {
+      "Kotlin Call Kotlin" : 3.0
+    }
+  }, {
+    "src" : 130,
+    "dest" : 129,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 390,
+    "dest" : 296,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 336,
+    "dest" : 370,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 239,
+    "dest" : 249,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 131,
+    "dest" : 72,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 122,
+    "dest" : 121,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 248,
+    "dest" : 432,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 29,
+    "dest" : 60,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 411,
+    "dest" : 410,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 174,
+    "dest" : 169,
+    "values" : {
+      "Java Call Java" : 2.0
+    }
+  }, {
+    "src" : 119,
+    "dest" : 187,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 130,
+    "dest" : 131,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 88,
+    "dest" : 93,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 336,
+    "dest" : 362,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 122,
+    "dest" : 112,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 390,
+    "dest" : 263,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 88,
+    "dest" : 92,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 338,
+    "dest" : 228,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 250,
+    "dest" : 436,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 389,
+    "dest" : 287,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 395,
+    "dest" : 397,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 241,
+    "dest" : 251,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 168,
+    "dest" : 225,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 98,
+    "dest" : 407,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 32,
+    "dest" : 63,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 127,
+    "dest" : 126,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 352,
+    "dest" : 370,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 390,
+    "dest" : 392,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 129,
+    "dest" : 228,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 291,
+    "dest" : 282,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 227,
+    "dest" : 225,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 97,
+    "dest" : 406,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 236,
+    "dest" : 448,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 228,
+    "dest" : 229,
+    "values" : {
+      "Kotlin Call Kotlin" : 3.0
+    }
+  }, {
+    "src" : 228,
+    "dest" : 226,
+    "values" : {
+      "Kotlin Call Kotlin" : 2.0
+    }
+  }, {
+    "src" : 345,
+    "dest" : 370,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 354,
+    "dest" : 328,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 335,
+    "dest" : 370,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 336,
+    "dest" : 73,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 168,
+    "dest" : 80,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 235,
+    "dest" : 234,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 334,
+    "dest" : 64,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 121,
+    "dest" : 127,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 276,
+    "dest" : 291,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 37,
+    "dest" : 55,
+    "values" : {
+      "Java Call Java" : 2.0
+    }
+  }, {
+    "src" : 383,
+    "dest" : 189,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 269,
+    "dest" : 297,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 269,
+    "dest" : 296,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 342,
+    "dest" : 370,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 336,
+    "dest" : 64,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 218,
+    "dest" : 54,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 350,
+    "dest" : 370,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 55,
+    "dest" : 52,
+    "values" : {
+      "Java Use Java" : 1.0
+    }
+  }, {
+    "src" : 409,
+    "dest" : 410,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 232,
+    "dest" : 249,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 278,
+    "dest" : 297,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 243,
+    "dest" : 450,
+    "values" : {
+      "Kotlin Use Java" : 1.0
+    }
+  }, {
+    "src" : 37,
+    "dest" : 67,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 170,
+    "dest" : 175,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 284,
+    "dest" : 281,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 131,
+    "dest" : 225,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 278,
+    "dest" : 291,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 334,
+    "dest" : 188,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 40,
+    "dest" : 70,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 153,
+    "dest" : 58,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 275,
+    "dest" : 296,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 339,
+    "dest" : 363,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 30,
+    "dest" : 61,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 275,
+    "dest" : 297,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 131,
+    "dest" : 228,
+    "values" : {
+      "Kotlin Call Kotlin" : 2.0
+    }
+  }, {
+    "src" : 93,
+    "dest" : 420,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 386,
+    "dest" : 287,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 337,
+    "dest" : 371,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 353,
+    "dest" : 328,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 30,
+    "dest" : 55,
+    "values" : {
+      "Java Call Java" : 2.0
+    }
+  }, {
+    "src" : 328,
+    "dest" : 188,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 187,
+    "dest" : 415,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 359,
+    "dest" : 95,
+    "values" : {
+      "Kotlin Call Kotlin" : 2.0
+    }
+  }, {
+    "src" : 95,
+    "dest" : 403,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 301,
+    "dest" : 308,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 237,
+    "dest" : 433,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 301,
+    "dest" : 307,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 301,
+    "dest" : 309,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 45,
+    "dest" : 75,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 301,
+    "dest" : 310,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 277,
+    "dest" : 291,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 172,
+    "dest" : 176,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 172,
+    "dest" : 177,
+    "values" : {
+      "Java Call Java" : 1.0
+    }
+  }, {
+    "src" : 276,
+    "dest" : 296,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 241,
+    "dest" : 460,
+    "values" : {
+      "Kotlin Call Java" : 1.0
+    }
+  }, {
+    "src" : 338,
+    "dest" : 370,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 119,
+    "dest" : 122,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 387,
+    "dest" : 287,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 343,
+    "dest" : 370,
+    "values" : {
+      "Kotlin Call Kotlin" : 1.0
+    }
+  }, {
+    "src" : 40,
+    "dest" : 55,
+    "values" : {
+      "Java Call Java" : 2.0
+    }
+  }, {
+    "src" : 387,
+    "dest" : 286,
+    "values" : {
+      "Kotlin Call Kotlin" : 3.0
+    }
+  } ]
+}
