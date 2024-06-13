@@ -1,0 +1,9 @@
+[submodule "data/project-source-code/DSU-Sideloader"]
+	path = data/project-source-code/DSU-Sideloader
+	url = https://github.com/VegaBobo/DSU-Sideloader
+[submodule "data/project-source-code/Flap"]
+	path = data/project-source-code/Flap
+	url = https://github.com/AlanCheen/Flap
+[submodule "data/project-source-code/RootEncoder"]
+	path = data/project-source-code/RootEncoder
+	url = https://github.com/pedroSG94/RootEncoder
