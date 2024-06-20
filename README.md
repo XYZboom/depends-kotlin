@@ -12,10 +12,26 @@ is the improved version of
 ### Runtime requirement
 Java Runtime Environment (JRE) >= 17
 ### Simple usage
-Download jar file in release page.
+Download jar file in [release page](https://github.com/XYZboom/depends-kotlin/releases).
 ```bash
 java depends-kotlin-all.jar kotlin [input-path] [output-file]
 ```
+### Run on project in data directory
+- [x] **Step 1. Clone project recursively**
+```bash
+git clone --recurse-submodules https://github.com/XYZboom/depends-kotlin.git
+```
+- [x] **Step 2. Download jar file in [release page](https://github.com/XYZboom/depends-kotlin/releases)**
+- [x] **Step 3. Specify the input project and output path**
+The example here runs on project "Flap" in data directory.
+The file "depends-kotlin-all.jar" was the jar you just downloaded.
+```bash
+java depends-kotlin-all.jar kotlin ./data/Flap Flap --show-language
+```
+- [x] **Step 4. Check the output file**
+After step 3, you will see the output file: "Flap-file.json" in root
+path of this project.
+![Example](data/images/example-Flap-file.png)
 ### Usage
 Depends-Kotlin is based on the JVM platform and requires at least Java 17. 
 The input of Depends-Kotlin is the source folder path of a particular project. 
